@@ -1,0 +1,7 @@
+import Foundation
+
+enum APIConfig {
+    // Copy this file to APIConfig.swift and add your real key
+    // DO NOT commit APIConfig.swift to version control
+    static let anthropicAPIKey = "your-api-key-here"
+}
