@@ -8,6 +8,7 @@ class TranslationService {
     struct TranslationResult {
         let hanzi: String
         let pinyin: String
+        let literalTranslation: String
     }
     
     enum TranslationError: LocalizedError {
@@ -33,29 +34,18 @@ class TranslationService {
         }
     }
     
-    func translate(_ englishText: String) async throws -> TranslationResult {
-        let url = URL(string: "https://api.anthropic.com/v1/messages")!
+    func translate(_ englishText: String, formality: String = "informal") async throws -> TranslationResult {
+        guard let url = URL(string: APIConfig.translationEndpoint) else {
+            throw TranslationError.invalidURL
+        }
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue(APIConfig.anthropicAPIKey, forHTTPHeaderField: "x-api-key")
-        request.setValue("2023-06-01", forHTTPHeaderField: "anthropic-version")
-        
-        let systemPrompt = """
-        You are a Chinese language translation assistant. Translate English phrases into Mandarin Chinese using everyday, colloquial speech - the way a native speaker would naturally say it in casual conversation. Avoid formal or written Chinese.
-
-        Return JSON only, no markdown, no code blocks, just raw JSON:
-        {"hanzi": "Chinese characters here", "pinyin": "pinyin with tone marks here"}
-        """
         
         let requestBody: [String: Any] = [
-            "model": "claude-sonnet-4-20250514",
-            "max_tokens": 256,
-            "system": systemPrompt,
-            "messages": [
-                ["role": "user", "content": englishText]
-            ]
+            "english": englishText,
+            "formality": formality
         ]
         
         request.httpBody = try JSONSerialization.data(withJSONObject: requestBody)
@@ -67,31 +57,21 @@ class TranslationService {
         }
         
         guard httpResponse.statusCode == 200 else {
-            // Try to extract error message from response
             if let errorJson = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
-               let error = errorJson["error"] as? [String: Any],
-               let message = error["message"] as? String {
+               let message = errorJson["error"] as? String {
                 throw TranslationError.apiError(message)
             }
             throw TranslationError.apiError("HTTP \(httpResponse.statusCode)")
         }
         
-        // Parse Claude's response
-        guard let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
-              let content = json["content"] as? [[String: Any]],
-              let firstContent = content.first,
-              let text = firstContent["text"] as? String else {
-            throw TranslationError.decodingError
-        }
-        
-        // Parse the JSON from Claude's text response
-        guard let translationData = text.data(using: .utf8),
-              let translation = try? JSONSerialization.jsonObject(with: translationData) as? [String: String],
+        guard let translation = try? JSONSerialization.jsonObject(with: data) as? [String: String],
               let hanzi = translation["hanzi"],
               let pinyin = translation["pinyin"] else {
             throw TranslationError.decodingError
         }
         
-        return TranslationResult(hanzi: hanzi, pinyin: pinyin)
+        let literal = translation["literal"] ?? ""
+        
+        return TranslationResult(hanzi: hanzi, pinyin: pinyin, literalTranslation: literal)
     }
 }

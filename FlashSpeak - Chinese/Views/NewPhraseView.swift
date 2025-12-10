@@ -6,8 +6,13 @@ struct NewPhraseView: View {
     @Environment(\.dismiss) private var dismiss
     
     @StateObject private var speechService = SpeechRecognitionService()
+    @ObservedObject private var settings = SettingsManager.shared
+    @ObservedObject private var usage = UsageManager.shared
+    
+    @State private var showingPaywall = false
     
     @State private var currentState: ViewState = .idle
+    @State private var englishText: String = ""
     @State private var translationResult: TranslationService.TranslationResult?
     @State private var errorMessage: String?
     
@@ -55,16 +60,43 @@ struct NewPhraseView: View {
                 .font(.title2)
                 .foregroundStyle(.secondary)
             
-            Button(action: startListening) {
+            // Show remaining translations for free users
+            if !usage.isSubscribed {
+                Text("\(usage.remainingToday) free translations left today")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+            
+            Button(action: checkLimitAndStart) {
                 Text("Start Recording")
                     .font(.headline)
                     .padding()
                     .frame(maxWidth: .infinity)
-                    .background(Color.blue)
+                    .background(usage.canTranslate ? Color.blue : Color.gray)
                     .foregroundColor(.white)
                     .cornerRadius(12)
             }
+            .disabled(!usage.canTranslate)
             .padding(.horizontal, 40)
+            
+            if !usage.canTranslate {
+                Button("Upgrade to Pro") {
+                    showingPaywall = true
+                }
+                .font(.headline)
+                .foregroundStyle(.blue)
+            }
+        }
+        .sheet(isPresented: $showingPaywall) {
+            PaywallView()
+        }
+    }
+    
+    private func checkLimitAndStart() {
+        if usage.canTranslate {
+            startListening()
+        } else {
+            showingPaywall = true
         }
     }
     
@@ -106,11 +138,6 @@ struct NewPhraseView: View {
             Text("Translating...")
                 .font(.title2)
                 .foregroundStyle(.secondary)
-            
-            Text(speechService.transcribedText)
-                .font(.body)
-                .foregroundStyle(.secondary)
-                .multilineTextAlignment(.center)
         }
     }
     
@@ -121,7 +148,7 @@ struct NewPhraseView: View {
                 Text("English")
                     .font(.caption)
                     .foregroundStyle(.secondary)
-                Text(speechService.transcribedText)
+                Text(englishText)
                     .font(.title3)
                     .multilineTextAlignment(.center)
             }
@@ -146,6 +173,20 @@ struct NewPhraseView: View {
                 Text(translationResult?.hanzi ?? "")
                     .font(.largeTitle)
                     .multilineTextAlignment(.center)
+            }
+            
+            // Literal Translation
+            if let literal = translationResult?.literalTranslation, !literal.isEmpty {
+                VStack(spacing: 4) {
+                    Text("Literal")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                    Text(literal)
+                        .font(.body)
+                        .italic()
+                        .foregroundStyle(.secondary)
+                        .multilineTextAlignment(.center)
+                }
             }
             
             // Speaker button
@@ -181,7 +222,9 @@ struct NewPhraseView: View {
             .padding(.horizontal)
         }
         .onAppear {
-            speakChinese() // Auto-play on result
+            if settings.autoPlayAudio {
+                speakChinese()
+            }
         }
     }
     
@@ -238,9 +281,11 @@ struct NewPhraseView: View {
     }
     
     private func stopListeningAndTranslate() {
+        // Save the transcribed text BEFORE stopping
+        englishText = speechService.transcribedText
         speechService.stopListening()
         
-        guard !speechService.transcribedText.isEmpty else {
+        guard !englishText.isEmpty else {
             errorMessage = "No speech detected. Please try again."
             currentState = .error
             return
@@ -250,7 +295,7 @@ struct NewPhraseView: View {
         
         Task {
             do {
-                let result = try await TranslationService.shared.translate(speechService.transcribedText)
+                let result = try await TranslationService.shared.translate(englishText, formality: settings.formality)
                 translationResult = result
                 currentState = .result
             } catch {
@@ -268,11 +313,11 @@ struct NewPhraseView: View {
     
     private func retry() {
         // Keep the same English text, just re-translate
-        if currentState == .result || (currentState == .error && !speechService.transcribedText.isEmpty) {
+        if currentState == .result || (currentState == .error && !englishText.isEmpty) {
             currentState = .translating
             Task {
                 do {
-                    let result = try await TranslationService.shared.translate(speechService.transcribedText)
+                    let result = try await TranslationService.shared.translate(englishText, formality: settings.formality)
                     translationResult = result
                     currentState = .result
                 } catch {
@@ -282,6 +327,7 @@ struct NewPhraseView: View {
             }
         } else {
             // Start over completely
+            englishText = ""
             translationResult = nil
             errorMessage = nil
             currentState = .idle
@@ -292,12 +338,14 @@ struct NewPhraseView: View {
         guard let result = translationResult else { return }
         
         let phrase = Phrase(
-            englishText: speechService.transcribedText,
+            englishText: englishText,
             hanzi: result.hanzi,
-            pinyin: result.pinyin
+            pinyin: result.pinyin,
+            literalTranslation: result.literalTranslation
         )
         
         modelContext.insert(phrase)
+        usage.recordTranslation() 
         dismiss()
     }
 }

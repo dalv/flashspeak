@@ -4,26 +4,49 @@ class ChineseTTSService {
     static let shared = ChineseTTSService()
     
     private let synthesizer = AVSpeechSynthesizer()
+    private var isWarmedUp = false
     
-    private init() {}
+    private init() {
+        configureAudioSession()
+    }
+    
+    private func configureAudioSession() {
+        do {
+            let audioSession = AVAudioSession.sharedInstance()
+            try audioSession.setCategory(.playback, mode: .default)
+            try audioSession.setActive(true)
+        } catch {
+            print("Failed to configure audio session: \(error)")
+        }
+    }
+    
+    /// Call this at app launch to pre-load the Chinese voice in the background
+    func warmUp() {
+        guard !isWarmedUp else { return }
+        
+        DispatchQueue.global(qos: .background).async {
+            let utterance = AVSpeechUtterance(string: "你好")
+            utterance.voice = AVSpeechSynthesisVoice(language: "zh-CN")
+            utterance.volume = 0.0 // Silent
+            
+            self.synthesizer.speak(utterance)
+            self.isWarmedUp = true
+        }
+    }
     
     func speak(_ text: String) {
-        // Stop any current speech
+        configureAudioSession()
+        
         if synthesizer.isSpeaking {
             synthesizer.stopSpeaking(at: .immediate)
         }
         
         let utterance = AVSpeechUtterance(string: text)
-        
-        // Use Mandarin Chinese voice
         utterance.voice = AVSpeechSynthesisVoice(language: "zh-CN")
-        
-        // Adjust rate for clearer pronunciation (0.0 - 1.0, default is 0.5)
         utterance.rate = 0.45
-        
-        // Slight pause between phrases
         utterance.preUtteranceDelay = 0.1
         utterance.postUtteranceDelay = 0.1
+        utterance.volume = 1.0
         
         synthesizer.speak(utterance)
     }

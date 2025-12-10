@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    @Environment(\.navigateToPractice) private var navigateToPractice
+    
     var body: some View {
         NavigationStack {
             VStack(spacing: 40) {
@@ -27,7 +29,7 @@ struct HomeView: View {
                             .cornerRadius(12)
                     }
                     
-                    NavigationLink(destination: PracticeView()) {
+                    NavigationLink(destination: PracticeView(), isActive: navigateToPractice) {
                         Label("Practice", systemImage: "brain.head.profile")
                             .font(.headline)
                             .frame(maxWidth: .infinity)
@@ -41,16 +43,25 @@ struct HomeView: View {
                 
                 Spacer()
             }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Menu {
+                        NavigationLink(destination: ManageCardsView()) {
+                            Label("Manage Cards", systemImage: "rectangle.stack")
+                        }
+                        NavigationLink(destination: SettingsView()) {
+                            Label("Settings", systemImage: "gearshape")
+                        }
+                    } label: {
+                        Image(systemName: "line.3.horizontal")
+                            .font(.title2)
+                    }
+                }
+            }
         }
     }
 }
 
 #Preview {
     HomeView()
-}//
-//  HomeView.swift
-//  FlashSpeak - Chinese
-//
-//  Created by Vlad Tamas on 12/8/25.
-//
-
+}
