@@ -4,10 +4,18 @@ import SwiftData
 struct ManageCardsView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
-    @Query(sort: \Phrase.createdAt, order: .reverse) private var phrases: [Phrase]
-    
+    @Query(sort: \Phrase.createdAt, order: .reverse) private var allPhrases: [Phrase]
+
+    @ObservedObject private var settings = SettingsManager.shared
+
     @State private var showingDeleteAllAlert = false
-    
+
+    private var language: Language { settings.currentLanguage }
+
+    private var phrases: [Phrase] {
+        allPhrases.filter { $0.languageCode == settings.currentLanguageCode }
+    }
+
     var body: some View {
         VStack {
             if phrases.isEmpty {
@@ -24,30 +32,30 @@ struct ManageCardsView: View {
                 deleteAllCards()
             }
         } message: {
-            Text("This will permanently delete all \(phrases.count) cards. This cannot be undone.")
+            Text("This will permanently delete all \(phrases.count) \(language.name) cards. This cannot be undone.")
         }
     }
-    
+
     private var emptyView: some View {
         VStack(spacing: 20) {
             Spacer()
-            
+
             Image(systemName: "rectangle.stack.badge.minus")
                 .font(.system(size: 60))
                 .foregroundStyle(.secondary)
-            
+
             Text("No cards yet")
                 .font(.title2)
                 .foregroundStyle(.secondary)
-            
+
             Text("Add phrases using the New Phrase button")
                 .font(.body)
                 .foregroundStyle(.tertiary)
-            
+
             Spacer()
         }
     }
-    
+
     private var listView: some View {
         VStack {
             List {
@@ -57,8 +65,7 @@ struct ManageCardsView: View {
                 .onDelete(perform: deleteCards)
             }
             .listStyle(.plain)
-            
-            // Delete All button at bottom
+
             Button(action: { showingDeleteAllAlert = true }) {
                 Text("Delete All Cards")
                     .font(.headline)
@@ -71,48 +78,51 @@ struct ManageCardsView: View {
             .padding()
         }
     }
-    
+
     private func cardRow(_ phrase: Phrase) -> some View {
         VStack(alignment: .leading, spacing: 6) {
             Text(phrase.englishText)
                 .font(.headline)
-            
-            Text(phrase.pinyin)
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
-            
+
+            if language.hasPronunciationGuide, !phrase.pronunciation.isEmpty {
+                Text(phrase.pronunciation)
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
+
             HStack {
-                Text(phrase.hanzi)
+                Text(phrase.targetText)
                     .font(.title3)
-                
+
                 Spacer()
-                
+
                 Button(action: { speakPhrase(phrase) }) {
                     Image(systemName: "speaker.wave.2")
                         .foregroundStyle(.blue)
                 }
                 .buttonStyle(.borderless)
             }
-            
+
             Text("Next review: \(phrase.nextReviewAt.formatted(.relative(presentation: .named)))")
                 .font(.caption)
                 .foregroundStyle(.tertiary)
         }
         .padding(.vertical, 4)
     }
-    
+
     // MARK: - Actions
-    
+
     private func speakPhrase(_ phrase: Phrase) {
-        ChineseTTSService.shared.speak(phrase.hanzi)
+        TTSService.shared.speak(phrase.targetText, language: language)
     }
-    
+
     private func deleteCards(at offsets: IndexSet) {
-        for index in offsets {
-            modelContext.delete(phrases[index])
+        let phrasesToDelete = offsets.map { phrases[$0] }
+        for phrase in phrasesToDelete {
+            modelContext.delete(phrase)
         }
     }
-    
+
     private func deleteAllCards() {
         for phrase in phrases {
             modelContext.delete(phrase)

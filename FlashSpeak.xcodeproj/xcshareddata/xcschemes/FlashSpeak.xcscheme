@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F5FDF9292EE6C334002671F7"
-               BuildableName = "FlashSpeak - Chinese.app"
-               BlueprintName = "FlashSpeak - Chinese"
-               ReferencedContainer = "container:FlashSpeak - Chinese.xcodeproj">
+               BuildableName = "FlashSpeak.app"
+               BlueprintName = "FlashSpeak"
+               ReferencedContainer = "container:FlashSpeak.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,13 +45,13 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F5FDF9292EE6C334002671F7"
-            BuildableName = "FlashSpeak - Chinese.app"
-            BlueprintName = "FlashSpeak - Chinese"
-            ReferencedContainer = "container:FlashSpeak - Chinese.xcodeproj">
+            BuildableName = "FlashSpeak.app"
+            BlueprintName = "FlashSpeak"
+            ReferencedContainer = "container:FlashSpeak.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <StoreKitConfigurationFileReference
-         identifier = "../../FlashSpeak - Chinese/Products.storekit">
+         identifier = "../../FlashSpeak/Products.storekit">
       </StoreKitConfigurationFileReference>
    </LaunchAction>
    <ProfileAction
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F5FDF9292EE6C334002671F7"
-            BuildableName = "FlashSpeak - Chinese.app"
-            BlueprintName = "FlashSpeak - Chinese"
-            ReferencedContainer = "container:FlashSpeak - Chinese.xcodeproj">
+            BuildableName = "FlashSpeak.app"
+            BlueprintName = "FlashSpeak"
+            ReferencedContainer = "container:FlashSpeak.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

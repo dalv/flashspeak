@@ -5,12 +5,16 @@ class StoreManager: ObservableObject {
     static let shared = StoreManager()
     
     // Product IDs - you'll configure these in App Store Connect
-    static let monthlyProductID = "com.flashspeak.chinese.monthly"
-    static let yearlyProductID = "com.flashspeak.chinese.yearly29"
-    static let lifetimeProductID = "com.flashspeak.chinese.lifetime"
+    static let monthlyProductID = "com.flashspeak.pro.monthly"
+    static let yearlyProductID = "com.flashspeak.pro.yearly"
+    static let lifetimeProductID = "com.flashspeak.pro.lifetime"
     
     @Published var products: [Product] = []
+    #if DEBUG
+    @Published var isSubscribed: Bool = true
+    #else
     @Published var isSubscribed: Bool = false
+    #endif
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
     
@@ -125,7 +129,11 @@ class StoreManager: ObservableObject {
             }
         }
         
+        #if DEBUG
+        isSubscribed = true
+        #else
         isSubscribed = hasActiveSubscription
+        #endif
     }
     
     // MARK: - Transaction Listener

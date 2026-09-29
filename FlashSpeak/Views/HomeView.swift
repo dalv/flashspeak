@@ -1,20 +1,27 @@
 import SwiftUI
 
 struct HomeView: View {
-    @Environment(\.navigateToPractice) private var navigateToPractice
-    
+    @Binding var navigateToPractice: Bool
+    @ObservedObject private var settings = SettingsManager.shared
+
     var body: some View {
         NavigationStack {
             VStack(spacing: 40) {
                 Spacer()
-                
+
                 Text("FlashSpeak")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                
-                Text("中文")
-                    .font(.title)
-                    .foregroundStyle(.secondary)
+
+                Button(action: cycleLanguage) {
+                    HStack(spacing: 8) {
+                        Text("\(settings.currentLanguage.flag) \(settings.currentLanguage.name)")
+                            .font(.title)
+                        Image(systemName: "chevron.right")
+                            .font(.caption)
+                    }
+                    .foregroundStyle(.white)
+                }
                 
                 Spacer()
                 
@@ -29,7 +36,7 @@ struct HomeView: View {
                             .cornerRadius(12)
                     }
                     
-                    NavigationLink(destination: PracticeView(), isActive: navigateToPractice) {
+                    NavigationLink(destination: PracticeView(), isActive: $navigateToPractice) {
                         Label("Practice", systemImage: "brain.head.profile")
                             .font(.headline)
                             .frame(maxWidth: .infinity)
@@ -60,8 +67,17 @@ struct HomeView: View {
             }
         }
     }
+    private func cycleLanguage() {
+        let codes = settings.myLanguageCodes
+        guard codes.count > 1,
+              let currentIndex = codes.firstIndex(of: settings.currentLanguageCode) else { return }
+        let nextIndex = (currentIndex + 1) % codes.count
+        if let next = Language.find(byCode: codes[nextIndex]) {
+            settings.setCurrentLanguage(next)
+        }
+    }
 }
 
 #Preview {
-    HomeView()
+    HomeView(navigateToPractice: .constant(false))
 }

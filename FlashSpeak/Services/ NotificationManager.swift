@@ -42,7 +42,8 @@ class NotificationManager: ObservableObject {
         let phrase = phrases.randomElement()!
         
         let content = UNMutableNotificationContent()
-        content.title = "Time to practice! 🇨🇳"
+        let flag = SettingsManager.shared.currentLanguage.flag
+        content.title = "Time to practice! \(flag)"
         content.body = "How do you say: \"\(phrase.englishText)\"?"
         content.sound = .default
         content.userInfo = ["action": "practice"]

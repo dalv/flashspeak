@@ -2,14 +2,19 @@ import SwiftUI
 import SwiftData
 
 @main
-struct FlashSpeakChineseApp: App {
+struct FlashSpeakApp: App {
     @State private var navigateToPractice = false
     
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Phrase.self,
         ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+        
+        let modelConfiguration = ModelConfiguration(
+            schema: schema,
+            isStoredInMemoryOnly: false,
+            cloudKitDatabase: .private("iCloud.com.vladtamas.FlashSpeak")
+        )
 
         do {
             return try ModelContainer(for: schema, configurations: [modelConfiguration])
@@ -19,8 +24,8 @@ struct FlashSpeakChineseApp: App {
     }()
 
     init() {
-        // Warm up Chinese TTS voice in background
-        ChineseTTSService.shared.warmUp()
+        // Warm up TTS voice in background
+        TTSService.shared.warmUp()
         
         // Set up notification delegate
         UNUserNotificationCenter.current().delegate = NotificationDelegate.shared
@@ -28,8 +33,7 @@ struct FlashSpeakChineseApp: App {
 
     var body: some Scene {
         WindowGroup {
-            HomeView()
-                .environment(\.navigateToPractice, $navigateToPractice)
+            HomeView(navigateToPractice: $navigateToPractice)
                 .onReceive(NotificationCenter.default.publisher(for: .navigateToPractice)) { _ in
                     navigateToPractice = true
                 }
@@ -43,7 +47,6 @@ struct FlashSpeakChineseApp: App {
 class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
     static let shared = NotificationDelegate()
     
-    // Handle notification when app is in foreground
     func userNotificationCenter(
         _ center: UNUserNotificationCenter,
         willPresent notification: UNNotification
@@ -51,7 +54,6 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
         return [.banner, .sound]
     }
     
-    // Handle notification tap
     func userNotificationCenter(
         _ center: UNUserNotificationCenter,
         didReceive response: UNNotificationResponse
@@ -64,21 +66,6 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
     }
 }
 
-// MARK: - Notification Name Extension
-
 extension Notification.Name {
     static let navigateToPractice = Notification.Name("navigateToPractice")
-}
-
-// MARK: - Environment Key for Navigation
-
-private struct NavigateToPracticeKey: EnvironmentKey {
-    static let defaultValue: Binding<Bool> = .constant(false)
-}
-
-extension EnvironmentValues {
-    var navigateToPractice: Binding<Bool> {
-        get { self[NavigateToPracticeKey.self] }
-        set { self[NavigateToPracticeKey.self] = newValue }
-    }
 }

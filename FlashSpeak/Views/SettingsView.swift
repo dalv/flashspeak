@@ -12,11 +12,24 @@ struct SettingsView: View {
     var body: some View {
         Form {
             Section {
+                NavigationLink(destination: LanguageSettingView()) {
+                    HStack {
+                        Text("Language")
+                        Spacer()
+                        Text("\(settings.currentLanguage.flag) \(settings.currentLanguage.name)")
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            } header: {
+                Text("Language")
+            }
+
+            Section {
                 Toggle("Auto-Play Audio", isOn: $settings.autoPlayAudio)
             } header: {
                 Text("Audio")
             } footer: {
-                Text("Automatically speak the Chinese translation when viewing results and practicing flashcards.")
+                Text("Automatically speak the translation when viewing results and practicing flashcards.")
             }
             
             Section {
