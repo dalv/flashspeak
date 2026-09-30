@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(FlashSpeak/Services/APIConfig.swift)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=$(jq -r '.tool_input.file_path // .tool_response.filePath // empty'); case \"$f\" in *.swift) [ -f \"$f\" ] && swiftformat --quiet \"$f\" ;; esac; exit 0",
+            "timeout": 30,
+            "statusMessage": "Running SwiftFormat"
+          }
+        ]
+      }
+    ]
+  }
+}
