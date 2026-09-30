@@ -25,6 +25,7 @@ The app already exists on the App Store as FlashSpeak, supporting Mandarin Chine
 - The web app itself (the backend must be ready for it, the UI is later).
 - Pronunciation scoring of the learner's own speech.
 - Languages beyond the initial four.
+- A lock screen widget displaying a few phrases of the current selected language every hour
 
 **Success metrics**
 
