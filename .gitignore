@@ -14,3 +14,7 @@ DerivedData/
 # Swift Package Manager
 .swiftpm/
 Packages/
+# Cloudflare Worker local secrets and deps
+cloudflare-worker/.dev.vars
+cloudflare-worker/node_modules/
+cloudflare-worker/.wrangler/

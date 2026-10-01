@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Settings</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+button{font:inherit}
+</style>
+</helmet>
+<div style="width: 390px; height: 1060px; box-sizing: border-box; padding: 62px 20px 34px; background: #F2F3F5; color: #15171C; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; align-items: center; gap: 12px">
+<button aria-label="Back" style="width: 44px; height: 44px; border-radius: 22px; padding: 0; display: flex; align-items: center; justify-content: center; color: #15171C; background: rgba(255,255,255,0.6); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(255,255,255,0.9); box-shadow: 0 1px 2px rgba(20,22,28,0.06), 0 6px 20px rgba(20,22,28,0.08)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg></button>
+<h1 style="margin: 0; font-size: 28px; font-weight: 700">Settings</h1>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="padding-left: 14px; font-size: 13px; font-weight: 700; color: #5B616E">Language</span>
+<div style="background: #FFFFFF; border-radius: 18px; overflow: hidden">
+<div style="display: flex; align-items: center; justify-content: space-between; min-height: 52px; padding: 0 14px; border-bottom: 1px solid #EDEFF2"><span style="font-size: 16px">Learning</span><span style="display: flex; align-items: center; gap: 6px; font-size: 16px; color: #5B616E"><span lang="zh-Hans" style="font-family: 'Noto Sans SC', sans-serif">中文</span> Mandarin<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 12px 14px"><span style="font-size: 16px">How translations sound</span>
+<div role="group" aria-label="Register" style="display: flex; gap: 2px; padding: 3px; border-radius: 18px; background: #F2F3F5">
+<button aria-pressed="true" style="flex-grow: 1; height: 34px; border-radius: 16px; border: none; background: #FFFFFF; color: #15171C; font-size: 14px; font-weight: 700; box-shadow: 0 1px 3px rgba(20,22,28,0.12)">Casual</button>
+<button aria-pressed="false" style="flex-grow: 1; height: 34px; border-radius: 16px; border: none; background: transparent; color: #5B616E; font-size: 14px; font-weight: 600">Neutral</button>
+<button aria-pressed="false" style="flex-grow: 1; height: 34px; border-radius: 16px; border: none; background: transparent; color: #5B616E; font-size: 14px; font-weight: 600">Polite</button>
+</div></div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="padding-left: 14px; font-size: 13px; font-weight: 700; color: #5B616E">Playback</span>
+<div style="background: #FFFFFF; border-radius: 18px; overflow: hidden">
+<div style="display: flex; align-items: center; justify-content: space-between; min-height: 52px; padding: 0 14px; border-bottom: 1px solid #EDEFF2"><span style="font-size: 16px">Auto-play translations</span><span role="switch" aria-checked="true" aria-label="Auto-play translations" style="width: 51px; height: 31px; border-radius: 16px; background: #C23B22; position: relative; display: block"><span style="position: absolute; top: 2px; left: 22px; width: 27px; height: 27px; border-radius: 14px; background: #FFFFFF; box-shadow: 0 2px 4px rgba(0,0,0,0.2)"></span></span></div>
+<div style="display: flex; align-items: center; justify-content: space-between; min-height: 52px; padding: 0 14px; border-bottom: 1px solid #EDEFF2"><span style="font-size: 16px">Default speed</span><span style="display: flex; align-items: center; gap: 6px; font-size: 16px; color: #5B616E">Slow<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></div>
+<div style="display: flex; align-items: center; justify-content: space-between; min-height: 52px; padding: 0 14px; border-bottom: 1px solid #EDEFF2"><span style="font-size: 16px">Thinking gap in audio recall</span><span style="display: flex; align-items: center; gap: 6px; font-size: 16px; color: #5B616E">5 s<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></div>
+<div style="display: flex; align-items: center; justify-content: space-between; min-height: 52px; padding: 0 14px"><span style="font-size: 16px">Better voices</span><span style="display: flex; align-items: center; gap: 6px; font-size: 16px; color: #5B616E">How to download<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></span></div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="padding-left: 14px; font-size: 13px; font-weight: 700; color: #5B616E">Reminders</span>
+<div style="background: #FFFFFF; border-radius: 18px; overflow: hidden">
+<div style="display: flex; align-items: center; justify-content: space-between; min-height: 52px; padding: 0 14px; border-bottom: 1px solid #EDEFF2"><span style="font-size: 16px">Daily reminder</span><span role="switch" aria-checked="true" aria-label="Daily reminder" style="width: 51px; height: 31px; border-radius: 16px; background: #C23B22; position: relative; display: block"><span style="position: absolute; top: 2px; left: 22px; width: 27px; height: 27px; border-radius: 14px; background: #FFFFFF; box-shadow: 0 2px 4px rgba(0,0,0,0.2)"></span></span></div>
+<div style="display: flex; align-items: center; justify-content: space-between; min-height: 52px; padding: 0 14px"><span style="font-size: 16px">Time</span><span style="padding: 6px 10px; border-radius: 8px; background: #F2F3F5; font-size: 16px">8:00 PM</span></div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="padding-left: 14px; font-size: 13px; font-weight: 700; color: #5B616E">FlashSpeak Pro</span>
+<div style="background: #FFFFFF; border-radius: 18px; overflow: hidden">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 64px; padding: 0 14px; border-bottom: 1px solid #EDEFF2"><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 16px">Free plan</span><span style="font-size: 13px; color: #5B616E">2 of 3 translations left today</span></span><button style="height: 36px; padding: 0 16px; border-radius: 18px; border: none; background: #C23B22; color: #FFFFFF; font-size: 15px; font-weight: 700">Upgrade</button></div>
+<div style="display: flex; align-items: center; min-height: 52px; padding: 0 14px"><span style="font-size: 16px; color: #C23B22">Restore purchases</span></div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="padding-left: 14px; font-size: 13px; font-weight: 700; color: #5B616E">Your data</span>
+<div style="background: #FFFFFF; border-radius: 18px; overflow: hidden">
+<div style="display: flex; align-items: center; justify-content: space-between; min-height: 52px; padding: 0 14px; border-bottom: 1px solid #EDEFF2"><span style="font-size: 16px">iCloud sync</span><span style="font-size: 16px; color: #5B616E">On</span></div>
+<div style="display: flex; align-items: center; justify-content: space-between; min-height: 52px; padding: 0 14px; border-bottom: 1px solid #EDEFF2"><span style="font-size: 16px">Export my phrases</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5B616E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg></div>
+<div style="display: flex; align-items: center; min-height: 52px; padding: 0 14px"><span style="font-size: 16px; color: #B42318">Delete all my data</span></div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1060}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

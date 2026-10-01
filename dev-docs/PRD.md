@@ -6,7 +6,7 @@ Sep 29, 2026 · @Vlad Tamas
 
 FlashSpeak turns the phrases a learner actually needs into spoken, reviewable cards: say it in English, hear how a local would say it, and practise it until it comes out without thinking.
 
-The app already exists on the App Store as FlashSpeak, supporting Mandarin Chinese and Indonesian. This overhaul adds Korean and Japanese, keeps iCloud sync while preparing the data for a web app later, and adds suggested phrases and a hands-free audio recall mode.
+The app already exists on the App Store as FlashSpeak, supporting Mandarin Chinese and Indonesian. This overhaul adds Korean and Japanese, keeps iCloud sync while preparing the data for a web app later, and adds suggested phrases, a way to clarify a translation in your own words, ready-made preset categories (numbers, days, connector words and more), and a hands-free audio recall mode.
 
 **The problem.** Textbooks and translation tools give formal, literal phrasing that sounds stiff in real conversation. Learners also struggle to produce phrases quickly while speaking, because they have only ever read them, not heard and repeated them.
 
@@ -76,7 +76,8 @@ The app is one home screen with three actions and a menu; every other screen is 
 | New phrase | Home | Speak, type or get suggested phrases, then save |
 | Audio recall | Home | Hands-free listening practice |
 | Flashcard recall | Home | Spaced-repetition review |
-| Manage cards | Menu | Browse, play and delete phrases |
+| Manage cards | Menu | Browse, play and delete phrases, by section (User phrases or a preset category) |
+| Preset categories | Menu, Home empty state | Browse ready-made categories and start learning one |
 | Settings | Menu | Language, playback, reminders, subscription |
 | Paywall | New phrase (limit reached), Settings | Upgrade to Pro |
 | Onboarding | First launch | Pick first language, grant microphone access |
@@ -88,8 +89,8 @@ The home screen shows the current language and three large actions; recording a 
 - **Language selector** at the top: Mandarin Chinese, Indonesian, Korean, Japanese. The choice persists across launches and switches the whole phrase set.
 - **New phrase:** the primary action, visually strongest.
 - **Audio recall** and **Flashcard recall:** secondary actions. Each shows a small count (phrases in the set; cards due today).
-- **Menu** (top right): Manage cards, Settings.
-- **Empty state:** with no phrases yet, the recall actions are disabled with a one-line hint to add a phrase or try suggested phrases.
+- **Menu** (top right): Manage cards, Preset categories, Settings.
+- **Empty state:** with no phrases yet, the recall actions are disabled with a one-line hint to add a phrase, try suggested phrases, or start a preset category such as Numbers.
 - **Free users** see how many free translations remain today (for example "2 of 3 left").
 
 ## New phrase
@@ -134,8 +135,55 @@ Users can also type their own category (for example "at acro practice").
 
 - English phrase, target-language phrase in native script, romanization (for Mandarin, Japanese, Korean), and a word-by-word gloss that can be expanded.
 - Audio plays automatically if the auto-play setting is on, with a speed control (see Speech and audio spec) and a replay button.
-- Actions: Save, Try another version (re-translate), Discard.
+- Actions: Save, Clarify (see below), Try another version (re-translate), Discard.
 - If the phrase already exists in the set, the card says so and shows the existing card instead of saving a duplicate.
+
+**Clarify a translation**
+
+The translation isn't always the one the user had in mind. Clarify lets them say what's wrong in their own words, and the LLM adjusts the translation or offers different ones.
+
+- **Input:** Clarify opens the same input as a new phrase: speak (default) or type, with the transcript editable before sending. The prompt gives examples: "it was something like *dai cha*…", "is there a more informal version, like *duo shao* something?", "I meant to a friend, not a waiter".
+- **Sounded-out words:** transcription is English only, so a hint like "dai cha" may come out as "dye char". The transcript can be edited first, and the prompt tells the LLM that hints may be rough phonetic spellings of target-language words, possibly garbled by English speech recognition.
+- **What is sent:** the original English, the translation shown, any earlier versions and clarifications for this phrase, the clarification, the language and the register.
+- **What comes back:** one to three candidate translations, each a full result (native script, romanization, gloss, level, usage note), plus one line explaining what changed or what the user was probably thinking of ("You may mean 打车 dǎchē, 'take a taxi'"). If the clarification suggests the current translation is already right, the reply says so and keeps it.
+- **Choosing:** with one candidate the result card updates in place and plays it. With several, they are shown as small cards with play buttons; picking one makes it the result card. "Back to previous version" restores the last one.
+- **Repeat:** the user can clarify again on the new version. Free users get up to 3 clarifications per phrase; Pro is unlimited. Clarifications don't count toward the daily free translations.
+- **Saving:** the duplicate check runs on the version that is saved. The phrase keeps its clarification text, so the user can see why the translation differs and flags include it.
+- **After saving:** Clarify is also on the full card in Manage cards. Changing a saved phrase's translation keeps its review history and schedule.
+- Clarify needs a connection; offline it is disabled with a short note.
+
+## Phrase library: user phrases and preset categories
+
+Each language's library has two parts: the user's own phrases, and ready-made preset categories of basic vocabulary that every learner needs.
+
+**User phrases**
+
+- Everything the user creates: spoken, typed, and suggested phrases they chose to save. Each keeps its source (spoken, typed, suggested).
+- This is the default section in Manage cards and is always part of review.
+
+**Preset categories**
+
+- Curated lists of basic words and short phrases, the same for every user, in all four languages.
+- **Opt in per category.** The Preset categories screen lists them with a word count and a preview. "Start learning" adds the category to the user's review; until then it can be browsed and played but isn't in flashcards or audio recall. A started category can be paused again, which keeps its review history.
+- **Content source:** written once per language with the translation prompt, checked by the same native reviewer as the evaluation set, and shipped inside the app as versioned data. Presets work offline, cost nothing per user, and don't count toward the free limit. Corrections ship with app updates and update the user's cards without losing review history.
+- **Card format:** the front is the English (for numbers, the digits, with the English spoken); the back is native script, romanization and audio as for any phrase. Connector words and question words carry a short example phrase in the usage note, because a lone "because" is hard to recall without context.
+- **Duplicates:** the duplicate check covers user phrases and started categories. If a new phrase matches a preset item, the result card shows the preset card.
+
+| Category | Items |
+| --- | --- |
+| Numbers | 1–23, 34, 45, 56, 67, 78, 89, 95, 100, 115, 250, 275, 500, 750, 945, 1000, 2500, 5000 (40 cards) |
+| Days of the week | Monday to Sunday, weekend |
+| Connector words | and, or, but, if, because, so, when (as in "when I get home"), then, also, before, after |
+| Question words | what, who, where, when, why, how, which, how much (price), how many |
+| Time words | now, today, tomorrow, yesterday, later, soon, already, not yet, morning, afternoon, evening, tonight, this week, next week, last week, every day (no months) |
+
+**Language notes for numbers (defaults, to confirm with the native reviewers)**
+
+- **Mandarin:** 2 is 二 when counting and 两 before a measure word or in 两百 / 两千; the card shows the counting form and the usage note mentions 两. Larger numbers use the everyday spoken form (2500 两千五).
+- **Japanese:** 4, 7 and 9 have two readings (yon/shi, nana/shichi, kyū/ku); the card uses the common one (yon, nana, kyū) and notes the other.
+- **Korean:** Korean uses two number systems day to day, and the Korean Numbers category has both:
+  - **Sino-Korean** (일, 이, 삼) for the 40 numbers above: prices, phone numbers, dates, minutes.
+  - **Native Korean** (하나, 둘, 셋) for counting things, people, age and the hour: 1–20 and 30, 40, 50 (about 23 more cards), each with an everyday counter example in the usage note (한 개 one item, 두 명 two people, 세 시 three o'clock, 스무 살 twenty years old). The card front says which use it is ("3 · counting things").
 
 ## Translation quality spec
 
@@ -161,10 +209,12 @@ A register setting (casual / neutral / polite) can override the default per lang
 - A short usage note when it matters ("used with friends only").
 - An estimated level (see Duplicate detection and proficiency levels).
 
+For a clarification (see New phrase) it returns one to three such results plus a one-line explanation.
+
 **Quality process**
 
 - The prompt, model and settings live on the server with a version number, so they can change without an App Store release.
-- An evaluation set of 50 phrases per language with approved translations, reviewed by a native speaker (for example an iTalki tutor).
+- An evaluation set of 50 phrases per language with approved translations, reviewed by a native speaker (for example an iTalki tutor), plus about 10 clarification cases per language (a phrase, a first translation, a clarification and the expected result).
 - A prompt change ships only if its outputs are at least as good as the current version on the evaluation set.
 - The user can flag a bad translation from the result card; flags are logged for review.
 
@@ -244,6 +294,7 @@ Audio recall is a hands-free listening session: hear the English, try to say it 
 **Session**
 
 - Length options: 10, 20 or all phrases; default 20.
+- Phrases come from User phrases and started preset categories; the user can narrow a session to one section (for example only Numbers).
 - Order: phrases due for review first, then the newest, then random.
 - Progress at the bottom: practised this session and total in the set ("12 of 20 · 148 in set").
 - A summary at the end: phrases practised, time spent.
@@ -268,7 +319,7 @@ Flashcards use the FSRS spaced-repetition algorithm, which needs fewer reviews t
 
 - **Front:** the English phrase. **Back:** native script, romanization, gloss; audio plays on flip if auto-play is on.
 - Tap to flip; the user rates recall with two buttons, Hard or Easy (mapped to FSRS Again and Good), and FSRS sets the next review date. Two buttons is a deliberate choice: simpler than four.
-- The session shows cards due today, plus up to 10 new cards per day (adjustable).
+- The session shows cards due today, plus up to 10 new cards per day (adjustable), from User phrases and started preset categories. The user can narrow a session to one section.
 - Progress at the top: cards left in this session.
 - An optional reverse direction (target language on the front, listening only) for listening practice.
 - Every review is stored as its own record so history syncs safely across devices and future FSRS versions can recalculate schedules.
@@ -276,11 +327,11 @@ Flashcards use the FSRS spaced-repetition algorithm, which needs fewer reviews t
 
 ## Manage cards
 
-Manage cards lists every phrase in the current language, newest first, with search.
+Manage cards lists every phrase in the current language, newest first, with search. A section picker at the top switches between User phrases and each started preset category.
 
 - Each row: English, translation, romanization, level label; tap the play button to hear it.
 - Tap a row to open the full card, where the translation can be edited (audio regenerates) or re-translated.
-- Swipe left to delete, with Undo for a few seconds.
+- Swipe left to delete, with Undo for a few seconds. In a preset category, swipe hides the item from review instead; it can be restored.
 - **Delete all cards in this language:** a button at the bottom, confirmed by typing the language name, since it cannot be undone after 30 days.
 - Sort options: newest, oldest, A to Z, level.
 
@@ -304,6 +355,8 @@ Free users get 3 translations per day; Pro removes the limit. The limit and Pro 
 | --- | --- | --- |
 | Translations per day | 3 | Unlimited |
 | Suggested phrase batches | Counts as 1 translation per batch | Unlimited |
+| Clarifications | Up to 3 per phrase, not counted as translations | Unlimited |
+| Preset categories | All, unlimited | All, unlimited |
 | Audio recall and flashcards | Unlimited on saved phrases | Unlimited |
 | Languages | All four | All four |
 
@@ -317,13 +370,13 @@ The developer's own account is Pro by default through an allow-list of the devel
 
 ## Data model
 
-Six records cover the product; phrases and reviews are the core, everything else supports them.
+Six records cover the product; phrases and reviews are the core, everything else supports them. Preset content itself ships inside the app; a preset item becomes a Phrase record only when its category is started, so it can be reviewed and synced like any other.
 
 | Record | Key fields | Notes |
 | --- | --- | --- |
 | User | app transaction ID, entitlement (free / pro), developer override flag | Kept in the AI proxy, not iCloud; identifies the user without sign-in |
-| Language settings | user, language, register, set level override, daily new-card limit | One per user per language |
-| Phrase | id, user, language, English, translation, romanization, gloss, alternative, usage note, level, source (spoken / typed / suggested / imported), embedding, prompt version, created, updated, deleted at | The language field is what separates the sets |
+| Language settings | user, language, register, set level override, daily new-card limit, started preset categories | One per user per language |
+| Phrase | id, user, language, English, translation, romanization, gloss, alternative, usage note, level, source (spoken / typed / suggested / imported / preset), preset category and item key, preset content version, clarifications, hidden from review, embedding, prompt version, created, updated, deleted at | The language field separates the sets; the source and preset category separate User phrases from presets |
 | Audio | phrase, voice provider, voice id, audio file, word timings | Later release only (premium voices); not needed with Apple voices |
 | Review | phrase, reviewed at, rating, mode (flashcard / audio recall), FSRS state after review | Append-only; drives scheduling |
 | Usage | user, date, translations used | Kept in the AI proxy; enforces the free limit |
@@ -362,10 +415,10 @@ The new version ships as an update to the existing App Store app, so users, revi
 
 Build in five phases, testing the riskiest parts (voice quality and translation quality) before any UI polish.
 
-1. **Prove the core.** Pick the best Apple voices per language (male English, female target) and check slow and word-by-word playback; first version of the translation prompt and its evaluation set. Raise the minimum iOS version to 26.
+1. **Prove the core.** Pick the best Apple voices per language (male English, female target) and check slow and word-by-word playback; first version of the translation prompt and its evaluation set, including clarification cases. Raise the minimum iOS version to 26.
 2. **Foundations.** AI proxy (keys, App Attest, free limit), extended CloudKit schema, app skeleton with modules, design tokens, and the Claude Code setup (CLAUDE.md, build and test tools, skills).
-3. **Capture.** Home, New phrase (speak, type, suggest), result card, duplicate detection, levels, free limit and paywall.
-4. **Review.** Flashcards with FSRS, audio recall with background playback, Manage cards, Settings, reminders.
+3. **Capture.** Home, New phrase (speak, type, suggest), result card with Clarify, duplicate detection, levels, free limit and paywall.
+4. **Review.** Flashcards with FSRS, audio recall with background playback, Manage cards, preset categories (content reviewed per language), Settings, reminders.
 5. **Migrate and ship.** Schema upgrade for existing phrases, subscriber carry-over, TestFlight with a few learners per language, App Store update.
 
 **Open questions**
@@ -376,6 +429,9 @@ Build in five phases, testing the riskiest parts (voice quality and translation 
 - [ ] When to move to premium voices, and which provider per language.
 - [ ] Who reviews each language's evaluation set (a native tutor per language)?
 - [ ] Should audio recall also accept the learner's spoken answer and check it (later release)?
+- [x] Korean numbers: Numbers in Korean includes both systems as used day to day (see Language notes for numbers). Decided 2026-10-01.
+- [x] Months: not part of any category. Decided 2026-10-01.
+- [ ] More preset categories later (essential responses, pronouns and family, colours, directions)? Not now; revisit after release.
 
 * [ ] Users with phrases in a dropped language: a notice only, or also an export option?
 

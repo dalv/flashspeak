@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Home</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&amp;family=Noto+Sans+KR:wght@400;700&amp;family=Noto+Sans+SC:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+button{font:inherit}
+a{color:#C23B22}a:hover{color:#9A2E1A}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 62px 20px 34px; background: #F2F3F5; color: #15171C; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<h1 style="margin: 0; font-size: 34px; font-weight: 700; letter-spacing: -0.5px">FlashSpeak</h1>
+<button aria-label="Menu" style="width: 44px; height: 44px; border-radius: 22px; padding: 0; display: flex; align-items: center; justify-content: center; color: #15171C; background: rgba(255,255,255,0.6); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(255,255,255,0.9); box-shadow: 0 1px 2px rgba(20,22,28,0.06), 0 6px 20px rgba(20,22,28,0.08)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+</div>
+<div role="group" aria-label="Language" style="display: flex; gap: 4px; padding: 4px; border-radius: 24px; background: rgba(255,255,255,0.6); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(255,255,255,0.9); box-shadow: 0 1px 2px rgba(20,22,28,0.06), 0 6px 20px rgba(20,22,28,0.08)">
+<button aria-pressed="true" lang="zh-Hans" style="flex-grow: 1; height: 40px; border-radius: 20px; border: none; background: #C23B22; color: #FFFFFF; font-size: 15px; font-weight: 700; font-family: 'Noto Sans SC', sans-serif">中文</button>
+<button aria-pressed="false" lang="id" style="flex-grow: 1; height: 40px; border-radius: 20px; border: none; background: transparent; color: #15171C; font-size: 15px; font-weight: 600">Indonesia</button>
+<button aria-pressed="false" lang="ko" style="flex-grow: 1; height: 40px; border-radius: 20px; border: none; background: transparent; color: #15171C; font-size: 15px; font-weight: 700; font-family: 'Noto Sans KR', sans-serif">한국어</button>
+<button aria-pressed="false" lang="ja" style="flex-grow: 1; height: 40px; border-radius: 20px; border: none; background: transparent; color: #15171C; font-size: 15px; font-weight: 700; font-family: 'Noto Sans JP', sans-serif">日本語</button>
+</div>
+<button style="height: 300px; border: none; border-radius: 28px; padding: 24px; background: #C23B22; color: #FFFFFF; text-align: left; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 30px rgba(194,59,34,0.28)">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 30px; font-weight: 700; letter-spacing: -0.4px">New phrase</span>
+<span style="font-size: 17px; line-height: 1.35; color: #FFFFFF">Say it in English. Hear how a local would say it.</span>
+</div>
+<div style="display: flex; align-items: center; gap: 16px">
+<span style="width: 76px; height: 76px; border-radius: 38px; background: #FFFFFF; color: #C23B22; display: flex; align-items: center; justify-content: center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><path d="M12 18v3"></path></svg></span>
+<span style="font-size: 15px; line-height: 1.35; color: #FFFFFF">Or type it,<br>or get suggestions</span>
+</div>
+</button>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+<button style="height: 168px; border: none; border-radius: 24px; padding: 20px; background: #FFFFFF; color: #15171C; text-align: left; display: flex; flex-direction: column; justify-content: space-between">
+<span style="width: 44px; height: 44px; border-radius: 22px; background: #FBEAE6; color: #C23B22; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15v-3a8 8 0 0 1 16 0v3"></path><rect x="3" y="14" width="5" height="7" rx="2"></rect><rect x="16" y="14" width="5" height="7" rx="2"></rect></svg></span>
+<span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 18px; font-weight: 700">Audio recall</span><span style="font-size: 14px; color: #5B616E">148 phrases · hands-free</span></span>
+</button>
+<button style="height: 168px; border: none; border-radius: 24px; padding: 20px; background: #FFFFFF; color: #15171C; text-align: left; display: flex; flex-direction: column; justify-content: space-between">
+<span style="width: 44px; height: 44px; border-radius: 22px; background: #FBEAE6; color: #C23B22; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="14" height="14" rx="3"></rect><path d="M7 3h11a3 3 0 0 1 3 3v11"></path></svg></span>
+<span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 18px; font-weight: 700">Flashcards</span><span style="font-size: 14px; color: #5B616E"><span style="color: #C23B22; font-weight: 700">12</span> due today</span></span>
+</button>
+</div>
+<div style="flex-grow: 1"></div>
+<p style="margin: 0; text-align: center; font-size: 14px; color: #5B616E">2 of 3 free translations left today · <a href="Paywall.dc.html" style="font-weight: 700; text-decoration: none">Go Pro</a></p>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -179,8 +179,8 @@ No property or model is renamed or removed. Legacy fields stay in the schema eve
 
 | Field | Type | Default | Purpose |
 | --- | --- | --- | --- |
-| `id` | `UUID?` | `nil`, backfilled | Stable ID for sync and a future backend |
-| `source` | `String` | `"legacy"` | spoken / typed / suggested / imported / legacy |
+| `stableID` | `UUID?` | `nil`, backfilled | Stable ID for sync and a future backend. Named `stableID`, not `id`, so it doesn't replace SwiftData's own identity (`Identifiable`) |
+| `source` | `String` | `"legacy"` | spoken / typed / suggested / imported / preset / legacy |
 | `reading` | `String?` | `nil` | Kana reading for Japanese |
 | `glossData` | `Data?` | `nil` | JSON word pairs for the expandable gloss; `literalTranslation` stays as the plain string |
 | `alternative` | `String?` | `nil` | One alternative version |
@@ -196,12 +196,19 @@ No property or model is renamed or removed. Legacy fields stay in the schema eve
 | `fsrsLapses` | `Int` | `0` | |
 | `schedulerVersion` | `String?` | `nil` | FSRS parameters used |
 | `reviews` | `[ReviewLog]?` | `nil` | Optional inverse relationship |
+| `presetCategory` | `String?` | `nil` | Preset category ID ("numbers"); nil for user phrases |
+| `presetItemKey` | `String?` | `nil` | Stable key of the item in its category, so content updates can find the card |
+| `presetContentVersion` | `Int?` | `nil` | Content version the card was created or last updated from |
+| `clarificationsData` | `Data?` | `nil` | JSON `[Clarification]` (text, translation it replaced, date) |
+| `hiddenFromReview` | `Bool` | `false` | A preset item hidden from review without deleting it |
+
+A preset category counts as **started** when its items exist as Phrase records, and as **paused** when they are all hidden; no separate setting is stored, so the state syncs with the phrases. Typed accessors (`phraseSource`, `gloss`, `clarifications`, `cardState`) live in `Phrase+Values.swift`.
 
 `pronunciation` keeps holding the romanization, and `nextReviewAt` becomes the FSRS due date, so no field needs renaming. `easeFactor`, `interval` and `repetitions` stay but are no longer written.
 
 ### New `ReviewLog`
 
-`id: UUID?`, `phrase: Phrase?`, `reviewedAt: Date`, `rating: Int` (hard / easy), `mode: String` (flashcard / audioRecall), `stateAfter: Int?`, `stabilityAfter: Double?`, `difficultyAfter: Double?`, `dueAfter: Date?`, `schedulerVersion: String?`. Insert only, never edited, so offline reviews on two devices never overwrite each other. The phrase's FSRS fields are a cache that can be rebuilt from the log.
+`stableID: UUID?`, `phrase: Phrase?`, `reviewedAt: Date`, `rating: Int` (hard / easy), `mode: String` (flashcard / audioRecall), `stateAfter: Int?`, `stabilityAfter: Double?`, `difficultyAfter: Double?`, `dueAfter: Date?`, `schedulerVersion: String?`. Insert only, never edited, so offline reviews on two devices never overwrite each other. The phrase's FSRS fields are a cache that can be rebuilt from the log.
 
 ### Settings stay on the device
 
@@ -232,7 +239,7 @@ Risk: two devices may backfill different UUIDs for the same phrase before syncin
 ### Layout
 
 - Add `cloudflare-worker/wrangler.toml` (name, compatibility date, vars; the D1 binding comes later) and `package.json`, so `wrangler dev` works and the deployed configuration is recorded.
-- Split `src/index.js` into `router.js`, `languages.js`, `prompts/` (one file per version), `anthropic.js`, `auth.js`, `usage.js`.
+- `src/index.js` (router), `legacy.js` (the 1.x endpoint, unchanged), `languages.js`, `prompts/v1.js` (one file per version), `anthropic.js`, `v2/handlers.js`; `auth.js` and `usage.js` come with server-side limits. Handler tests run with `npm test` (no API calls).
 - `languages.js` holds the four languages (romanization spec, default register, level scale names) and must match `Language.allLanguages`.
 
 ### Endpoints
@@ -241,7 +248,8 @@ Risk: two devices may backfill different UUIDs for the same phrase before syncin
 | --- | --- |
 | `POST /` | **Legacy, unchanged**, so any installed old build keeps working ([0008](decisions/0008-keep-legacy-worker-endpoint.md)) |
 | `POST /v2/translate` | `{english, language, register?}` → translation |
-| `POST /v2/suggest` | `{language, category, level, existing: [english], count: 5}` → suggestions |
+| `POST /v2/clarify` | `{english, language, register, currentTargetText, currentRomanization, history: [{clarification, targetText}], clarification}` → `{explanation, keepsCurrent, candidates: [translation]}` (1–3 candidates) |
+| `POST /v2/suggest` | `{language, category, level, register, existing: [english], count: 5}` → `{phrases: [{english, translation}], promptVersion}` |
 | `POST /v2/flag` | Logs a bad-translation report |
 | `GET /v2/config` | Languages, current prompt version, free limit |
 
@@ -268,7 +276,7 @@ v2 translate response:
 
 - Prompts are versioned data on the server: per-language register rules from the PRD, the romanization spec, kana reading for Japanese, and the level scale. The version is returned with every result and stored on the phrase.
 - Structured output through a tool or JSON schema, replacing "return raw JSON", so a fenced reply can no longer fail the request.
-- Move from `claude-sonnet-4-20250514` to a current Sonnet, with `max_tokens` sized for the larger response.
+- v2 uses `claude-sonnet-5-5` with adaptive thinking at `low` effort, structured output through `output_config.format` (forced tool use returns a 400 on this model), and server-side `fallbacks: "default"` for safety declines ([0016](decisions/0016-worker-v2-model-settings.md)). The legacy endpoint keeps its old model, unchanged.
 - Later: `cloudflare-worker/evals/` runs the 50-phrase-per-language evaluation set against `wrangler dev` for every prompt change.
 
 ### Identity, limits and cost

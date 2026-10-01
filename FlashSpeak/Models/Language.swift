@@ -35,4 +35,13 @@ struct Language: Codable, Identifiable, Hashable {
     static func find(byCode code: String) -> Language? {
         allLanguages.first { $0.code == code }
     }
+
+    /// The four languages of the overhaul, in picker order. New code uses
+    /// only these; `allLanguages` remains for the legacy views until they go.
+    /// Must match `LANGUAGES` in the Worker's `languages.js`.
+    static let supportedCodes = ["zh-CN", "id", "ko", "ja"]
+
+    static let supported: [Language] = supportedCodes.compactMap(find(byCode:))
+
+    var isSupported: Bool { Self.supportedCodes.contains(code) }
 }

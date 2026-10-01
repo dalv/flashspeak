@@ -3,42 +3,31 @@ import SwiftData
 
 @main
 struct FlashSpeakApp: App {
-    @State private var navigateToPractice = false
-    
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Phrase.self,
-        ])
-        
-        let modelConfiguration = ModelConfiguration(
-            schema: schema,
-            isStoredInMemoryOnly: false,
-            cloudKitDatabase: .private("iCloud.com.vladtamas.FlashSpeak")
-        )
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+    @State private var dependencies: AppDependencies
 
     init() {
-        // Warm up TTS voice in background
+        FontRegistration.registerBundledFonts()
+        do {
+            let dependencies = try AppDependencies.live()
+            // Marks onboarding done for 1.x users who already have phrases.
+            _ = OnboardingModel.isNeeded(dependencies: dependencies)
+            _dependencies = State(initialValue: dependencies)
+        } catch {
+            fatalError("Could not open the phrase store: \(error)")
+        }
+
+        // Legacy: warm up TTS voice in background. Removed with the legacy views.
         TTSService.shared.warmUp()
-        
+
         // Set up notification delegate
         UNUserNotificationCenter.current().delegate = NotificationDelegate.shared
     }
 
     var body: some Scene {
         WindowGroup {
-            HomeView(navigateToPractice: $navigateToPractice)
-                .onReceive(NotificationCenter.default.publisher(for: .navigateToPractice)) { _ in
-                    navigateToPractice = true
-                }
+            RootView()
+                .dependencies(dependencies)
         }
-        .modelContainer(sharedModelContainer)
     }
 }
 

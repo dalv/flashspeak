@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Manage cards</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+button,input{font:inherit}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 62px 20px 34px; background: #F2F3F5; color: #15171C; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif; display: flex; flex-direction: column; gap: 14px; overflow: hidden">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<button aria-label="Back" style="width: 44px; height: 44px; border-radius: 22px; padding: 0; display: flex; align-items: center; justify-content: center; color: #15171C; background: rgba(255,255,255,0.6); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(255,255,255,0.9); box-shadow: 0 1px 2px rgba(20,22,28,0.06), 0 6px 20px rgba(20,22,28,0.08)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg></button>
+<button style="height: 44px; padding: 0 16px; border-radius: 22px; color: #15171C; font-size: 15px; font-weight: 600; background: rgba(255,255,255,0.6); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(255,255,255,0.9); box-shadow: 0 1px 2px rgba(20,22,28,0.06), 0 6px 20px rgba(20,22,28,0.08)">Newest first</button>
+</div>
+<div style="display: flex; align-items: baseline; gap: 10px">
+<h1 lang="zh-Hans" style="margin: 0; font-family: 'Noto Sans SC', sans-serif; font-size: 34px; font-weight: 700">中文</h1>
+<span style="font-size: 15px; color: #5B616E">148 phrases</span>
+</div>
+<div style="display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E3E5EA; color: #5B616E">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+<label for="search" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search phrases</label>
+<input id="search" type="search" placeholder="Search in English or Chinese" style="flex-grow: 1; border: none; outline: none; background: transparent; color: #15171C; font-size: 16px">
+</div>
+<div style="background: #FFFFFF; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column">
+<div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-bottom: 1px solid #EDEFF2">
+<div style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Can you say that one more time, slowly?</span><span style="font-size: 14px; color: #5B616E"><span lang="zh-Hans" style="font-family: 'Noto Sans SC', sans-serif; color: #15171C">你能再说一遍吗？慢一点。</span></span></div>
+<span style="padding: 2px 8px; border-radius: 10px; background: #FBEAE6; color: #A8321D; font-size: 12px; font-weight: 700">HSK 2</span>
+<button aria-label="Play" style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 18px; border: none; padding: 0; background: #FBEAE6; color: #C23B22; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"></path></svg></button>
+</div>
+<div style="display: flex; border-bottom: 1px solid #EDEFF2">
+<div style="flex-shrink: 0; width: 100%; margin-left: -88px; display: flex; align-items: center; gap: 12px; padding: 12px 14px; box-sizing: border-box; background: #FFFFFF">
+<div style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Where’s the bathroom?</span><span style="font-size: 14px; color: #5B616E"><span lang="zh-Hans" style="font-family: 'Noto Sans SC', sans-serif; color: #15171C">洗手间在哪儿？</span> xǐshǒujiān zài nǎr?</span></div>
+<span style="padding: 2px 8px; border-radius: 10px; background: #FBEAE6; color: #A8321D; font-size: 12px; font-weight: 700">HSK 2</span>
+</div>
+<button style="flex-shrink: 0; width: 88px; border: none; background: #B42318; color: #FFFFFF; font-size: 15px; font-weight: 700; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"></path></svg>Delete</button>
+</div>
+<div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-bottom: 1px solid #EDEFF2">
+<div style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">How much is this?</span><span style="font-size: 14px; color: #5B616E"><span lang="zh-Hans" style="font-family: 'Noto Sans SC', sans-serif; color: #15171C">这个多少钱？</span> zhège duōshao qián?</span></div>
+<span style="padding: 2px 8px; border-radius: 10px; background: #FBEAE6; color: #A8321D; font-size: 12px; font-weight: 700">HSK 1</span>
+<button aria-label="Play" style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 18px; border: none; padding: 0; background: #FBEAE6; color: #C23B22; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"></path></svg></button>
+</div>
+<div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-bottom: 1px solid #EDEFF2">
+<div style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">No spicy, please</span><span style="font-size: 14px; color: #5B616E"><span lang="zh-Hans" style="font-family: 'Noto Sans SC', sans-serif; color: #15171C">不要辣</span> bú yào là</span></div>
+<span style="padding: 2px 8px; border-radius: 10px; background: #FBEAE6; color: #A8321D; font-size: 12px; font-weight: 700">HSK 2</span>
+<button aria-label="Play" style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 18px; border: none; padding: 0; background: #FBEAE6; color: #C23B22; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"></path></svg></button>
+</div>
+<div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-bottom: 1px solid #EDEFF2">
+<div style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">I’m full</span><span style="font-size: 14px; color: #5B616E"><span lang="zh-Hans" style="font-family: 'Noto Sans SC', sans-serif; color: #15171C">我吃饱了</span> wǒ chī bǎo le</span></div>
+<span style="padding: 2px 8px; border-radius: 10px; background: #FBEAE6; color: #A8321D; font-size: 12px; font-weight: 700">HSK 2</span>
+<button aria-label="Play" style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 18px; border: none; padding: 0; background: #FBEAE6; color: #C23B22; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"></path></svg></button>
+</div>
+<div style="display: flex; align-items: center; gap: 12px; padding: 12px 14px">
+<div style="flex-grow: 1; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 700">Turn left</span><span style="font-size: 14px; color: #5B616E"><span lang="zh-Hans" style="font-family: 'Noto Sans SC', sans-serif; color: #15171C">左转</span> zuǒ zhuǎn</span></div>
+<span style="padding: 2px 8px; border-radius: 10px; background: #FBEAE6; color: #A8321D; font-size: 12px; font-weight: 700">HSK 2</span>
+<button aria-label="Play" style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 18px; border: none; padding: 0; background: #FBEAE6; color: #C23B22; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"></path></svg></button>
+</div>
+</div>
+<div style="flex-grow: 1"></div>
+<button style="height: 48px; border: none; background: transparent; color: #B42318; font-size: 16px; font-weight: 600">Delete all Mandarin phrases</button>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

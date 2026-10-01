@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Flashcard, front</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+button{font:inherit}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 62px 20px 34px; background: #F2F3F5; color: #15171C; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<button aria-label="End session" style="width: 44px; height: 44px; border-radius: 22px; padding: 0; display: flex; align-items: center; justify-content: center; color: #15171C; background: rgba(255,255,255,0.6); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(255,255,255,0.9); box-shadow: 0 1px 2px rgba(20,22,28,0.06), 0 6px 20px rgba(20,22,28,0.08)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+<div style="display: flex; flex-direction: column; align-items: center"><span style="font-size: 17px; font-weight: 700">Flashcards</span><span style="font-size: 13px; color: #5B616E"><span lang="ja" style="font-family: 'Noto Sans JP', sans-serif">日本語</span> · 8 left</span></div>
+<span style="width: 44px; height: 44px"></span>
+</div>
+<div style="height: 4px; border-radius: 2px; background: #E3E5EA"><div style="width: 33%; height: 4px; border-radius: 2px; background: #9B2F6B"></div></div>
+<button style="flex-grow: 1; border: none; border-radius: 32px; padding: 28px; background: #FFFFFF; color: #15171C; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; box-shadow: 0 10px 30px rgba(20,22,28,0.06)">
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 1px; color: #5B616E">ENGLISH</span>
+<span style="font-size: 30px; line-height: 1.25; font-weight: 700; letter-spacing: -0.3px">Could I get the check, please?</span>
+<span style="margin-top: 24px; font-size: 14px; color: #5B616E">Say it, then tap to flip</span>
+</button>
+<button style="height: 54px; border-radius: 27px; color: #15171C; font-size: 17px; font-weight: 700; background: rgba(255,255,255,0.6); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(255,255,255,0.9); box-shadow: 0 1px 2px rgba(20,22,28,0.06), 0 6px 20px rgba(20,22,28,0.08)">Show answer</button>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>FlashSpeak design tokens</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&amp;family=Noto+Sans+KR:wght@700&amp;family=Noto+Sans+SC:wght@700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 880px; height: 900px; box-sizing: border-box; padding: 40px; background: #FFFFFF; color: #15171C; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: -0.3px">FlashSpeak design tokens</h1>
+<p style="margin: 0; font-size: 15px; color: #5B616E">Calm, warm, focused. One accent per language; glass only on controls and navigation; content sits on solid white.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 13px; font-weight: 700; color: #5B616E">Neutrals</span>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="height: 48px; border-radius: 12px; background: #F2F3F5; border: 1px solid #E3E5EA"></span><span style="font-size: 12px; font-weight: 700">ground</span><span style="font-size: 12px; color: #5B616E">#F2F3F5</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="height: 48px; border-radius: 12px; background: #FFFFFF; border: 1px solid #E3E5EA"></span><span style="font-size: 12px; font-weight: 700">surface</span><span style="font-size: 12px; color: #5B616E">#FFFFFF</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="height: 48px; border-radius: 12px; background: #15171C"></span><span style="font-size: 12px; font-weight: 700">ink</span><span style="font-size: 12px; color: #5B616E">#15171C</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="height: 48px; border-radius: 12px; background: #5B616E"></span><span style="font-size: 12px; font-weight: 700">secondary</span><span style="font-size: 12px; color: #5B616E">#5B616E</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="height: 48px; border-radius: 12px; background: #E3E5EA"></span><span style="font-size: 12px; font-weight: 700">hairline</span><span style="font-size: 12px; color: #5B616E">#E3E5EA</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="height: 48px; border-radius: 12px; background: #0E1014"></span><span style="font-size: 12px; font-weight: 700">recall ground</span><span style="font-size: 12px; color: #5B616E">#0E1014</span></div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 13px; font-weight: 700; color: #5B616E">Language accents · main / tint / on dark</span>
+<div style="display: flex; align-items: center; gap: 10px"><span style="width: 92px; font-size: 14px; font-weight: 700">Mandarin</span><span style="width: 40px; height: 40px; border-radius: 10px; background: #C23B22"></span><span style="width: 40px; height: 40px; border-radius: 10px; background: #FBEAE6"></span><span style="width: 40px; height: 40px; border-radius: 10px; background: #F08A73"></span><span style="font-size: 12px; color: #5B616E">#C23B22 · #FBEAE6 · #F08A73</span></div>
+<div style="display: flex; align-items: center; gap: 10px"><span style="width: 92px; font-size: 14px; font-weight: 700">Indonesian</span><span style="width: 40px; height: 40px; border-radius: 10px; background: #0B7A6F"></span><span style="width: 40px; height: 40px; border-radius: 10px; background: #E3F2F0"></span><span style="width: 40px; height: 40px; border-radius: 10px; background: #6FD3C6"></span><span style="font-size: 12px; color: #5B616E">#0B7A6F · #E3F2F0 · #6FD3C6</span></div>
+<div style="display: flex; align-items: center; gap: 10px"><span style="width: 92px; font-size: 14px; font-weight: 700">Korean</span><span style="width: 40px; height: 40px; border-radius: 10px; background: #2B55C7"></span><span style="width: 40px; height: 40px; border-radius: 10px; background: #E7EDFA"></span><span style="width: 40px; height: 40px; border-radius: 10px; background: #8FA9F0"></span><span style="font-size: 12px; color: #5B616E">#2B55C7 · #E7EDFA · #8FA9F0</span></div>
+<div style="display: flex; align-items: center; gap: 10px"><span style="width: 92px; font-size: 14px; font-weight: 700">Japanese</span><span style="width: 40px; height: 40px; border-radius: 10px; background: #9B2F6B"></span><span style="width: 40px; height: 40px; border-radius: 10px; background: #F5E6EE"></span><span style="width: 40px; height: 40px; border-radius: 10px; background: #E08AB8"></span><span style="font-size: 12px; color: #5B616E">#9B2F6B · #F5E6EE · #E08AB8</span></div>
+<p style="margin: 0; font-size: 12px; color: #5B616E">Danger (delete): #B42318. White text on every main accent meets 4.5:1.</p>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 13px; font-weight: 700; color: #5B616E">Type · SF Pro for UI, Noto Sans SC / JP / KR for native script</span>
+<div style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid #EDEFF2; padding-bottom: 8px"><span style="font-size: 34px; font-weight: 700">Large title</span><span style="font-size: 12px; color: #5B616E">34 / bold</span></div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid #EDEFF2; padding-bottom: 8px"><span style="font-size: 28px; font-weight: 700">Title</span><span style="font-size: 12px; color: #5B616E">28 / bold</span></div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid #EDEFF2; padding-bottom: 8px"><span style="font-size: 34px; font-weight: 700"><span lang="zh-Hans" style="font-family: 'Noto Sans SC', sans-serif">你好</span> <span lang="ja" style="font-family: 'Noto Sans JP', sans-serif">こんにちは</span> <span lang="ko" style="font-family: 'Noto Sans KR', sans-serif">안녕</span></span><span style="font-size: 12px; color: #5B616E">native 34–42 / bold</span></div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid #EDEFF2; padding-bottom: 8px"><span style="font-size: 19px; color: #5B616E">nǐ hǎo · romanization</span><span style="font-size: 12px; color: #5B616E">19 / regular / secondary</span></div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; border-bottom: 1px solid #EDEFF2; padding-bottom: 8px"><span style="font-size: 17px">Body and English phrase</span><span style="font-size: 12px; color: #5B616E">17 / regular</span></div>
+<div style="display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 8px"><span style="font-size: 13px; font-weight: 700; color: #5B616E">Section label</span><span style="font-size: 12px; color: #5B616E">13 / bold / secondary</span></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 13px; font-weight: 700; color: #5B616E">Shape and spacing</span>
+<div style="display: flex; align-items: flex-end; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 4px; align-items: center"><span style="width: 64px; height: 64px; border-radius: 28px; background: #F2F3F5; border: 1px solid #E3E5EA"></span><span style="font-size: 12px; color: #5B616E">card 28–32</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px; align-items: center"><span style="width: 64px; height: 64px; border-radius: 20px; background: #F2F3F5; border: 1px solid #E3E5EA"></span><span style="font-size: 12px; color: #5B616E">list 18–20</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px; align-items: center"><span style="width: 64px; height: 44px; border-radius: 22px; background: #F2F3F5; border: 1px solid #E3E5EA"></span><span style="font-size: 12px; color: #5B616E">capsule</span></div>
+<div style="display: flex; flex-direction: column; gap: 4px; align-items: center"><span style="width: 64px; height: 44px; border-radius: 14px; background: #F2F3F5; border: 1px solid #E3E5EA"></span><span style="font-size: 12px; color: #5B616E">field 14</span></div>
+</div>
+<p style="margin: 0; font-size: 13px; line-height: 1.5; color: #15171C">Spacing steps 4 · 8 · 12 · 16 · 20 · 24 · 32. Screen padding 20. Touch targets at least 44. Primary actions 52–56 tall.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 13px; font-weight: 700; color: #5B616E">Rules</span>
+<p style="margin: 0; font-size: 13px; line-height: 1.5">Glass (native Liquid Glass) only on nav buttons, segmented controls and floating actions. Phrase cards, lists and flashcards are solid surface. One filled accent button per screen. Audio recall is always dark, huge type, nothing else on screen.</p>
+</div>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":880,"height":900}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

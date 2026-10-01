@@ -1,0 +1,10 @@
+# Local development: `npm run dev` (wrangler dev) with ANTHROPIC_API_KEY in .dev.vars.
+#
+# NOT YET USED FOR DEPLOYING. Before the first deploy from this file, confirm
+# that `name` matches the Worker that is live today (the app's APIConfig URL);
+# a different name would create a second Worker instead of updating it.
+# Never deploy without asking (CLAUDE.md).
+name = "flashspeak"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+compatibility_flags = ["nodejs_compat"]

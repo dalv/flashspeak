@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Suggest phrases, pick a situation</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+button,input{font:inherit}
+</style>
+</helmet>
+<div style="width: 390px; height: 1180px; box-sizing: border-box; padding: 62px 20px 34px; background: #F2F3F5; color: #15171C; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<button aria-label="Back" style="width: 44px; height: 44px; border-radius: 22px; padding: 0; display: flex; align-items: center; justify-content: center; color: #15171C; background: rgba(255,255,255,0.6); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(255,255,255,0.9); box-shadow: 0 1px 2px rgba(20,22,28,0.06), 0 6px 20px rgba(20,22,28,0.08)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg></button>
+<span style="font-size: 17px; font-weight: 700">Suggest phrases</span>
+<span style="width: 44px; height: 44px"></span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<h1 style="margin: 0; font-size: 28px; font-weight: 700; letter-spacing: -0.3px">Pick a situation</h1>
+<p style="margin: 0; font-size: 15px; color: #5B616E"><span lang="ko" style="font-family: 'Noto Sans KR', sans-serif">한국어</span> · at your level, TOPIK 1–2</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="own" style="font-size: 13px; font-weight: 700; color: #5B616E">Or describe your own</label>
+<input id="own" type="text" placeholder="e.g. at acro practice" style="height: 48px; box-sizing: border-box; padding: 0 16px; border-radius: 14px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 16px">
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 13px; font-weight: 700; color: #5B616E">Everyday</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Greetings and small talk</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Meeting someone at a party</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Talking about yourself</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Making plans with friends</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Texting and chat replies</button>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 13px; font-weight: 700; color: #5B616E">Out and about</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">At the grocery store</button>
+<button aria-pressed="true" style="padding: 9px 14px; border-radius: 18px; border: 1px solid #2B55C7; background: #E7EDFA; color: #2B55C7; font-size: 15px; font-weight: 700">At a café or restaurant</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">At the market</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Directions</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Taxi or ride-hail</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Public transport</button>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 13px; font-weight: 700; color: #5B616E">Services</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Pharmacy or doctor</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Bank or ATM</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Phone and SIM card</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Hair salon</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">A repair person</button>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 13px; font-weight: 700; color: #5B616E">Places</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">At the gym</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Hotel or guesthouse</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Renting an apartment</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">At the airport</button>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 13px; font-weight: 700; color: #5B616E">Social</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Compliments and thanks</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Apologising</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Asking for help</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Agreeing and disagreeing</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">“One more time, slowly”</button>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 13px; font-weight: 700; color: #5B616E">Emergencies</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Lost items</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Feeling unwell</button>
+<button style="padding: 9px 14px; border-radius: 18px; border: 1px solid #E3E5EA; background: #FFFFFF; color: #15171C; font-size: 15px">Police or ambulance</button>
+</div>
+</div>
+<div style="flex-grow: 1"></div>
+<button style="height: 54px; border-radius: 27px; border: none; background: #2B55C7; color: #FFFFFF; font-size: 17px; font-weight: 700">Suggest 5 phrases</button>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1180}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

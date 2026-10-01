@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Result card</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+button{font:inherit}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 62px 20px 34px; background: #F2F3F5; color: #15171C; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<button aria-label="Back" style="width: 44px; height: 44px; border-radius: 22px; padding: 0; display: flex; align-items: center; justify-content: center; color: #15171C; background: rgba(255,255,255,0.6); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(255,255,255,0.9); box-shadow: 0 1px 2px rgba(20,22,28,0.06), 0 6px 20px rgba(20,22,28,0.08)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg></button>
+<span style="font-size: 17px; font-weight: 700">New phrase</span>
+<button aria-label="Report a bad translation" style="width: 44px; height: 44px; border-radius: 22px; padding: 0; display: flex; align-items: center; justify-content: center; color: #5B616E; background: rgba(255,255,255,0.6); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(255,255,255,0.9); box-shadow: 0 1px 2px rgba(20,22,28,0.06), 0 6px 20px rgba(20,22,28,0.08)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4"></path><path d="M5 4h11l-2 4 2 4H5"></path></svg></button>
+</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.35; color: #5B616E">“Can you say that one more time, slowly?”</p>
+<div style="background: #FFFFFF; border-radius: 28px; padding: 20px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; gap: 8px">
+<span style="padding: 4px 10px; border-radius: 12px; background: #FBEAE6; color: #A8321D; font-size: 13px; font-weight: 700">HSK 2</span>
+<span style="padding: 4px 10px; border-radius: 12px; background: #F2F3F5; color: #5B616E; font-size: 13px; font-weight: 600">Casual</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<p lang="zh-Hans" style="margin: 0; font-family: 'Noto Sans SC', sans-serif; font-size: 34px; line-height: 1.3; font-weight: 700">你能再说一遍吗？慢一点。</p>
+<p style="margin: 0; font-size: 19px; color: #5B616E">Nǐ néng zài shuō yí biàn ma? Màn yìdiǎn.</p>
+</div>
+<div style="display: flex; align-items: center; gap: 12px">
+<button aria-label="Play" style="width: 52px; height: 52px; flex-shrink: 0; border-radius: 26px; border: none; padding: 0; background: #C23B22; color: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"></path></svg></button>
+<div role="group" aria-label="Speed" style="flex-grow: 1; display: flex; gap: 2px; padding: 3px; border-radius: 20px; background: #F2F3F5">
+<button aria-pressed="false" style="flex-grow: 1; height: 36px; border-radius: 18px; border: none; background: transparent; color: #5B616E; font-size: 14px; font-weight: 600">Natural</button>
+<button aria-pressed="true" style="flex-grow: 1; height: 36px; border-radius: 18px; border: none; background: #FFFFFF; color: #15171C; font-size: 14px; font-weight: 700; box-shadow: 0 1px 3px rgba(20,22,28,0.12)">Slow</button>
+<button aria-pressed="false" style="flex-grow: 1; height: 36px; border-radius: 18px; border: none; background: transparent; color: #5B616E; font-size: 14px; font-weight: 600">Word by word</button>
+</div>
+</div>
+<div style="height: 1px; background: #E3E5EA"></div>
+<span style="font-size: 13px; font-weight: 700; color: #5B616E">Tap a word to hear it</span>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px">
+<button style="border: none; border-radius: 12px; padding: 8px 6px; background: #F7F8FA; color: #15171C; display: flex; flex-direction: column; align-items: center; gap: 2px"><span lang="zh-Hans" style="font-family: 'Noto Sans SC', sans-serif; font-size: 20px; font-weight: 700">你</span><span style="font-size: 12px; color: #5B616E">nǐ</span><span style="font-size: 12px">you</span></button>
+<button style="border: none; border-radius: 12px; padding: 8px 6px; background: #F7F8FA; color: #15171C; display: flex; flex-direction: column; align-items: center; gap: 2px"><span lang="zh-Hans" style="font-family: 'Noto Sans SC', sans-serif; font-size: 20px; font-weight: 700">能</span><span style="font-size: 12px; color: #5B616E">néng</span><span style="font-size: 12px">can</span></button>
+<button style="border: none; border-radius: 12px; padding: 8px 6px; background: #FBEAE6; color: #15171C; display: flex; flex-direction: column; align-items: center; gap: 2px; box-shadow: inset 0 0 0 2px #C23B22"><span lang="zh-Hans" style="font-family: 'Noto Sans SC', sans-serif; font-size: 20px; font-weight: 700">再</span><span style="font-size: 12px; color: #5B616E">zài</span><span style="font-size: 12px">again</span></button>
+<button style="border: none; border-radius: 12px; padding: 8px 6px; background: #F7F8FA; color: #15171C; display: flex; flex-direction: column; align-items: center; gap: 2px"><span lang="zh-Hans" style="font-family: 'Noto Sans SC', sans-serif; font-size: 20px; font-weight: 700">说</span><span style="font-size: 12px; color: #5B616E">shuō</span><span style="font-size: 12px">say</span></button>
+<button style="border: none; border-radius: 12px; padding: 8px 6px; background: #F7F8FA; color: #15171C; display: flex; flex-direction: column; align-items: center; gap: 2px"><span lang="zh-Hans" style="font-family: 'Noto Sans SC', sans-serif; font-size: 20px; font-weight: 700">一遍</span><span style="font-size: 12px; color: #5B616E">yí biàn</span><span style="font-size: 12px">one time</span></button>
+<button style="border: none; border-radius: 12px; padding: 8px 6px; background: #F7F8FA; color: #15171C; display: flex; flex-direction: column; align-items: center; gap: 2px"><span lang="zh-Hans" style="font-family: 'Noto Sans SC', sans-serif; font-size: 20px; font-weight: 700">吗</span><span style="font-size: 12px; color: #5B616E">ma</span><span style="font-size: 12px">(question)</span></button>
+<button style="border: none; border-radius: 12px; padding: 8px 6px; background: #F7F8FA; color: #15171C; display: flex; flex-direction: column; align-items: center; gap: 2px"><span lang="zh-Hans" style="font-family: 'Noto Sans SC', sans-serif; font-size: 20px; font-weight: 700">慢</span><span style="font-size: 12px; color: #5B616E">màn</span><span style="font-size: 12px">slow</span></button>
+<button style="border: none; border-radius: 12px; padding: 8px 6px; background: #F7F8FA; color: #15171C; display: flex; flex-direction: column; align-items: center; gap: 2px"><span lang="zh-Hans" style="font-family: 'Noto Sans SC', sans-serif; font-size: 20px; font-weight: 700">一点</span><span style="font-size: 12px; color: #5B616E">yìdiǎn</span><span style="font-size: 12px">a bit</span></button>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.4; color: #5B616E">More casual: <span lang="zh-Hans" style="font-family: 'Noto Sans SC', sans-serif; color: #15171C">再说一遍？慢点儿。</span></p>
+</div>
+<div style="flex-grow: 1"></div>
+<div style="display: flex; gap: 10px">
+<button style="height: 52px; padding: 0 18px; border-radius: 26px; color: #15171C; font-size: 16px; font-weight: 600; background: rgba(255,255,255,0.6); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(255,255,255,0.9); box-shadow: 0 1px 2px rgba(20,22,28,0.06), 0 6px 20px rgba(20,22,28,0.08)">Discard</button>
+<button style="height: 52px; padding: 0 18px; border-radius: 26px; color: #15171C; font-size: 16px; font-weight: 600; display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.6); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(255,255,255,0.9); box-shadow: 0 1px 2px rgba(20,22,28,0.06), 0 6px 20px rgba(20,22,28,0.08)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.34-5.66"></path><path d="M20 4v5h-5"></path></svg>Retry</button>
+<button style="flex-grow: 1; height: 52px; border-radius: 26px; border: none; background: #C23B22; color: #FFFFFF; font-size: 17px; font-weight: 700">Save</button>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
