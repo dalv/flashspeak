@@ -67,7 +67,7 @@ struct HomeScreen: View {
                 }
             }
             .navigationDestination(for: HomeRoute.self) { route in
-                ComingSoonView(route: route)
+                destination(for: route)
             }
         }
         .languageTheme(model.theme)
@@ -76,6 +76,18 @@ struct HomeScreen: View {
                 .languageTheme(model.theme)
         }
         .onAppear { model.refresh() }
+    }
+
+    @ViewBuilder
+    private func destination(for route: HomeRoute) -> some View {
+        switch route {
+        case .flashcards:
+            FlashcardsScreen(dependencies: model.dependencies) {
+                path = [.audioRecall]
+            }
+        default:
+            ComingSoonView(route: route)
+        }
     }
 
     private func openNewPhrase() {

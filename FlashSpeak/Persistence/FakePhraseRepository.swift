@@ -26,4 +26,8 @@ final class FakeReviewRepository: ReviewRepository {
     nonisolated init() {}
 
     func append(_: ReviewLog) throws {}
+
+    func newCardsIntroduced(in _: String, since _: Date) throws -> Int {
+        0
+    }
 }

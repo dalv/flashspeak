@@ -8,8 +8,8 @@ Status values: Not started · In progress · Done
 | --- | --- |
 | 1. Prove the core | Not started |
 | 2. Foundations | In progress |
-| 3. Capture | In progress |
-| 4. Review | Not started |
+| 3. Capture | Done |
+| 4. Review | In progress |
 | 5. Migrate and ship | Not started |
 
 ## 1. Prove the core
@@ -35,14 +35,17 @@ Status: In progress
 
 ## 3. Capture
 
-Status: In progress (Part A built; at Checkpoint A)
+Status: Done (Parts A and B built; awaiting your review on device)
 
-- [x] Home (Audio recall, Flashcards and the menu open placeholders until Milestone 3)
-- [~] New phrase: speak and type done; suggest in Part B
+- [x] Home
+- [x] New phrase: speak, type and suggest
 - [x] Result card, with Clarify ([0017](decisions/0017-clarify-and-capture-layout.md))
-- [ ] Duplicate detection
-- [ ] Levels
-- [ ] Free limit and paywall
+- [x] Duplicate detection (exact and near, on-device embeddings)
+- [x] Levels (per-phrase level, set level from the last 50)
+- [x] Free limit and paywall
+- [x] Onboarding (first language)
+- [x] Checkpoint 1: real translations and clarifications from the local Worker in all four languages (2026-10-01)
+- [ ] Audio not heard in the simulator; check voices and sound on a device
 
 ## 4. Review
 

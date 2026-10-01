@@ -4,7 +4,8 @@
     /// DEBUG only: opens one screen in a given state with preview data, for
     /// screenshots. Launch with `-demo <name> [-demoLanguage <code>]`.
     /// Names: home, onboarding, paywall, speak, listening, type, suggest,
-/// suggested, result, clarify, clarifyReply, duplicate.
+    /// suggested, result, clarify, clarifyReply, duplicate, flashcards,
+    /// flashcardBack, caughtUp.
     struct DemoScreen: View {
         let name: String
         let languageCode: String
@@ -12,6 +13,7 @@
         @State private var dependencies = AppDependencies.preview()
         @State private var newPhrase: NewPhraseModel?
         @State private var clarify: ClarifyModel?
+        @State private var flashcards: FlashcardsModel?
 
         static var requested: (name: String, language: String)? {
             let defaults = UserDefaults.standard
@@ -38,6 +40,10 @@
                 case "clarify", "clarifyReply":
                     if let clarify {
                         ClarifySheet(model: clarify)
+                    }
+                case "flashcards", "flashcardBack", "caughtUp":
+                    if let flashcards {
+                        NavigationStack { FlashcardsScreen(model: flashcards) }
                     }
                 default:
                     if let newPhrase {
@@ -66,6 +72,19 @@
                     model.typedText = "it was something like dai cha"
                     await model.send()
                 }
+            case "flashcards", "flashcardBack", "caughtUp":
+                let model = FlashcardsModel(dependencies: dependencies)
+                model.load()
+                if name == "flashcardBack" {
+                    model.flip()
+                }
+                if name == "caughtUp" {
+                    while !model.isFinished {
+                        model.flip()
+                        model.rate(.easy)
+                    }
+                }
+                flashcards = model
             default:
                 let model = NewPhraseModel(dependencies: dependencies)
                 if name == "type" {

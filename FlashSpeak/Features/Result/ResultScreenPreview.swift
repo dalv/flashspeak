@@ -13,7 +13,7 @@ struct ResultScreenPreview: View {
 
     var body: some View {
         NavigationStack {
-            if let model, let dependencies {
+            if let model, dependencies != nil {
                 ResultScreen(model: model, onDiscard: {}, onSaved: {})
             } else {
                 ProgressView()

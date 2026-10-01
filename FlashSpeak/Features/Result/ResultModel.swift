@@ -117,21 +117,9 @@ final class ResultModel: Identifiable, Hashable {
         }
     }
 
-    /// Maps a spoken range to the gloss word that contains it.
     private func highlight(_ range: Range<String.Index>, in text: String) {
-        let offset = text.distance(from: text.startIndex, to: range.lowerBound)
-        var position = 0
-        for (index, pair) in current.gloss.enumerated() {
-            guard let found = text.range(of: pair.target, range: text.index(text.startIndex, offsetBy: position) ..< text.endIndex) else {
-                continue
-            }
-            let start = text.distance(from: text.startIndex, to: found.lowerBound)
-            let end = text.distance(from: text.startIndex, to: found.upperBound)
-            if offset >= start, offset < end {
-                highlightedWord = index
-                return
-            }
-            position = end
+        if let index = GlossHighlighter.index(of: range, in: text, gloss: current.gloss) {
+            highlightedWord = index
         }
     }
 
