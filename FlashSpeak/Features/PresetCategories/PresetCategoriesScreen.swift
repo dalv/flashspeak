@@ -54,42 +54,6 @@ struct PresetCategoriesScreen: View {
     }
 }
 
-/// Every card in one category, playable, with the status button.
-struct PresetCategoryDetail: View {
-    let category: PresetCategoryContent
-    let model: PresetCategoriesModel
-
-    var body: some View {
-        List {
-            Section {
-                ForEach(category.items) { item in
-                    PhraseRow(item.content, isPlaying: model.playingKey == item.key) {
-                        model.play(item)
-                    }
-                }
-            } header: {
-                Text("\(category.items.count) cards")
-                    .appTextStyle(.sectionLabel)
-                    .foregroundStyle(DS.Color.inkSecondary)
-            }
-            .dsListRows()
-        }
-        .dsGroupedList()
-        .safeAreaBar(edge: .bottom) {
-            PresetStatusButton(
-                status: model.status(of: category),
-                onStart: { model.start(category) },
-                onPause: { model.pause(category) }
-            )
-            .padding(.horizontal, DS.Spacing.screenPadding)
-            .padding(.vertical, DS.Spacing.s)
-        }
-        .navigationTitle(category.title)
-        .navigationBarTitleDisplayMode(.inline)
-        .onDisappear(perform: model.stopPlayback)
-    }
-}
-
 #Preview("Mandarin", traits: .modifier(DesignSystemPreview())) {
     let dependencies = AppDependencies.preview()
     NavigationStack { PresetCategoriesScreen(dependencies: dependencies) }

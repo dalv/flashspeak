@@ -90,7 +90,7 @@ final class ManageCardsModel {
         }
         rows = all.filter { phrase in
             [phrase.englishText, phrase.targetText, phrase.pronunciation, phrase.reading ?? ""]
-                .contains { $0.range(of: query, options: [.caseInsensitive, .diacriticInsensitive]) != nil }
+                .contains { $0.localizedStandardContains(query) }
         }
     }
 

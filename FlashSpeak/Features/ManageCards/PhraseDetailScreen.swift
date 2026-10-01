@@ -83,10 +83,10 @@ struct PhraseDetailScreen: View {
                 }
                 .tint(DS.Color.ink)
                 .disabled(phrase.isPreset)
+                .confirmationDialog("Delete this phrase?", isPresented: $confirmsDelete, titleVisibility: .visible) {
+                    Button("Delete", role: .destructive, action: onDelete)
+                }
             }
-        }
-        .confirmationDialog("Delete this phrase?", isPresented: $confirmsDelete, titleVisibility: .visible) {
-            Button("Delete", role: .destructive, action: onDelete)
         }
         .sheet(item: $clarify) { clarify in
             ClarifySheet(model: clarify)
@@ -104,29 +104,6 @@ struct PhraseDetailScreen: View {
     /// After a manual edit, start from the edited text.
     private func reloadModel() {
         model = ResultModel(editing: phrase, dependencies: dependencies)
-    }
-}
-
-/// When the card is next due and how often it was reviewed.
-private struct ReviewSummary: View {
-    let phrase: Phrase
-
-    var body: some View {
-        let reviews = phrase.reviews?.count ?? 0
-        VStack(alignment: .leading, spacing: DS.Spacing.xxs) {
-            if phrase.hiddenFromReview {
-                Text("Hidden from review")
-            } else if reviews == 0 {
-                Text("New card, not reviewed yet")
-            } else {
-                Text("Next review \(phrase.nextReviewAt.formatted(.relative(presentation: .named)))")
-                Text(reviews == 1 ? "Reviewed once" : "Reviewed \(reviews) times")
-            }
-            Text("Added \(phrase.createdAt.formatted(date: .abbreviated, time: .omitted))")
-        }
-        .appTextStyle(.footnote)
-        .foregroundStyle(DS.Color.inkSecondary)
-        .padding(.top, DS.Spacing.s)
     }
 }
 

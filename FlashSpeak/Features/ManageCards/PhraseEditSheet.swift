@@ -10,6 +10,7 @@ struct PhraseEditSheet: View {
     @State private var romanization: String
     @State private var reading: String
     @State private var usageNote: String
+    @State private var saveFailed = false
     @Environment(\.dismiss) private var dismiss
     @Environment(\.languageTheme) private var theme
 
@@ -41,6 +42,11 @@ struct PhraseEditSheet: View {
                 }
                 Section("Usage note") {
                     TextField("Optional", text: $usageNote, axis: .vertical)
+                }
+                if saveFailed {
+                    Text("Couldn't save the change. Try again.")
+                        .appTextStyle(.secondary)
+                        .foregroundStyle(DS.Color.danger)
                 }
             }
             .dsGroupedList()
@@ -78,8 +84,12 @@ struct PhraseEditSheet: View {
         phrase.reading = reading.trimmed.isEmpty ? nil : reading.trimmed
         phrase.usageNote = usageNote.trimmed.isEmpty ? nil : usageNote.trimmed
         phrase.updatedAt = .now
-        try? dependencies.phrases.save()
-        dismiss()
+        do {
+            try dependencies.phrases.save()
+            dismiss()
+        } catch {
+            saveFailed = true
+        }
     }
 }
 

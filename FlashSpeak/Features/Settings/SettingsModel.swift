@@ -7,6 +7,10 @@ import Observation
 @Observable
 final class SettingsModel {
     private(set) var reminderDenied = false
+    /// The reminder switch; turning it on asks for permission first.
+    var wantsReminder: Bool
+    /// The level suggestions use now, from recent phrases.
+    private(set) var automaticLevel = SetLevel.range.lowerBound
     private(set) var restoreMessage: String?
     private(set) var isRestoring = false
 
@@ -14,6 +18,13 @@ final class SettingsModel {
 
     init(dependencies: AppDependencies) {
         self.dependencies = dependencies
+        wantsReminder = dependencies.settings.reminderEnabled
+    }
+
+    /// Reads values that need a store fetch. Call when the screen appears.
+    func refresh() {
+        let phrases = (try? dependencies.phrases.phrases(in: languageCode, section: .userPhrases, sort: .newest)) ?? []
+        automaticLevel = SetLevel.current(levels: phrases.map(\.level), override: nil)
     }
 
     private var settings: any SettingsStore {
@@ -26,6 +37,7 @@ final class SettingsModel {
         get { settings.currentLanguageCode }
         set {
             settings.currentLanguageCode = newValue
+            refresh()
             Task { await ReminderPlanner(dependencies: dependencies).reschedule() }
         }
     }
@@ -43,12 +55,6 @@ final class SettingsModel {
     var levelOverride: Int? {
         get { settings.settings(for: languageCode).levelOverride }
         set { updateLanguage { $0.levelOverride = newValue } }
-    }
-
-    /// The level suggestions use now, from recent phrases or the override.
-    var automaticLevel: Int {
-        let phrases = (try? dependencies.phrases.phrases(in: languageCode, section: .userPhrases, sort: .newest)) ?? []
-        return SetLevel.current(levels: phrases.map(\.level), override: nil)
     }
 
     func levelLabel(_ level: Int) -> String {
@@ -114,11 +120,13 @@ final class SettingsModel {
             guard await dependencies.reminders.requestAuthorization() else {
                 reminderDenied = true
                 settings.reminderEnabled = false
+                wantsReminder = false
                 return
             }
         }
         reminderDenied = false
         settings.reminderEnabled = enabled
+        wantsReminder = enabled
         await ReminderPlanner(dependencies: dependencies).reschedule()
     }
 
@@ -185,5 +193,6 @@ final class SettingsModel {
         }
         dependencies.reminders.cancel()
         settings.reminderEnabled = false
+        wantsReminder = false
     }
 }

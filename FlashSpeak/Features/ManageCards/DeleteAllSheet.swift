@@ -26,9 +26,9 @@ struct DeleteAllSheet: View {
                         .autocorrectionDisabled()
                         .appTextStyle(.body)
                         .padding(DS.Spacing.s)
-                        .background(DS.Color.surface, in: .rect(cornerRadius: DS.Radius.field))
-                        .overlay {
+                        .background {
                             RoundedRectangle(cornerRadius: DS.Radius.field)
+                                .fill(DS.Color.surface)
                                 .strokeBorder(DS.Color.controlBorder, lineWidth: DS.Size.hairlineWidth)
                         }
                 }

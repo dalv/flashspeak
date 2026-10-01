@@ -130,12 +130,14 @@ struct ManageCardsScreen: View {
         .accessibilityHint(phrase.hiddenFromReview ? "Hidden from review" : "")
     }
 
+    @ViewBuilder
     private var emptyRow: some View {
-        Text(model.searchText.isEmpty ? "No phrases here yet." : "No phrases match “\(model.searchText)”.")
-            .appTextStyle(.secondary)
-            .foregroundStyle(DS.Color.inkSecondary)
-            .frame(maxWidth: .infinity, alignment: .center)
-            .padding(.vertical, DS.Spacing.l)
+        if model.searchText.isEmpty {
+            ContentUnavailableView("No phrases here yet", systemImage: "rectangle.on.rectangle")
+                .foregroundStyle(DS.Color.inkSecondary)
+        } else {
+            ContentUnavailableView.search
+        }
     }
 
     private var countText: String {
@@ -146,27 +148,6 @@ struct ManageCardsScreen: View {
             return hidden > 0 ? "\(shown) \(noun) · \(hidden) hidden" : "\(shown) \(noun)"
         }
         return "\(shown) \(noun)"
-    }
-}
-
-/// "Phrase deleted · Undo", shown for a few seconds after a delete.
-private struct UndoBar: View {
-    let onUndo: () -> Void
-
-    var body: some View {
-        HStack {
-            Text("Phrase deleted")
-                .appTextStyle(.subheadline)
-                .foregroundStyle(DS.Color.ink)
-            Spacer()
-            Button("Undo", action: onUndo)
-                .buttonStyle(.inline)
-        }
-        .padding(.horizontal, DS.Spacing.m)
-        .frame(minHeight: DS.Size.minTouch + DS.Spacing.xs)
-        .glassEffect(.regular, in: .capsule)
-        .padding(.horizontal, DS.Spacing.screenPadding)
-        .padding(.bottom, DS.Spacing.xs)
     }
 }
 
