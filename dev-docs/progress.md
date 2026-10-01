@@ -9,7 +9,7 @@ Status values: Not started · In progress · Done
 | 1. Prove the core | Not started |
 | 2. Foundations | In progress |
 | 3. Capture | Done |
-| 4. Review | In progress |
+| 4. Review | Done (device test pending) |
 | 5. Migrate and ship | Not started |
 
 ## 1. Prove the core
@@ -49,13 +49,16 @@ Status: Done (Parts A and B built; awaiting your review on device)
 
 ## 4. Review
 
-Status: Not started
+Status: Done in the simulator (2026-10-01); device test pending
 
-- [ ] Flashcards with FSRS
-- [ ] Audio recall with background playback
-- [ ] Manage cards
-- [ ] Settings
-- [ ] Reminders
+- [x] Flashcards with FSRS: Hard/Easy with next-interval labels, Hard repeats in the session, daily new-card limit, listening-first option, "All caught up" ([0005](decisions/0005-two-button-fsrs.md), [0021](decisions/0021-phase-4-interpretations.md))
+- [x] Audio recall with background playback: setup, hands-free session, lock screen controls, interruptions, summary; practice only ([0019](decisions/0019-audio-recall-is-practice-only.md))
+- [x] Manage cards: sections, search, sort, delete with Undo, hide presets, delete all, full card with Clarify, another version and edit
+- [x] Preset categories: five categories in four languages, start/pause, corrections by content version ([0015](decisions/0015-preset-categories.md), [0018](decisions/0018-preset-content-generated-then-reviewed.md))
+- [ ] Preset content checked by a native reviewer per language (generated, `reviewed: false`; doubtful items listed in 0018)
+- [x] Settings: language, register, level, new cards per day, playback and recall options, better-voices tip, Pro and restore, CSV export ([0020](decisions/0020-export-as-csv.md)), delete all, DEBUG free-user switch
+- [x] Reminders: daily notification with a phrase to recall; tapping it opens Flashcards
+- [ ] On a device: voices and sound (silent in the simulator), audio recall with the screen locked, lock screen controls, calls and headphones, reminders, microphone
 
 ## 5. Migrate and ship
 
@@ -68,9 +71,9 @@ Status: Not started
 
 ## Next steps
 
-- **Checkpoint A (Milestone 2):** review Home, New phrase, Result and Clarify. DEBUG launch arguments: `-demo home|speak|listening|type|result|clarify|clarifyReply` with `-demoLanguage zh-CN|id|ko|ja` open a screen with sample data; `-legacyUI` opens the old app.
-- Then Part B: duplicates, Suggest, Paywall, Onboarding.
-- **Checkpoint 1:** run the Worker with a key (`cloudflare-worker/.dev.vars`) and review real translations and clarifications in all four languages.
-
+- **Your review** of the Phase 4 screens and the choices in [0021](decisions/0021-phase-4-interpretations.md). DEBUG launch arguments open any screen with sample data: `-demo <name>` with `-demoLanguage zh-CN|id|ko|ja`. Names: home, onboarding, paywall, speak, listening, type, suggest, suggested, result, duplicate, clarify, clarifyReply, flashcards, flashcardBack, caughtUp, recall, recallThinking, recallAnswer, manage, card, presets, presetDetail, settings. `-legacyUI` opens the old app; `-localWorker` uses `wrangler dev` for real translations.
+- **Device test** (the list under Phase 4).
+- **Native review** of the preset content and the translation evaluation set.
+- **Phase 1 leftovers:** pick the best Apple voices per language, check slow and word-by-word playback on a device, the 50-phrase evaluation set.
+- **Phase 5:** CloudKit on (after the membership renewal), migration on real 1.x data, subscriber carry-over, delete the legacy code once you confirm, Worker deploy (with your go-ahead), TestFlight.
 - Review the component gallery (light, dark, accessibility text) and the proposed dark palette.
-- Start Phase 1.
