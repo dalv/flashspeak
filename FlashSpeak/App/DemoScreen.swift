@@ -6,7 +6,7 @@
     /// Names: home, onboarding, paywall, speak, listening, type, suggest,
     /// suggested, result, clarify, clarifyReply, duplicate, flashcards,
     /// flashcardBack, caughtUp, recall, recallThinking, recallAnswer, manage,
-    /// card, presets, presetDetail.
+    /// card, presets, presetDetail, settings.
     struct DemoScreen: View {
         let name: String
         let languageCode: String
@@ -60,6 +60,8 @@
                     if let recall {
                         NavigationStack { AudioRecallScreen(model: recall) }
                     }
+                case "settings":
+                    NavigationStack { SettingsScreen(dependencies: dependencies) }
                 case "presets":
                     NavigationStack { PresetCategoriesScreen(dependencies: dependencies) }
                 case "presetDetail":

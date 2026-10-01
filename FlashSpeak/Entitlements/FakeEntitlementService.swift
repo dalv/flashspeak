@@ -21,4 +21,11 @@ final class FakeEntitlementService: EntitlementService {
     }
 
     func restore() async throws {}
+
+    #if DEBUG
+        var debugForceFree: Bool {
+            get { !isPro }
+            set { isPro = !newValue }
+        }
+    #endif
 }

@@ -8,6 +8,11 @@ protocol EntitlementService: AnyObject {
     /// - Returns: true if the purchase completed and Pro is now active.
     func purchase(_ product: Product) async throws -> Bool
     func restore() async throws
+
+    #if DEBUG
+        /// DEBUG only: act as a free user, to test the paywall and limits.
+        var debugForceFree: Bool { get set }
+    #endif
 }
 
 /// The App Store products. These are the 1.0 app's IDs (also in

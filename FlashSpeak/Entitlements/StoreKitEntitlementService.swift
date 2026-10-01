@@ -4,16 +4,20 @@ import StoreKit
 
 /// `EntitlementService` on StoreKit 2.
 ///
-/// DEBUG builds are Pro unless launched with `-forceFree`, so the paywall
-/// and free limit can be tested (CLAUDE.md).
+/// DEBUG builds are Pro unless launched with `-forceFree` or switched to
+/// Free in Settings, so the paywall and free limit can be tested (CLAUDE.md).
 @MainActor
 @Observable
 final class StoreKitEntitlementService: EntitlementService {
     private(set) var hasActiveEntitlement = false
 
+    #if DEBUG
+        var debugForceFree = CommandLine.arguments.contains("-forceFree")
+    #endif
+
     var isPro: Bool {
         #if DEBUG
-            return !CommandLine.arguments.contains("-forceFree") || hasActiveEntitlement
+            return !debugForceFree || hasActiveEntitlement
         #else
             return hasActiveEntitlement
         #endif

@@ -1,4 +1,4 @@
-/// Screens pushed from Home. Those built in Milestone 3 show a placeholder until then.
+/// Screens pushed from Home.
 enum HomeRoute: Hashable {
     case audioRecall
     case flashcards

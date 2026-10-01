@@ -41,6 +41,11 @@ final class HomeModel {
         dueCount = (try? dependencies.phrases.due(in: code, section: .all, now: now, newLimit: limit).count) ?? 0
     }
 
+    /// Reschedules the daily reminder with a fresh phrase to recall.
+    func refreshReminder() async {
+        await ReminderPlanner(dependencies: dependencies).reschedule()
+    }
+
     func makeNewPhrase() -> NewPhraseModel {
         NewPhraseModel(dependencies: dependencies)
     }

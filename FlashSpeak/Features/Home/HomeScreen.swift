@@ -82,6 +82,11 @@ struct HomeScreen: View {
                 .languageTheme(model.theme)
         }
         .onAppear { model.refresh() }
+        .task { await model.refreshReminder() }
+        .onReceive(NotificationCenter.default.publisher(for: .navigateToPractice)) { _ in
+            newPhrase = nil
+            path = [.flashcards]
+        }
     }
 
     @ViewBuilder
@@ -91,14 +96,14 @@ struct HomeScreen: View {
             FlashcardsScreen(dependencies: model.dependencies) {
                 path = [.audioRecall]
             }
+        case .settings:
+            SettingsScreen(dependencies: model.dependencies)
         case .audioRecall:
             AudioRecallScreen(dependencies: model.dependencies)
         case .manageCards:
             ManageCardsScreen(dependencies: model.dependencies)
         case .presetCategories:
             PresetCategoriesScreen(dependencies: model.dependencies)
-        default:
-            ComingSoonView(route: route)
         }
     }
 

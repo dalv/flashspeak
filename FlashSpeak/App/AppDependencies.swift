@@ -20,6 +20,7 @@ struct AppDependencies {
     let usage: any UsageService
     let embeddings: any EmbeddingProvider
     let presets: PresetCatalog
+    let reminders: any ReminderScheduler
 
     var presetLibrary: PresetLibrary {
         PresetLibrary(catalog: presets, phrases: phrases)
@@ -53,7 +54,8 @@ struct AppDependencies {
             entitlements: entitlements,
             usage: LocalUsageService { entitlements.isPro },
             embeddings: NLSentenceEmbeddingProvider(),
-            presets: presets
+            presets: presets,
+            reminders: NotificationReminderScheduler()
         )
     }
 
@@ -78,7 +80,8 @@ struct AppDependencies {
             entitlements: entitlements,
             usage: LocalUsageService(defaults: defaults) { entitlements.isPro },
             embeddings: NLSentenceEmbeddingProvider(),
-            presets: .bundled()
+            presets: .bundled(),
+            reminders: FakeReminderScheduler()
         )
     }
 
@@ -102,7 +105,8 @@ struct AppDependencies {
             entitlements: entitlements,
             usage: LocalUsageService(defaults: defaults) { entitlements.isPro },
             embeddings: FakeEmbeddingProvider(),
-            presets: presets
+            presets: presets,
+            reminders: FakeReminderScheduler()
         )
     }
 }
