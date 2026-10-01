@@ -3,6 +3,10 @@ import Observation
 
 /// One translated phrase on the result card, before it is saved: playback,
 /// another version, clarifications with a way back, flagging and saving.
+///
+/// With `editing`, it works on a saved phrase (the full card in Manage
+/// cards): each new version is written to that phrase straight away, and
+/// its schedule and review history are kept.
 @MainActor
 @Observable
 final class ResultModel: Identifiable, Hashable {
@@ -26,7 +30,9 @@ final class ResultModel: Identifiable, Hashable {
     let languageCode: String
     let register: Register
     /// Identifies this phrase for the per-phrase clarification limit.
-    let sessionKey = UUID().uuidString
+    let sessionKey: String
+    /// The saved phrase being changed, if any.
+    let editing: Phrase?
 
     private(set) var current: TranslationResult
     /// Earlier versions, most recent last; "Back to previous version" pops one.
@@ -54,6 +60,34 @@ final class ResultModel: Identifiable, Hashable {
         languageCode = dependencies.settings.currentLanguageCode
         register = dependencies.settings.settings(for: languageCode).register
         speed = dependencies.settings.defaultSpeed
+        sessionKey = UUID().uuidString
+        editing = nil
+        refreshDuplicateCheck()
+    }
+
+    /// Works on a saved phrase.
+    init(editing phrase: Phrase, dependencies: AppDependencies) {
+        english = phrase.englishText
+        source = phrase.phraseSource
+        languageCode = phrase.languageCode
+        register = dependencies.settings.settings(for: phrase.languageCode).register
+        speed = dependencies.settings.defaultSpeed
+        sessionKey = phrase.stableID?.uuidString ?? UUID().uuidString
+        editing = phrase
+        current = TranslationResult(
+            targetText: phrase.targetText,
+            romanization: phrase.pronunciation.isEmpty ? nil : phrase.pronunciation,
+            reading: phrase.reading,
+            gloss: phrase.gloss,
+            literal: phrase.literalTranslation,
+            alternative: phrase.alternative,
+            usageNote: phrase.usageNote,
+            level: phrase.level,
+            promptVersion: phrase.promptVersion ?? ""
+        )
+        clarifications = phrase.clarifications
+        saveState = .saved
+        self.dependencies = dependencies
         refreshDuplicateCheck()
     }
 
@@ -64,7 +98,8 @@ final class ResultModel: Identifiable, Hashable {
     }
 
     func refreshDuplicateCheck() {
-        let existing = (try? dependencies.phrases.phrases(in: languageCode, section: .all, sort: .newest)) ?? []
+        let existing = ((try? dependencies.phrases.phrases(in: languageCode, section: .all, sort: .newest)) ?? [])
+            .filter { $0 !== editing }
         duplicate = DuplicateDetector(embeddings: dependencies.embeddings)
             .check(english: english, target: current.targetText, among: existing)
     }
@@ -150,6 +185,7 @@ final class ResultModel: Identifiable, Hashable {
     /// Records a clarification that kept the current translation.
     func recordKept(clarification: String) {
         clarifications.append(Clarification(text: clarification, previousTargetText: current.targetText, date: .now))
+        persistEdit()
     }
 
     func backToPreviousVersion() {
@@ -158,6 +194,7 @@ final class ResultModel: Identifiable, Hashable {
         current = previous
         refreshDuplicateCheck()
         highlightedWord = nil
+        persistEdit()
     }
 
     private func replaceCurrent(with next: TranslationResult) {
@@ -166,7 +203,30 @@ final class ResultModel: Identifiable, Hashable {
         current = next
         refreshDuplicateCheck()
         highlightedWord = nil
+        persistEdit()
         playIfAutoPlay()
+    }
+
+    /// Writes the current version to the saved phrase being edited. The
+    /// FSRS fields and reviews are left alone.
+    private func persistEdit(now: Date = .now) {
+        guard let phrase = editing else { return }
+        phrase.targetText = current.targetText
+        phrase.pronunciation = current.romanization ?? ""
+        phrase.reading = current.reading
+        phrase.gloss = current.gloss
+        phrase.literalTranslation = current.literal
+        phrase.alternative = current.alternative
+        phrase.usageNote = current.usageNote
+        phrase.level = current.level
+        phrase.promptVersion = current.promptVersion
+        phrase.clarifications = clarifications
+        phrase.updatedAt = now
+        do {
+            try dependencies.phrases.save()
+        } catch {
+            saveState = .failed("Couldn't save the change. Try again.")
+        }
     }
 
     /// The history sent with the next clarification, oldest first.
@@ -186,7 +246,7 @@ final class ResultModel: Identifiable, Hashable {
     }
 
     func save() {
-        guard saveState != .saved, canSave else { return }
+        guard editing == nil, saveState != .saved, canSave else { return }
         saveState = .saving
         dependencies.speech.stop()
         do {

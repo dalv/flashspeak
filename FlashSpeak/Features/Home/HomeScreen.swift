@@ -87,6 +87,8 @@ struct HomeScreen: View {
             }
         case .audioRecall:
             AudioRecallScreen(dependencies: model.dependencies)
+        case .manageCards:
+            ManageCardsScreen(dependencies: model.dependencies)
         default:
             ComingSoonView(route: route)
         }

@@ -24,13 +24,16 @@ struct AppDependencies {
     static func live() throws -> AppDependencies {
         let container = try ModelContainer.app()
         try MigrationRunner.runIfNeeded(context: container.mainContext)
+        let phrases = SwiftDataPhraseRepository(context: container.mainContext)
+        // Deleted phrases can be recovered for 30 days (PRD, Manage cards).
+        try? phrases.purgeDeleted(olderThan: .now.addingTimeInterval(-30 * 86400))
 
         let audioSession = SystemAudioSessionCoordinator()
         let voices = AppleVoiceCatalog()
         let entitlements = StoreKitEntitlementService()
         return AppDependencies(
             modelContainer: container,
-            phrases: SwiftDataPhraseRepository(context: container.mainContext),
+            phrases: phrases,
             reviews: SwiftDataReviewRepository(context: container.mainContext),
             scheduler: FSRSScheduler(),
             translation: WorkerEndpoint.liveClient(),

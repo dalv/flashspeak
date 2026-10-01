@@ -16,6 +16,7 @@ final class FakePhraseRepository: PhraseRepository {
 
     func insert(_: Phrase) throws {}
     func softDelete(_: Phrase, at _: Date) throws {}
+    func restore(_: Phrase) throws {}
     func purgeDeleted(olderThan _: Date) throws {}
     func save() throws {}
 }

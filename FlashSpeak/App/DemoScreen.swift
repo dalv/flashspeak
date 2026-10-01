@@ -5,7 +5,8 @@
     /// screenshots. Launch with `-demo <name> [-demoLanguage <code>]`.
     /// Names: home, onboarding, paywall, speak, listening, type, suggest,
     /// suggested, result, clarify, clarifyReply, duplicate, flashcards,
-    /// flashcardBack, caughtUp, recall, recallThinking, recallAnswer.
+    /// flashcardBack, caughtUp, recall, recallThinking, recallAnswer, manage,
+    /// card.
     struct DemoScreen: View {
         let name: String
         let languageCode: String
@@ -49,6 +50,12 @@
                 case "recall", "recallThinking", "recallAnswer":
                     if let recall {
                         NavigationStack { AudioRecallScreen(model: recall) }
+                    }
+                case "manage":
+                    NavigationStack { ManageCardsScreen(dependencies: dependencies) }
+                case "card":
+                    if let phrase = try? dependencies.phrases.phrases(in: languageCode, section: .all, sort: .newest).first {
+                        NavigationStack { PhraseDetailScreen(phrase: phrase, dependencies: dependencies) {} }
                     }
                 default:
                     if let newPhrase {

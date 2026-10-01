@@ -42,6 +42,12 @@ final class SwiftDataPhraseRepository: PhraseRepository {
         try context.save()
     }
 
+    func restore(_ phrase: Phrase) throws {
+        phrase.deletedAt = nil
+        phrase.updatedAt = .now
+        try context.save()
+    }
+
     func purgeDeleted(olderThan date: Date) throws {
         let descriptor = FetchDescriptor<Phrase>(predicate: #Predicate { phrase in
             phrase.deletedAt != nil

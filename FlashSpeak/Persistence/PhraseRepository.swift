@@ -10,6 +10,8 @@ protocol PhraseRepository {
     func due(in languageCode: String, section: PhraseSection, now: Date, newLimit: Int) throws -> [Phrase]
     func insert(_ phrase: Phrase) throws
     func softDelete(_ phrase: Phrase, at date: Date) throws
+    /// Undoes a soft delete.
+    func restore(_ phrase: Phrase) throws
     func purgeDeleted(olderThan date: Date) throws
     func save() throws
 }
