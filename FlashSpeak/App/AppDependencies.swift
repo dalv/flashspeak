@@ -19,6 +19,11 @@ struct AppDependencies {
     let entitlements: any EntitlementService
     let usage: any UsageService
     let embeddings: any EmbeddingProvider
+    let presets: PresetCatalog
+
+    var presetLibrary: PresetLibrary {
+        PresetLibrary(catalog: presets, phrases: phrases)
+    }
 
     /// The real app. Throws if the store can't open.
     static func live() throws -> AppDependencies {
@@ -27,6 +32,8 @@ struct AppDependencies {
         let phrases = SwiftDataPhraseRepository(context: container.mainContext)
         // Deleted phrases can be recovered for 30 days (PRD, Manage cards).
         try? phrases.purgeDeleted(olderThan: .now.addingTimeInterval(-30 * 86400))
+        let presets = PresetCatalog.bundled()
+        try? PresetLibrary(catalog: presets, phrases: phrases).applyCorrections()
 
         let audioSession = SystemAudioSessionCoordinator()
         let voices = AppleVoiceCatalog()
@@ -45,7 +52,8 @@ struct AppDependencies {
             settings: UserDefaultsSettingsStore(),
             entitlements: entitlements,
             usage: LocalUsageService { entitlements.isPro },
-            embeddings: NLSentenceEmbeddingProvider()
+            embeddings: NLSentenceEmbeddingProvider(),
+            presets: presets
         )
     }
 
@@ -69,12 +77,13 @@ struct AppDependencies {
             settings: UserDefaultsSettingsStore(defaults: defaults),
             entitlements: entitlements,
             usage: LocalUsageService(defaults: defaults) { entitlements.isPro },
-            embeddings: NLSentenceEmbeddingProvider()
+            embeddings: NLSentenceEmbeddingProvider(),
+            presets: .bundled()
         )
     }
 
     /// Like `preview`, but with no delays and an empty store.
-    static func test() -> AppDependencies {
+    static func test(presets: PresetCatalog = .empty) -> AppDependencies {
         let container = ModelContainer.inMemory()
         let defaults = UserDefaults(suiteName: "test-\(UUID().uuidString)") ?? .standard
         let entitlements = FakeEntitlementService()
@@ -92,7 +101,8 @@ struct AppDependencies {
             settings: UserDefaultsSettingsStore(defaults: defaults),
             entitlements: entitlements,
             usage: LocalUsageService(defaults: defaults) { entitlements.isPro },
-            embeddings: FakeEmbeddingProvider()
+            embeddings: FakeEmbeddingProvider(),
+            presets: presets
         )
     }
 }

@@ -1,0 +1,1753 @@
+{
+  "language": "zh-CN",
+  "contentVersion": 1,
+  "reviewed": false,
+  "promptVersion": "2026-10.1",
+  "model": "claude-sonnet-5-5",
+  "generatedAt": "2026-10-01",
+  "categories": [
+    {
+      "id": "numbers",
+      "items": [
+        {
+          "key": "1",
+          "english": "1",
+          "targetText": "一",
+          "romanization": "yī",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "一",
+              "romanization": "yī",
+              "english": "one"
+            }
+          ],
+          "literal": "one",
+          "usageNote": "In phone numbers, room numbers and similar digit strings, 1 is usually said as \"yāo\" instead of \"yī\" to avoid confusion with seven (qī).",
+          "level": 1
+        },
+        {
+          "key": "2",
+          "english": "2",
+          "targetText": "二",
+          "romanization": "èr",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "二",
+              "romanization": "èr",
+              "english": "two"
+            }
+          ],
+          "literal": "two",
+          "usageNote": "二 is the counting form; before a measure word use 两 instead, as in 两个 (liǎng gè).",
+          "level": 1
+        },
+        {
+          "key": "3",
+          "english": "3",
+          "targetText": "三",
+          "romanization": "sān",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "三",
+              "romanization": "sān",
+              "english": "three"
+            }
+          ],
+          "literal": "three",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "4",
+          "english": "4",
+          "targetText": "四",
+          "romanization": "sì",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "四",
+              "romanization": "sì",
+              "english": "four"
+            }
+          ],
+          "literal": "four",
+          "usageNote": "Don't mix up sì (four, 4th tone) with shí (ten); the tones and the tongue position differ. Four is also considered unlucky because it sounds like 死 (sǐ, death).",
+          "level": 1
+        },
+        {
+          "key": "5",
+          "english": "5",
+          "targetText": "五",
+          "romanization": "wǔ",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "五",
+              "romanization": "wǔ",
+              "english": "five"
+            }
+          ],
+          "literal": "five",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "6",
+          "english": "6",
+          "targetText": "六",
+          "romanization": "liù",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "六",
+              "romanization": "liù",
+              "english": "six"
+            }
+          ],
+          "literal": "six",
+          "usageNote": "In phone numbers and room numbers, 六 is always said as liù, never changed; the tone stays falling.",
+          "level": 1
+        },
+        {
+          "key": "7",
+          "english": "7",
+          "targetText": "七",
+          "romanization": "qī",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "七",
+              "romanization": "qī",
+              "english": "seven"
+            }
+          ],
+          "literal": "seven",
+          "usageNote": "When reading out phone numbers or room numbers, 七 is sometimes said as \"guǎi\" (拐) to avoid confusion with 一 (yāo).",
+          "level": 1
+        },
+        {
+          "key": "8",
+          "english": "8",
+          "targetText": "八",
+          "romanization": "bā",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "八",
+              "romanization": "bā",
+              "english": "eight"
+            }
+          ],
+          "literal": "eight",
+          "usageNote": "Considered a very lucky number in Chinese culture because it sounds like 发 (fā, \"to get rich\").",
+          "level": 1
+        },
+        {
+          "key": "9",
+          "english": "9",
+          "targetText": "九",
+          "romanization": "jiǔ",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "九",
+              "romanization": "jiǔ",
+              "english": "nine"
+            }
+          ],
+          "literal": "nine",
+          "usageNote": "When reading out phone numbers or room numbers, 九 stays \"jiǔ\"; it sounds like 久 (long-lasting), so it is considered a lucky number.",
+          "level": 1
+        },
+        {
+          "key": "10",
+          "english": "10",
+          "targetText": "十",
+          "romanization": "shí",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "十",
+              "romanization": "shí",
+              "english": "ten"
+            }
+          ],
+          "literal": "ten",
+          "usageNote": "When ordering by hand gesture or on the phone, people often hold up crossed index fingers to show 10 since the character 十 is a cross shape.",
+          "level": 1
+        },
+        {
+          "key": "11",
+          "english": "11",
+          "targetText": "十一",
+          "romanization": "shíyī",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "十",
+              "romanization": "shí",
+              "english": "ten"
+            },
+            {
+              "target": "一",
+              "romanization": "yī",
+              "english": "one"
+            }
+          ],
+          "literal": "ten-one",
+          "usageNote": "Eleven is just \"ten\" plus \"one\"; when reading a phone number or room number aloud, 一 is often said as \"yāo\" instead.",
+          "level": 1
+        },
+        {
+          "key": "12",
+          "english": "12",
+          "targetText": "十二",
+          "romanization": "shí èr",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "十",
+              "romanization": "shí",
+              "english": "ten"
+            },
+            {
+              "target": "二",
+              "romanization": "èr",
+              "english": "two"
+            }
+          ],
+          "literal": "ten two",
+          "usageNote": "Use 二 (èr) here, not 两 (liǎng), since 十二 is a fixed number; 两 is for counting things, like 两个.",
+          "level": 1
+        },
+        {
+          "key": "13",
+          "english": "13",
+          "targetText": "十三",
+          "romanization": "shísān",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "十",
+              "romanization": "shí",
+              "english": "ten"
+            },
+            {
+              "target": "三",
+              "romanization": "sān",
+              "english": "three"
+            }
+          ],
+          "literal": "ten-three",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "14",
+          "english": "14",
+          "targetText": "十四",
+          "romanization": "shí sì",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "十",
+              "romanization": "shí",
+              "english": "ten"
+            },
+            {
+              "target": "四",
+              "romanization": "sì",
+              "english": "four"
+            }
+          ],
+          "literal": "ten four",
+          "usageNote": "Be careful to distinguish shí sì (14) from sì shí (40) and shí shì; the tones and order matter.",
+          "level": 1
+        },
+        {
+          "key": "15",
+          "english": "15",
+          "targetText": "十五",
+          "romanization": "shíwǔ",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "十",
+              "romanization": "shí",
+              "english": "ten"
+            },
+            {
+              "target": "五",
+              "romanization": "wǔ",
+              "english": "five"
+            }
+          ],
+          "literal": "ten five",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "16",
+          "english": "16",
+          "targetText": "十六",
+          "romanization": "shíliù",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "十六",
+              "romanization": "shíliù",
+              "english": "sixteen"
+            }
+          ],
+          "literal": "ten-six",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "17",
+          "english": "17",
+          "targetText": "十七",
+          "romanization": "shí qī",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "十",
+              "romanization": "shí",
+              "english": "ten"
+            },
+            {
+              "target": "七",
+              "romanization": "qī",
+              "english": "seven"
+            }
+          ],
+          "literal": "ten seven",
+          "usageNote": "When giving a phone number or room number, 7 is often said as \"guǎi\" in some places, but \"qī\" is always safe for 17.",
+          "level": 1
+        },
+        {
+          "key": "18",
+          "english": "18",
+          "targetText": "十八",
+          "romanization": "shíbā",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "十",
+              "romanization": "shí",
+              "english": "ten"
+            },
+            {
+              "target": "八",
+              "romanization": "bā",
+              "english": "eight"
+            }
+          ],
+          "literal": "ten eight",
+          "usageNote": "Eight (八) is considered lucky, so 18 is a popular number in prices and phone numbers.",
+          "level": 1
+        },
+        {
+          "key": "19",
+          "english": "19",
+          "targetText": "十九",
+          "romanization": "shíjiǔ",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "十",
+              "romanization": "shí",
+              "english": "ten"
+            },
+            {
+              "target": "九",
+              "romanization": "jiǔ",
+              "english": "nine"
+            }
+          ],
+          "literal": "ten nine",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "20",
+          "english": "20",
+          "targetText": "二十",
+          "romanization": "èr shí",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "二",
+              "romanization": "èr",
+              "english": "two"
+            },
+            {
+              "target": "十",
+              "romanization": "shí",
+              "english": "ten"
+            }
+          ],
+          "literal": "two ten",
+          "usageNote": "Say 二十 (not 两十) for 20; in speech you may hear 廿 (niàn) only in writing or dialects, so stick with 二十.",
+          "level": 1
+        },
+        {
+          "key": "21",
+          "english": "21",
+          "targetText": "二十一",
+          "romanization": "èr shí yī",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "二",
+              "romanization": "èr",
+              "english": "two"
+            },
+            {
+              "target": "十",
+              "romanization": "shí",
+              "english": "ten"
+            },
+            {
+              "target": "一",
+              "romanization": "yī",
+              "english": "one"
+            }
+          ],
+          "literal": "two ten one",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "22",
+          "english": "22",
+          "targetText": "二十二",
+          "romanization": "èrshí'èr",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "二十",
+              "romanization": "èrshí",
+              "english": "twenty"
+            },
+            {
+              "target": "二",
+              "romanization": "èr",
+              "english": "two"
+            }
+          ],
+          "literal": "two-ten two",
+          "usageNote": "Use 二 (èr), not 两 (liǎng), in each position of this number; 两 is only for counting things, like 两个.",
+          "level": 1
+        },
+        {
+          "key": "23",
+          "english": "23",
+          "targetText": "二十三",
+          "romanization": "èr shí sān",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "二",
+              "romanization": "èr",
+              "english": "two"
+            },
+            {
+              "target": "十",
+              "romanization": "shí",
+              "english": "ten"
+            },
+            {
+              "target": "三",
+              "romanization": "sān",
+              "english": "three"
+            }
+          ],
+          "literal": "two ten three",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "34",
+          "english": "34",
+          "targetText": "三十四",
+          "romanization": "sān shí sì",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "三十",
+              "romanization": "sān shí",
+              "english": "thirty"
+            },
+            {
+              "target": "四",
+              "romanization": "sì",
+              "english": "four"
+            }
+          ],
+          "literal": "three-ten four",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "45",
+          "english": "45",
+          "targetText": "四十五",
+          "romanization": "sìshíwǔ",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "四",
+              "romanization": "sì",
+              "english": "four"
+            },
+            {
+              "target": "十",
+              "romanization": "shí",
+              "english": "ten"
+            },
+            {
+              "target": "五",
+              "romanization": "wǔ",
+              "english": "five"
+            }
+          ],
+          "literal": "four ten five",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "56",
+          "english": "56",
+          "targetText": "五十六",
+          "romanization": "wǔshíliù",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "五十六",
+              "romanization": "wǔshíliù",
+              "english": "fifty-six"
+            }
+          ],
+          "literal": "five ten six",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "67",
+          "english": "67",
+          "targetText": "六十七",
+          "romanization": "liù shí qī",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "六",
+              "romanization": "liù",
+              "english": "six"
+            },
+            {
+              "target": "十",
+              "romanization": "shí",
+              "english": "ten"
+            },
+            {
+              "target": "七",
+              "romanization": "qī",
+              "english": "seven"
+            }
+          ],
+          "literal": "six ten seven",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "78",
+          "english": "78",
+          "targetText": "七十八",
+          "romanization": "qīshíbā",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "七",
+              "romanization": "qī",
+              "english": "seven"
+            },
+            {
+              "target": "十",
+              "romanization": "shí",
+              "english": "ten"
+            },
+            {
+              "target": "八",
+              "romanization": "bā",
+              "english": "eight"
+            }
+          ],
+          "literal": "seven ten eight",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "89",
+          "english": "89",
+          "targetText": "八十九",
+          "romanization": "bā shí jiǔ",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "八",
+              "romanization": "bā",
+              "english": "eight"
+            },
+            {
+              "target": "十",
+              "romanization": "shí",
+              "english": "ten"
+            },
+            {
+              "target": "九",
+              "romanization": "jiǔ",
+              "english": "nine"
+            }
+          ],
+          "literal": "eight ten nine",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "95",
+          "english": "95",
+          "targetText": "九十五",
+          "romanization": "jiǔshíwǔ",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "九",
+              "romanization": "jiǔ",
+              "english": "nine"
+            },
+            {
+              "target": "十",
+              "romanization": "shí",
+              "english": "ten"
+            },
+            {
+              "target": "五",
+              "romanization": "wǔ",
+              "english": "five"
+            }
+          ],
+          "literal": "nine ten five",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "100",
+          "english": "100",
+          "targetText": "一百",
+          "romanization": "yì bǎi",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "一",
+              "romanization": "yì",
+              "english": "one"
+            },
+            {
+              "target": "百",
+              "romanization": "bǎi",
+              "english": "hundred"
+            }
+          ],
+          "literal": "one hundred",
+          "usageNote": "Say 一百 (yì bǎi) on its own; 一 is kept before 百, and it also appears in bigger numbers like 一百二 (120).",
+          "level": 1
+        },
+        {
+          "key": "115",
+          "english": "115",
+          "targetText": "一百一十五",
+          "romanization": "yì bǎi yī shí wǔ",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "一百",
+              "romanization": "yì bǎi",
+              "english": "one hundred"
+            },
+            {
+              "target": "一十",
+              "romanization": "yī shí",
+              "english": "ten (one-ten)"
+            },
+            {
+              "target": "五",
+              "romanization": "wǔ",
+              "english": "five"
+            }
+          ],
+          "literal": "one hundred one ten five",
+          "usageNote": "In 115, the 一 before 十 is usually kept in speech (一百一十五), though 一百十五 is also heard.",
+          "level": 2
+        },
+        {
+          "key": "250",
+          "english": "250",
+          "targetText": "两百五十",
+          "romanization": "liǎng bǎi wǔshí",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "两",
+              "romanization": "liǎng",
+              "english": "two"
+            },
+            {
+              "target": "百",
+              "romanization": "bǎi",
+              "english": "hundred"
+            },
+            {
+              "target": "五十",
+              "romanization": "wǔshí",
+              "english": "fifty"
+            }
+          ],
+          "literal": "two hundred five-ten",
+          "usageNote": "In casual speech, 两百五 is common for prices, but 二百五 alone is also slang for a fool, so be careful with it.",
+          "level": 2
+        },
+        {
+          "key": "275",
+          "english": "275",
+          "targetText": "两百七十五",
+          "romanization": "liǎng bǎi qīshíwǔ",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "两",
+              "romanization": "liǎng",
+              "english": "two"
+            },
+            {
+              "target": "百",
+              "romanization": "bǎi",
+              "english": "hundred"
+            },
+            {
+              "target": "七十五",
+              "romanization": "qīshíwǔ",
+              "english": "seventy-five"
+            }
+          ],
+          "literal": "two hundred seventy-five",
+          "usageNote": "In everyday speech 两百 is more common than 二百 for 200 at the start of a number.",
+          "level": 2
+        },
+        {
+          "key": "500",
+          "english": "500",
+          "targetText": "五百",
+          "romanization": "wǔ bǎi",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "五",
+              "romanization": "wǔ",
+              "english": "five"
+            },
+            {
+              "target": "百",
+              "romanization": "bǎi",
+              "english": "hundred"
+            }
+          ],
+          "literal": "five hundred",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "750",
+          "english": "750",
+          "targetText": "七百五十",
+          "romanization": "qī bǎi wǔ shí",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "七",
+              "romanization": "qī",
+              "english": "seven"
+            },
+            {
+              "target": "百",
+              "romanization": "bǎi",
+              "english": "hundred"
+            },
+            {
+              "target": "五",
+              "romanization": "wǔ",
+              "english": "five"
+            },
+            {
+              "target": "十",
+              "romanization": "shí",
+              "english": "ten"
+            }
+          ],
+          "literal": "seven hundred five ten",
+          "usageNote": "In everyday speech, the final 十 is often dropped: 七百五 is very common, especially with prices.",
+          "level": 2
+        },
+        {
+          "key": "945",
+          "english": "945",
+          "targetText": "九百四十五",
+          "romanization": "jiǔ bǎi sì shí wǔ",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "九百",
+              "romanization": "jiǔ bǎi",
+              "english": "nine hundred"
+            },
+            {
+              "target": "四十",
+              "romanization": "sì shí",
+              "english": "forty"
+            },
+            {
+              "target": "五",
+              "romanization": "wǔ",
+              "english": "five"
+            }
+          ],
+          "literal": "nine hundred four-ten five",
+          "usageNote": null,
+          "level": 2
+        },
+        {
+          "key": "1000",
+          "english": "1000",
+          "targetText": "一千",
+          "romanization": "yì qiān",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "一",
+              "romanization": "yì",
+              "english": "one"
+            },
+            {
+              "target": "千",
+              "romanization": "qiān",
+              "english": "thousand"
+            }
+          ],
+          "literal": "one thousand",
+          "usageNote": "In 1000 the 一 is kept (一千), and it is pronounced yì before qiān, a fourth tone, not yī as in isolation.",
+          "level": 2
+        },
+        {
+          "key": "2500",
+          "english": "2500",
+          "targetText": "两千五",
+          "romanization": "liǎng qiān wǔ",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "两",
+              "romanization": "liǎng",
+              "english": "two"
+            },
+            {
+              "target": "千",
+              "romanization": "qiān",
+              "english": "thousand"
+            },
+            {
+              "target": "五",
+              "romanization": "wǔ",
+              "english": "five (hundred)"
+            }
+          ],
+          "literal": "two thousand five (hundred)",
+          "usageNote": "In everyday speech the final 百 is dropped after 千, so 两千五 means 2500; the full 两千五百 is also correct and clearer in formal or written contexts.",
+          "level": 2
+        },
+        {
+          "key": "5000",
+          "english": "5000",
+          "targetText": "五千",
+          "romanization": "wǔ qiān",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "五",
+              "romanization": "wǔ",
+              "english": "five"
+            },
+            {
+              "target": "千",
+              "romanization": "qiān",
+              "english": "thousand"
+            }
+          ],
+          "literal": "five thousand",
+          "usageNote": null,
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "days",
+      "items": [
+        {
+          "key": "monday",
+          "english": "Monday",
+          "targetText": "星期一",
+          "romanization": "xīngqī yī",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "星期",
+              "romanization": "xīngqī",
+              "english": "week"
+            },
+            {
+              "target": "一",
+              "romanization": "yī",
+              "english": "one"
+            }
+          ],
+          "literal": "week one",
+          "usageNote": "In Mandarin, Monday is \"week one\" and the other weekdays count up from it (星期二 is Tuesday); Sunday is the exception, 星期天 or 星期日.",
+          "level": 1
+        },
+        {
+          "key": "tuesday",
+          "english": "Tuesday",
+          "targetText": "星期二",
+          "romanization": "xīngqī èr",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "星期",
+              "romanization": "xīngqī",
+              "english": "week"
+            },
+            {
+              "target": "二",
+              "romanization": "èr",
+              "english": "two"
+            }
+          ],
+          "literal": "week two",
+          "usageNote": "In casual speech, 礼拜二 (lǐbài èr) is also common, especially in northern China and Taiwan.",
+          "level": 1
+        },
+        {
+          "key": "wednesday",
+          "english": "Wednesday",
+          "targetText": "星期三",
+          "romanization": "xīngqīsān",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "星期",
+              "romanization": "xīngqī",
+              "english": "week"
+            },
+            {
+              "target": "三",
+              "romanization": "sān",
+              "english": "three"
+            }
+          ],
+          "literal": "week three",
+          "usageNote": "In speech you can also say 礼拜三 (lǐbàisān), which is more casual and common in northern China and Taiwan.",
+          "level": 1
+        },
+        {
+          "key": "thursday",
+          "english": "Thursday",
+          "targetText": "星期四",
+          "romanization": "xīngqīsì",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "星期",
+              "romanization": "xīngqī",
+              "english": "week"
+            },
+            {
+              "target": "四",
+              "romanization": "sì",
+              "english": "four"
+            }
+          ],
+          "literal": "week-four",
+          "usageNote": "礼拜四 (lǐbài sì) is a more colloquial variant; 周四 (zhōu sì) is common in writing and shorter speech.",
+          "level": 1
+        },
+        {
+          "key": "friday",
+          "english": "Friday",
+          "targetText": "星期五",
+          "romanization": "xīngqīwǔ",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "星期",
+              "romanization": "xīngqī",
+              "english": "week"
+            },
+            {
+              "target": "五",
+              "romanization": "wǔ",
+              "english": "five"
+            }
+          ],
+          "literal": "week five",
+          "usageNote": "礼拜五 (lǐbàiwǔ) is a more casual, colloquial variant; 周五 (zhōuwǔ) is a common shorter form.",
+          "level": 2
+        },
+        {
+          "key": "saturday",
+          "english": "Saturday",
+          "targetText": "星期六",
+          "romanization": "xīngqīliù",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "星期",
+              "romanization": "xīngqī",
+              "english": "week"
+            },
+            {
+              "target": "六",
+              "romanization": "liù",
+              "english": "six"
+            }
+          ],
+          "literal": "week six",
+          "usageNote": "Saturday is counted as day six of the week; 周六 (zhōuliù) is a shorter, equally common variant, and 礼拜六 is more colloquial.",
+          "level": 2
+        },
+        {
+          "key": "sunday",
+          "english": "Sunday",
+          "targetText": "星期天",
+          "romanization": "xīngqītiān",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "星期天",
+              "romanization": "xīngqītiān",
+              "english": "Sunday"
+            }
+          ],
+          "literal": "week-day (seven): Sunday",
+          "usageNote": "In casual speech 星期天 is most common; 周日 and 礼拜天 are also heard, and 星期日 is more formal or written.",
+          "level": 1
+        },
+        {
+          "key": "weekend",
+          "english": "weekend",
+          "targetText": "周末",
+          "romanization": "zhōumò",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "周末",
+              "romanization": "zhōumò",
+              "english": "weekend"
+            }
+          ],
+          "literal": "week-end",
+          "usageNote": "In Taiwan 週末 is also common; in mainland China 周末 is the standard written form, and 双休日 refers specifically to a two-day weekend.",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "connectors",
+      "items": [
+        {
+          "key": "and",
+          "english": "and",
+          "targetText": "和",
+          "romanization": "hé",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "和",
+              "romanization": "hé",
+              "english": "and"
+            }
+          ],
+          "literal": "and",
+          "usageNote": "Example: 我和朋友去吃饭。(Wǒ hé péngyou qù chīfàn.) [I'm going to eat with my friend. / My friend and I are going to eat.] Use it to join nouns only, not whole clauses or verbs.",
+          "level": 1
+        },
+        {
+          "key": "or",
+          "english": "or",
+          "targetText": "或者",
+          "romanization": "huòzhě",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "或者",
+              "romanization": "huòzhě",
+              "english": "or"
+            }
+          ],
+          "literal": "or",
+          "usageNote": "Use 或者 in statements: 我喝茶或者咖啡都可以。(I'm fine with tea or coffee.) For questions, use 还是 instead.",
+          "level": 3
+        },
+        {
+          "key": "but",
+          "english": "but",
+          "targetText": "但是",
+          "romanization": "dànshì",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "但是",
+              "romanization": "dànshì",
+              "english": "but, however"
+            }
+          ],
+          "literal": "but",
+          "usageNote": "Example: 我想去,但是没有时间。(wǒ xiǎng qù, dànshì méiyǒu shíjiān) [I want to go, but I don't have time.]",
+          "level": 2
+        },
+        {
+          "key": "if",
+          "english": "if",
+          "targetText": "如果",
+          "romanization": "rúguǒ",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "如果",
+              "romanization": "rúguǒ",
+              "english": "if"
+            }
+          ],
+          "literal": "if",
+          "usageNote": "Example: 如果明天下雨，我们就不去了。(If it rains tomorrow, we won't go.) Often paired with 就 in the second half.",
+          "level": 3
+        },
+        {
+          "key": "because",
+          "english": "because",
+          "targetText": "因为",
+          "romanization": "yīnwèi",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "因为",
+              "romanization": "yīnwèi",
+              "english": "because"
+            }
+          ],
+          "literal": "because",
+          "usageNote": "Example: 因为下雨,所以我没去。(Yīnwèi xià yǔ, suǒyǐ wǒ méi qù.) [Because it rained, I didn't go.]",
+          "level": 2
+        },
+        {
+          "key": "so",
+          "english": "so",
+          "targetText": "所以",
+          "romanization": "suǒyǐ",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "所以",
+              "romanization": "suǒyǐ",
+              "english": "so, therefore"
+            }
+          ],
+          "literal": "so / therefore",
+          "usageNote": "Example: 下雨了,所以我们走了。(Xià yǔ le, suǒyǐ wǒmen zǒu le.) [It rained, so we left.]",
+          "level": 2
+        },
+        {
+          "key": "when",
+          "english": "when",
+          "targetText": "的时候",
+          "romanization": "de shíhou",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "的",
+              "romanization": "de",
+              "english": "(particle linking modifier)"
+            },
+            {
+              "target": "时候",
+              "romanization": "shíhou",
+              "english": "time, moment"
+            }
+          ],
+          "literal": "'s time / at the time of",
+          "usageNote": "Goes after the clause: 我到家的时候,给你打电话。(Wǒ dào jiā de shíhou, gěi nǐ dǎ diànhuà.) [When I get home, I'll call you.]",
+          "level": 2
+        },
+        {
+          "key": "then",
+          "english": "then",
+          "targetText": "然后",
+          "romanization": "ránhòu",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "然后",
+              "romanization": "ránhòu",
+              "english": "and then, afterwards"
+            }
+          ],
+          "literal": "thus-after",
+          "usageNote": "Example: 我们先吃饭,然后去看电影。 (Let's eat first, and then go watch a movie.)",
+          "level": 3
+        },
+        {
+          "key": "also",
+          "english": "also",
+          "targetText": "也",
+          "romanization": "yě",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "也",
+              "romanization": "yě",
+              "english": "also, too"
+            }
+          ],
+          "literal": "also",
+          "usageNote": "Goes before the verb: 我也想去。(wǒ yě xiǎng qù) [I want to go too.]",
+          "level": 2
+        },
+        {
+          "key": "before",
+          "english": "before",
+          "targetText": "以前",
+          "romanization": "yǐqián",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "以前",
+              "romanization": "yǐqián",
+              "english": "before; previously"
+            }
+          ],
+          "literal": "before",
+          "usageNote": "Example: 吃饭以前要洗手。(Yǐqián: Chīfàn yǐqián yào xǐ shǒu.) [You need to wash your hands before eating.]",
+          "level": 3
+        },
+        {
+          "key": "after",
+          "english": "after",
+          "targetText": "以后",
+          "romanization": "yǐhòu",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "以后",
+              "romanization": "yǐhòu",
+              "english": "after, afterwards, later"
+            }
+          ],
+          "literal": "after / afterwards",
+          "usageNote": "Example: 吃饭以后我们去散步。(Chī fàn yǐhòu wǒmen qù sànbù.) [After eating, we'll go for a walk.]",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "questions",
+      "items": [
+        {
+          "key": "what",
+          "english": "what",
+          "targetText": "什么",
+          "romanization": "shénme",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "什么",
+              "romanization": "shénme",
+              "english": "what"
+            }
+          ],
+          "literal": "what",
+          "usageNote": "Example: 这是什么? (Zhè shì shénme?) [What is this?]",
+          "level": 1
+        },
+        {
+          "key": "who",
+          "english": "who",
+          "targetText": "谁",
+          "romanization": "shéi",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "谁",
+              "romanization": "shéi",
+              "english": "who"
+            }
+          ],
+          "literal": "who",
+          "usageNote": "Example: 你是谁? (nǐ shì shéi?) [Who are you?]",
+          "level": 1
+        },
+        {
+          "key": "where",
+          "english": "where",
+          "targetText": "哪里",
+          "romanization": "nǎlǐ",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "哪里",
+              "romanization": "nǎlǐ",
+              "english": "where"
+            }
+          ],
+          "literal": "where",
+          "usageNote": "Example: 洗手间在哪里? (Nǎlǐ... Xǐshǒujiān zài nǎlǐ?) [Where is the restroom?] 哪儿 (nǎr) is the more colloquial, northern-sounding variant.",
+          "level": 1
+        },
+        {
+          "key": "when",
+          "english": "when",
+          "targetText": "什么时候",
+          "romanization": "shénme shíhou",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "什么",
+              "romanization": "shénme",
+              "english": "what"
+            },
+            {
+              "target": "时候",
+              "romanization": "shíhou",
+              "english": "time"
+            }
+          ],
+          "literal": "what time",
+          "usageNote": "Example: 你什么时候有空? (Nǐ shénme shíhou yǒu kòng?) [When are you free?]",
+          "level": 2
+        },
+        {
+          "key": "why",
+          "english": "why",
+          "targetText": "为什么",
+          "romanization": "wèi shénme",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "为什么",
+              "romanization": "wèi shénme",
+              "english": "why; for what reason"
+            }
+          ],
+          "literal": "for what",
+          "usageNote": "Example: 你为什么迟到?(nǐ wèi shénme chídào?) [Why are you late?] 干嘛 (gànmá) is a casual alternative meaning \"why/what for\".",
+          "level": 1
+        },
+        {
+          "key": "how",
+          "english": "how",
+          "targetText": "怎么",
+          "romanization": "zěnme",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "怎么",
+              "romanization": "zěnme",
+              "english": "how"
+            }
+          ],
+          "literal": "how",
+          "usageNote": "Example: 这个字怎么读? (zhège zì zěnme dú?) [How do you read this character?]",
+          "level": 1
+        },
+        {
+          "key": "which",
+          "english": "which",
+          "targetText": "哪",
+          "romanization": "nǎ",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "哪",
+              "romanization": "nǎ",
+              "english": "which"
+            }
+          ],
+          "literal": "which",
+          "usageNote": "Usually followed by a measure word, e.g. 你要哪个? (Nǐ yào nǎ ge?) [Which one do you want?]",
+          "level": 1
+        },
+        {
+          "key": "how-much",
+          "english": "how much (price)",
+          "targetText": "多少钱",
+          "romanization": "duōshao qián",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "多少",
+              "romanization": "duōshao",
+              "english": "how much / how many"
+            },
+            {
+              "target": "钱",
+              "romanization": "qián",
+              "english": "money"
+            }
+          ],
+          "literal": "how much money",
+          "usageNote": "Example: 这个多少钱? (Zhège duōshao qián?) [How much is this?]",
+          "level": 1
+        },
+        {
+          "key": "how-many",
+          "english": "how many",
+          "targetText": "多少",
+          "romanization": "duōshao",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "多少",
+              "romanization": "duōshao",
+              "english": "how many / how much"
+            }
+          ],
+          "literal": "how many / how much",
+          "usageNote": "Example: 这个多少钱？(Zhège duōshao qián?) [How much is this?]. For small numbers (under about ten) you can use 几 (jǐ) before a measure word instead.",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "items": [
+        {
+          "key": "now",
+          "english": "now",
+          "targetText": "现在",
+          "romanization": "xiànzài",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "现在",
+              "romanization": "xiànzài",
+              "english": "now"
+            }
+          ],
+          "literal": "now",
+          "usageNote": null,
+          "level": 2
+        },
+        {
+          "key": "today",
+          "english": "today",
+          "targetText": "今天",
+          "romanization": "jīntiān",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "今天",
+              "romanization": "jīntiān",
+              "english": "today"
+            }
+          ],
+          "literal": "this day",
+          "usageNote": "Comes before the verb or at the start of a sentence, e.g. 今天我很忙 (I'm busy today).",
+          "level": 1
+        },
+        {
+          "key": "tomorrow",
+          "english": "tomorrow",
+          "targetText": "明天",
+          "romanization": "míngtiān",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "明天",
+              "romanization": "míngtiān",
+              "english": "tomorrow"
+            }
+          ],
+          "literal": "bright day (tomorrow)",
+          "usageNote": "Goes before the verb or at the start of a sentence, e.g. 明天见 (see you tomorrow).",
+          "level": 1
+        },
+        {
+          "key": "yesterday",
+          "english": "yesterday",
+          "targetText": "昨天",
+          "romanization": "zuótiān",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "昨天",
+              "romanization": "zuótiān",
+              "english": "yesterday"
+            }
+          ],
+          "literal": "yesterday",
+          "usageNote": "昨日 (zuórì) is a formal, written variant; in speech 昨天 is what people say.",
+          "level": 1
+        },
+        {
+          "key": "later",
+          "english": "later",
+          "targetText": "待会儿",
+          "romanization": "dāihuìr",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "待会儿",
+              "romanization": "dāihuìr",
+              "english": "in a little while, later"
+            }
+          ],
+          "literal": "wait a moment (later)",
+          "usageNote": "Means later within the same day, usually soon; for a vaguer or more distant later, use 以后 (yǐhòu).",
+          "level": 4
+        },
+        {
+          "key": "soon",
+          "english": "soon",
+          "targetText": "马上",
+          "romanization": "mǎshàng",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "马上",
+              "romanization": "mǎshàng",
+              "english": "immediately, right away, soon"
+            }
+          ],
+          "literal": "on the horse (right away)",
+          "usageNote": "马上 means \"right away\" and is used for things about to happen; 很快 (hěn kuài) suits something happening in a short while.",
+          "level": 3
+        },
+        {
+          "key": "already",
+          "english": "already",
+          "targetText": "已经",
+          "romanization": "yǐjīng",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "已经",
+              "romanization": "yǐjīng",
+              "english": "already"
+            }
+          ],
+          "literal": "already",
+          "usageNote": "Goes before the verb and usually pairs with 了 at the end of the clause, e.g. 我已经吃了 (I've already eaten).",
+          "level": 2
+        },
+        {
+          "key": "not-yet",
+          "english": "not yet",
+          "targetText": "还没",
+          "romanization": "hái méi",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "还",
+              "romanization": "hái",
+              "english": "still, yet"
+            },
+            {
+              "target": "没",
+              "romanization": "méi",
+              "english": "not (have done)"
+            }
+          ],
+          "literal": "still not (yet)",
+          "usageNote": "Often used alone as a short answer to \"Have you...yet?\" questions, such as 你吃了吗?",
+          "level": 2
+        },
+        {
+          "key": "morning",
+          "english": "morning",
+          "targetText": "早上",
+          "romanization": "zǎoshang",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "早上",
+              "romanization": "zǎoshang",
+              "english": "morning"
+            }
+          ],
+          "literal": "early morning",
+          "usageNote": "早上 means early morning, roughly sunrise to 9 or 10 a.m.; 上午 covers the whole morning up to noon.",
+          "level": 2
+        },
+        {
+          "key": "afternoon",
+          "english": "afternoon",
+          "targetText": "下午",
+          "romanization": "xiàwǔ",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "下午",
+              "romanization": "xiàwǔ",
+              "english": "afternoon"
+            }
+          ],
+          "literal": "afternoon (lit. 'lower noon')",
+          "usageNote": "Covers roughly noon to about 6 pm; it goes before the verb, as in 下午见 (see you this afternoon).",
+          "level": 1
+        },
+        {
+          "key": "evening",
+          "english": "evening",
+          "targetText": "晚上",
+          "romanization": "wǎnshang",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "晚上",
+              "romanization": "wǎnshang",
+              "english": "evening, night"
+            }
+          ],
+          "literal": "evening",
+          "usageNote": "晚上 covers both evening and night; 傍晚 (bàngwǎn) means early evening around dusk.",
+          "level": 2
+        },
+        {
+          "key": "tonight",
+          "english": "tonight",
+          "targetText": "今晚",
+          "romanization": "jīn wǎn",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "今",
+              "romanization": "jīn",
+              "english": "this (today)"
+            },
+            {
+              "target": "晚",
+              "romanization": "wǎn",
+              "english": "evening, night"
+            }
+          ],
+          "literal": "this evening",
+          "usageNote": "Covers both this evening and later tonight; 今晚 is the common spoken shortening of 今天晚上.",
+          "level": 2
+        },
+        {
+          "key": "this-week",
+          "english": "this week",
+          "targetText": "这周",
+          "romanization": "zhè zhōu",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "这",
+              "romanization": "zhè",
+              "english": "this"
+            },
+            {
+              "target": "周",
+              "romanization": "zhōu",
+              "english": "week"
+            }
+          ],
+          "literal": "this week",
+          "usageNote": "In speech people also say 这个星期 (zhège xīngqī); 本周 is more formal, common in writing and announcements.",
+          "level": 2
+        },
+        {
+          "key": "next-week",
+          "english": "next week",
+          "targetText": "下周",
+          "romanization": "xià zhōu",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "下",
+              "romanization": "xià",
+              "english": "next / below"
+            },
+            {
+              "target": "周",
+              "romanization": "zhōu",
+              "english": "week"
+            }
+          ],
+          "literal": "next week",
+          "usageNote": "In speech, 下周 is often placed before the verb or at the start of the sentence, e.g. 下周见 (see you next week).",
+          "level": 3
+        },
+        {
+          "key": "last-week",
+          "english": "last week",
+          "targetText": "上个星期",
+          "romanization": "shàng ge xīngqī",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "上",
+              "romanization": "shàng",
+              "english": "previous"
+            },
+            {
+              "target": "个",
+              "romanization": "ge",
+              "english": "(measure word)"
+            },
+            {
+              "target": "星期",
+              "romanization": "xīngqī",
+              "english": "week"
+            }
+          ],
+          "literal": "previous (measure word) week",
+          "usageNote": "In speech, 上个星期 and 上星期 are both common, while 上周 is slightly shorter and a bit more written.",
+          "level": 2
+        },
+        {
+          "key": "every-day",
+          "english": "every day",
+          "targetText": "每天",
+          "romanization": "měi tiān",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "每",
+              "romanization": "měi",
+              "english": "every"
+            },
+            {
+              "target": "天",
+              "romanization": "tiān",
+              "english": "day"
+            }
+          ],
+          "literal": "every day",
+          "usageNote": "Place it before the verb: 我每天喝茶 (I drink tea every day).",
+          "level": 2
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1663 @@
+{
+  "language": "ja",
+  "contentVersion": 1,
+  "reviewed": false,
+  "promptVersion": "2026-10.1",
+  "model": "claude-sonnet-5-5",
+  "generatedAt": "2026-10-01",
+  "categories": [
+    {
+      "id": "numbers",
+      "items": [
+        {
+          "key": "1",
+          "english": "1",
+          "targetText": "一",
+          "romanization": "ichi",
+          "reading": "いち",
+          "gloss": [
+            {
+              "target": "一",
+              "romanization": "ichi",
+              "english": "one"
+            }
+          ],
+          "literal": "one",
+          "usageNote": "When counting objects, people often use the native Japanese count word ひとつ (hitotsu) instead.",
+          "level": 1
+        },
+        {
+          "key": "2",
+          "english": "2",
+          "targetText": "二",
+          "romanization": "ni",
+          "reading": "に",
+          "gloss": [
+            {
+              "target": "二",
+              "romanization": "ni",
+              "english": "two"
+            }
+          ],
+          "literal": "two",
+          "usageNote": "When counting objects, ふたつ (futatsu) is the native Japanese counter; 二 (ni) is used for counting in sequence, phone numbers, and so on.",
+          "level": 1
+        },
+        {
+          "key": "3",
+          "english": "3",
+          "targetText": "三",
+          "romanization": "san",
+          "reading": "さん",
+          "gloss": [
+            {
+              "target": "三",
+              "romanization": "san",
+              "english": "three"
+            }
+          ],
+          "literal": "three",
+          "usageNote": "Also read \"mittsu\" when counting objects, and \"mi\" in some counting words like \"mikka\" (3rd day of the month).",
+          "level": 1
+        },
+        {
+          "key": "4",
+          "english": "4",
+          "targetText": "四",
+          "romanization": "yon",
+          "reading": "よん",
+          "gloss": [
+            {
+              "target": "四",
+              "romanization": "yon",
+              "english": "four"
+            }
+          ],
+          "literal": "four",
+          "usageNote": "The other reading, shi, is used in some compounds, but it sounds like the word for \"death\", so yon is preferred when counting.",
+          "level": 1
+        },
+        {
+          "key": "5",
+          "english": "5",
+          "targetText": "五",
+          "romanization": "go",
+          "reading": "ご",
+          "gloss": [
+            {
+              "target": "五",
+              "romanization": "go",
+              "english": "five"
+            }
+          ],
+          "literal": "five",
+          "usageNote": "When counting objects, 五つ (itsutsu) is the native Japanese counting form; 五 (go) is used for counting numbers, phone numbers, and prices.",
+          "level": 1
+        },
+        {
+          "key": "6",
+          "english": "6",
+          "targetText": "六",
+          "romanization": "roku",
+          "reading": "ろく",
+          "gloss": [
+            {
+              "target": "六",
+              "romanization": "roku",
+              "english": "six"
+            }
+          ],
+          "literal": "six",
+          "usageNote": "Also read む in the native counting series (六つ, むっつ), but 'roku' is the standard reading for the number itself.",
+          "level": 1
+        },
+        {
+          "key": "7",
+          "english": "7",
+          "targetText": "七",
+          "romanization": "nana",
+          "reading": "なな",
+          "gloss": [
+            {
+              "target": "七",
+              "romanization": "nana",
+              "english": "seven"
+            }
+          ],
+          "literal": "seven",
+          "usageNote": "Also read shichi, which is common in compounds like 七時 (shichi-ji, 7 o'clock); nana is clearer when speaking.",
+          "level": 1
+        },
+        {
+          "key": "8",
+          "english": "8",
+          "targetText": "八",
+          "romanization": "hachi",
+          "reading": "はち",
+          "gloss": [
+            {
+              "target": "八",
+              "romanization": "hachi",
+              "english": "eight"
+            }
+          ],
+          "literal": "eight",
+          "usageNote": "Also read as \"ya\" or \"yattsu\" when counting objects in the native Japanese series.",
+          "level": 1
+        },
+        {
+          "key": "9",
+          "english": "9",
+          "targetText": "九",
+          "romanization": "kyū",
+          "reading": "きゅう",
+          "gloss": [
+            {
+              "target": "九",
+              "romanization": "kyū",
+              "english": "nine"
+            }
+          ],
+          "literal": "nine",
+          "usageNote": "Also read ku, used in some fixed expressions such as 九時 (kuji, 9 o'clock) and 九月 (kugatsu, September).",
+          "level": 1
+        },
+        {
+          "key": "10",
+          "english": "10",
+          "targetText": "十",
+          "romanization": "jū",
+          "reading": "じゅう",
+          "gloss": [
+            {
+              "target": "十",
+              "romanization": "jū",
+              "english": "ten"
+            }
+          ],
+          "literal": "ten",
+          "usageNote": "When counting objects, you can also say とお (tō), the native Japanese counter for ten items.",
+          "level": 1
+        },
+        {
+          "key": "11",
+          "english": "11",
+          "targetText": "十一",
+          "romanization": "jūichi",
+          "reading": "じゅういち",
+          "gloss": [
+            {
+              "target": "十",
+              "romanization": "jū",
+              "english": "ten"
+            },
+            {
+              "target": "一",
+              "romanization": "ichi",
+              "english": "one"
+            }
+          ],
+          "literal": "ten-one",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "12",
+          "english": "12",
+          "targetText": "十二",
+          "romanization": "jūni",
+          "reading": "じゅうに",
+          "gloss": [
+            {
+              "target": "十",
+              "romanization": "jū",
+              "english": "ten"
+            },
+            {
+              "target": "二",
+              "romanization": "ni",
+              "english": "two"
+            }
+          ],
+          "literal": "ten-two",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "13",
+          "english": "13",
+          "targetText": "十三",
+          "romanization": "jūsan",
+          "reading": "じゅうさん",
+          "gloss": [
+            {
+              "target": "十",
+              "romanization": "jū",
+              "english": "ten"
+            },
+            {
+              "target": "三",
+              "romanization": "san",
+              "english": "three"
+            }
+          ],
+          "literal": "ten-three",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "14",
+          "english": "14",
+          "targetText": "十四",
+          "romanization": "jūyon",
+          "reading": "じゅうよん",
+          "gloss": [
+            {
+              "target": "十",
+              "romanization": "jū",
+              "english": "ten"
+            },
+            {
+              "target": "四",
+              "romanization": "yon",
+              "english": "four"
+            }
+          ],
+          "literal": "ten-four",
+          "usageNote": "jūshi is also used, but jūyon is more common in everyday speech; counting 14 people or things uses different counters.",
+          "level": 1
+        },
+        {
+          "key": "15",
+          "english": "15",
+          "targetText": "十五",
+          "romanization": "jūgo",
+          "reading": "じゅうご",
+          "gloss": [
+            {
+              "target": "十",
+              "romanization": "jū",
+              "english": "ten"
+            },
+            {
+              "target": "五",
+              "romanization": "go",
+              "english": "five"
+            }
+          ],
+          "literal": "ten-five",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "16",
+          "english": "16",
+          "targetText": "十六",
+          "romanization": "jūroku",
+          "reading": "じゅうろく",
+          "gloss": [
+            {
+              "target": "十",
+              "romanization": "jū",
+              "english": "ten"
+            },
+            {
+              "target": "六",
+              "romanization": "roku",
+              "english": "six"
+            }
+          ],
+          "literal": "ten-six",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "17",
+          "english": "17",
+          "targetText": "十七",
+          "romanization": "jūshichi",
+          "reading": "じゅうしち",
+          "gloss": [
+            {
+              "target": "十",
+              "romanization": "jū",
+              "english": "ten"
+            },
+            {
+              "target": "七",
+              "romanization": "shichi",
+              "english": "seven"
+            }
+          ],
+          "literal": "ten-seven",
+          "usageNote": "Both jūshichi and jūnana are common for 17; jūnana is also widely used, especially in casual speech.",
+          "level": 1
+        },
+        {
+          "key": "18",
+          "english": "18",
+          "targetText": "十八",
+          "romanization": "jūhachi",
+          "reading": "じゅうはち",
+          "gloss": [
+            {
+              "target": "十",
+              "romanization": "jū",
+              "english": "ten"
+            },
+            {
+              "target": "八",
+              "romanization": "hachi",
+              "english": "eight"
+            }
+          ],
+          "literal": "ten-eight",
+          "usageNote": "Age 18 is said 十八歳 (jūhassai), with a sound change: hachi becomes hassai.",
+          "level": 1
+        },
+        {
+          "key": "19",
+          "english": "19",
+          "targetText": "十九",
+          "romanization": "jūkyū",
+          "reading": "じゅうきゅう",
+          "gloss": [
+            {
+              "target": "十",
+              "romanization": "jū",
+              "english": "ten"
+            },
+            {
+              "target": "九",
+              "romanization": "kyū",
+              "english": "nine"
+            }
+          ],
+          "literal": "ten nine",
+          "usageNote": "The other reading, jūku (じゅうく), is also used, but jūkyū is more common for 19 in everyday speech.",
+          "level": 1
+        },
+        {
+          "key": "20",
+          "english": "20",
+          "targetText": "二十",
+          "romanization": "nijū",
+          "reading": "にじゅう",
+          "gloss": [
+            {
+              "target": "二",
+              "romanization": "ni",
+              "english": "two"
+            },
+            {
+              "target": "十",
+              "romanization": "jū",
+              "english": "ten"
+            }
+          ],
+          "literal": "two ten (2 × 10)",
+          "usageNote": "The age 20 is irregular: 二十歳 (はたち, hatachi), not にじゅうさい.",
+          "level": 1
+        },
+        {
+          "key": "21",
+          "english": "21",
+          "targetText": "二十一",
+          "romanization": "nijū ichi",
+          "reading": "にじゅう いち",
+          "gloss": [
+            {
+              "target": "二十",
+              "romanization": "nijū",
+              "english": "twenty"
+            },
+            {
+              "target": "一",
+              "romanization": "ichi",
+              "english": "one"
+            }
+          ],
+          "literal": "two-ten one",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "22",
+          "english": "22",
+          "targetText": "二十二",
+          "romanization": "nijūni",
+          "reading": "にじゅうに",
+          "gloss": [
+            {
+              "target": "二十",
+              "romanization": "nijū",
+              "english": "twenty"
+            },
+            {
+              "target": "二",
+              "romanization": "ni",
+              "english": "two"
+            }
+          ],
+          "literal": "two-ten two (twenty-two)",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "23",
+          "english": "23",
+          "targetText": "二十三",
+          "romanization": "nijūsan",
+          "reading": "にじゅうさん",
+          "gloss": [
+            {
+              "target": "二十",
+              "romanization": "nijū",
+              "english": "twenty"
+            },
+            {
+              "target": "三",
+              "romanization": "san",
+              "english": "three"
+            }
+          ],
+          "literal": "two-ten three (twenty three)",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "34",
+          "english": "34",
+          "targetText": "三十四",
+          "romanization": "sanjūyon",
+          "reading": "さんじゅうよん",
+          "gloss": [
+            {
+              "target": "三十",
+              "romanization": "sanjū",
+              "english": "thirty"
+            },
+            {
+              "target": "四",
+              "romanization": "yon",
+              "english": "four"
+            }
+          ],
+          "literal": "three-ten four (thirty-four)",
+          "usageNote": "Use \"yon\" for the 4 here; \"shi\" is possible but much less common in everyday counting.",
+          "level": 1
+        },
+        {
+          "key": "45",
+          "english": "45",
+          "targetText": "四十五",
+          "romanization": "yonjūgo",
+          "reading": "よんじゅうご",
+          "gloss": [
+            {
+              "target": "四十",
+              "romanization": "yonjū",
+              "english": "forty"
+            },
+            {
+              "target": "五",
+              "romanization": "go",
+              "english": "five"
+            }
+          ],
+          "literal": "four-ten five",
+          "usageNote": "Use yon (not shi) for the 4 here: yonjūgo. Shijūgo is less common.",
+          "level": 1
+        },
+        {
+          "key": "56",
+          "english": "56",
+          "targetText": "五十六",
+          "romanization": "gojūroku",
+          "reading": "ごじゅうろく",
+          "gloss": [
+            {
+              "target": "五十",
+              "romanization": "gojū",
+              "english": "fifty"
+            },
+            {
+              "target": "六",
+              "romanization": "roku",
+              "english": "six"
+            }
+          ],
+          "literal": "five-ten six (fifty six)",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "67",
+          "english": "67",
+          "targetText": "六十七",
+          "romanization": "rokujūnana",
+          "reading": "ろくじゅうなな",
+          "gloss": [
+            {
+              "target": "六十",
+              "romanization": "rokujū",
+              "english": "sixty"
+            },
+            {
+              "target": "七",
+              "romanization": "nana",
+              "english": "seven"
+            }
+          ],
+          "literal": "six-ten seven",
+          "usageNote": "The 7 is usually read nana here, though shichi is also correct; nana is clearer when speaking.",
+          "level": 1
+        },
+        {
+          "key": "78",
+          "english": "78",
+          "targetText": "七十八",
+          "romanization": "nanajūhachi",
+          "reading": "ななじゅうはち",
+          "gloss": [
+            {
+              "target": "七",
+              "romanization": "nana",
+              "english": "seven"
+            },
+            {
+              "target": "十",
+              "romanization": "jū",
+              "english": "ten"
+            },
+            {
+              "target": "八",
+              "romanization": "hachi",
+              "english": "eight"
+            }
+          ],
+          "literal": "seven ten eight",
+          "usageNote": "Both ななじゅうはち and しちじゅうはち are used; 七 is usually read nana here to avoid confusion with 一 (ichi) and 四 (shi).",
+          "level": 1
+        },
+        {
+          "key": "89",
+          "english": "89",
+          "targetText": "八十九",
+          "romanization": "hachijūkyū",
+          "reading": "はちじゅうきゅう",
+          "gloss": [
+            {
+              "target": "八十",
+              "romanization": "hachijū",
+              "english": "eighty"
+            },
+            {
+              "target": "九",
+              "romanization": "kyū",
+              "english": "nine"
+            }
+          ],
+          "literal": "eight-ten nine",
+          "usageNote": "The 9 is read kyū here; ku is rare in this number except in some counting contexts.",
+          "level": 1
+        },
+        {
+          "key": "95",
+          "english": "95",
+          "targetText": "九十五",
+          "romanization": "kyūjūgo",
+          "reading": "きゅうじゅうご",
+          "gloss": [
+            {
+              "target": "九",
+              "romanization": "kyū",
+              "english": "nine"
+            },
+            {
+              "target": "十",
+              "romanization": "jū",
+              "english": "ten"
+            },
+            {
+              "target": "五",
+              "romanization": "go",
+              "english": "five"
+            }
+          ],
+          "literal": "nine ten five (9 × 10 + 5)",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "100",
+          "english": "100",
+          "targetText": "百",
+          "romanization": "hyaku",
+          "reading": "ひゃく",
+          "gloss": [
+            {
+              "target": "百",
+              "romanization": "hyaku",
+              "english": "one hundred"
+            }
+          ],
+          "literal": "hundred",
+          "usageNote": "No \"one\" is needed for 100 (say hyaku, not ichi-hyaku), but 300, 600 and 800 change sound: sanbyaku, roppyaku, happyaku.",
+          "level": 1
+        },
+        {
+          "key": "115",
+          "english": "115",
+          "targetText": "百十五",
+          "romanization": "hyaku jū go",
+          "reading": "ひゃく じゅう ご",
+          "gloss": [
+            {
+              "target": "百",
+              "romanization": "hyaku",
+              "english": "hundred"
+            },
+            {
+              "target": "十",
+              "romanization": "jū",
+              "english": "ten"
+            },
+            {
+              "target": "五",
+              "romanization": "go",
+              "english": "five"
+            }
+          ],
+          "literal": "hundred ten five",
+          "usageNote": "Don't say ichi before hyaku (一百 is not used); 100 is just hyaku.",
+          "level": 1
+        },
+        {
+          "key": "250",
+          "english": "250",
+          "targetText": "二百五十",
+          "romanization": "nihyaku gojū",
+          "reading": "にひゃく ごじゅう",
+          "gloss": [
+            {
+              "target": "二百",
+              "romanization": "nihyaku",
+              "english": "two hundred"
+            },
+            {
+              "target": "五十",
+              "romanization": "gojū",
+              "english": "fifty"
+            }
+          ],
+          "literal": "two hundred fifty",
+          "usageNote": "Note the sound change in 二百 (nihyaku); in 三百 it becomes sanbyaku and in 六百 roppyaku, but 二百 is regular.",
+          "level": 1
+        },
+        {
+          "key": "275",
+          "english": "275",
+          "targetText": "二百七十五",
+          "romanization": "nihyaku nanajūgo",
+          "reading": "にひゃく ななじゅうご",
+          "gloss": [
+            {
+              "target": "二百",
+              "romanization": "nihyaku",
+              "english": "two hundred"
+            },
+            {
+              "target": "七十",
+              "romanization": "nanajū",
+              "english": "seventy"
+            },
+            {
+              "target": "五",
+              "romanization": "go",
+              "english": "five"
+            }
+          ],
+          "literal": "two-hundred seventy five",
+          "usageNote": "Seventy is usually said \"nana-jū\" rather than \"shichi-jū\" in everyday speech, and 200 is the irregular \"ni-hyaku\".",
+          "level": 2
+        },
+        {
+          "key": "500",
+          "english": "500",
+          "targetText": "五百",
+          "romanization": "gohyaku",
+          "reading": "ごひゃく",
+          "gloss": [
+            {
+              "target": "五",
+              "romanization": "go",
+              "english": "five"
+            },
+            {
+              "target": "百",
+              "romanization": "hyaku",
+              "english": "hundred"
+            }
+          ],
+          "literal": "five hundred",
+          "usageNote": "The hundred counter shifts to \"hyaku\" here with no sound change, unlike 300 (sanbyaku) and 600 (roppyaku).",
+          "level": 1
+        },
+        {
+          "key": "750",
+          "english": "750",
+          "targetText": "七百五十",
+          "romanization": "nanahyaku gojū",
+          "reading": "ななひゃく ごじゅう",
+          "gloss": [
+            {
+              "target": "七百",
+              "romanization": "nanahyaku",
+              "english": "seven hundred"
+            },
+            {
+              "target": "五十",
+              "romanization": "gojū",
+              "english": "fifty"
+            }
+          ],
+          "literal": "seven hundred fifty",
+          "usageNote": "700 is read nanahyaku (not shichihyaku) in everyday speech.",
+          "level": 2
+        },
+        {
+          "key": "945",
+          "english": "945",
+          "targetText": "九百四十五",
+          "romanization": "kyūhyaku yonjūgo",
+          "reading": "きゅうひゃく よんじゅうご",
+          "gloss": [
+            {
+              "target": "九百",
+              "romanization": "kyūhyaku",
+              "english": "nine hundred"
+            },
+            {
+              "target": "四十",
+              "romanization": "yonjū",
+              "english": "forty"
+            },
+            {
+              "target": "五",
+              "romanization": "go",
+              "english": "five"
+            }
+          ],
+          "literal": "nine-hundred forty five",
+          "usageNote": "Forty is usually yonjū (not shijū), and 900 is kyūhyaku with a regular h sound, not a sound change.",
+          "level": 2
+        },
+        {
+          "key": "1000",
+          "english": "1000",
+          "targetText": "千",
+          "romanization": "sen",
+          "reading": "せん",
+          "gloss": [
+            {
+              "target": "千",
+              "romanization": "sen",
+              "english": "thousand"
+            }
+          ],
+          "literal": "thousand",
+          "usageNote": "A bare 千 is normal for 1,000; 一千 is rarely used, though 一 is needed in 一万 (10,000).",
+          "level": 1
+        },
+        {
+          "key": "2500",
+          "english": "2500",
+          "targetText": "二千五百",
+          "romanization": "nisen gohyaku",
+          "reading": "にせん ごひゃく",
+          "gloss": [
+            {
+              "target": "二千",
+              "romanization": "nisen",
+              "english": "two thousand"
+            },
+            {
+              "target": "五百",
+              "romanization": "gohyaku",
+              "english": "five hundred"
+            }
+          ],
+          "literal": "two thousand five hundred",
+          "usageNote": "Note the sound change in 五百 (gohyaku), not \"gohaku\"; 千 stays \"sen\" after 二.",
+          "level": 2
+        },
+        {
+          "key": "5000",
+          "english": "5000",
+          "targetText": "五千",
+          "romanization": "gosen",
+          "reading": "ごせん",
+          "gloss": [
+            {
+              "target": "五",
+              "romanization": "go",
+              "english": "five"
+            },
+            {
+              "target": "千",
+              "romanization": "sen",
+              "english": "thousand"
+            }
+          ],
+          "literal": "five thousand",
+          "usageNote": "Prices are usually followed by 円, as in 五千円 (gosen en). Note that 5000 is ごせん, with no rendaku change like in 三千 (さんぜん).",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "days",
+      "items": [
+        {
+          "key": "monday",
+          "english": "Monday",
+          "targetText": "月曜日",
+          "romanization": "getsuyōbi",
+          "reading": "げつようび",
+          "gloss": [
+            {
+              "target": "月曜日",
+              "romanization": "getsuyōbi",
+              "english": "Monday"
+            }
+          ],
+          "literal": "Moon-day",
+          "usageNote": "The first kanji 月 means \"moon\", so the name literally means \"moon day\".",
+          "level": 1
+        },
+        {
+          "key": "tuesday",
+          "english": "Tuesday",
+          "targetText": "火曜日",
+          "romanization": "kayōbi",
+          "reading": "かようび",
+          "gloss": [
+            {
+              "target": "火曜日",
+              "romanization": "kayōbi",
+              "english": "Tuesday"
+            }
+          ],
+          "literal": "fire-day-of-the-week",
+          "usageNote": "The kanji 火 (fire) comes from the Japanese weekday names being based on the classical elements and celestial bodies, with Tuesday linked to Mars.",
+          "level": 1
+        },
+        {
+          "key": "wednesday",
+          "english": "Wednesday",
+          "targetText": "水曜日",
+          "romanization": "suiyōbi",
+          "reading": "すいようび",
+          "gloss": [
+            {
+              "target": "水曜日",
+              "romanization": "suiyōbi",
+              "english": "Wednesday"
+            }
+          ],
+          "literal": "water day",
+          "usageNote": "The kanji 水 (water) comes from the Japanese weekday names being based on the classical elements and planets, so Wednesday is the \"water\" day (Mercury).",
+          "level": 1
+        },
+        {
+          "key": "thursday",
+          "english": "Thursday",
+          "targetText": "木曜日",
+          "romanization": "mokuyōbi",
+          "reading": "もくようび",
+          "gloss": [
+            {
+              "target": "木曜日",
+              "romanization": "mokuyōbi",
+              "english": "Thursday"
+            }
+          ],
+          "literal": "Wood-day",
+          "usageNote": "The kanji 木 (tree/wood) refers to the element wood, one of the classical elements the Japanese weekdays are named after.",
+          "level": 1
+        },
+        {
+          "key": "friday",
+          "english": "Friday",
+          "targetText": "金曜日",
+          "romanization": "kin'yōbi",
+          "reading": "きんようび",
+          "gloss": [
+            {
+              "target": "金曜日",
+              "romanization": "kin'yōbi",
+              "english": "Friday"
+            }
+          ],
+          "literal": "Friday (gold-day)",
+          "usageNote": "The kanji 金 means gold, and 金曜日 is the day of the planet Venus. In casual speech people often shorten it to 金曜 or just 金 in schedules.",
+          "level": 1
+        },
+        {
+          "key": "saturday",
+          "english": "Saturday",
+          "targetText": "土曜日",
+          "romanization": "doyōbi",
+          "reading": "どようび",
+          "gloss": [
+            {
+              "target": "土曜日",
+              "romanization": "doyōbi",
+              "english": "Saturday"
+            }
+          ],
+          "literal": "Saturday (earth-day-of-week)",
+          "usageNote": "The 土 in the name refers to the element earth (Saturn), and 土曜 alone is a common shortened form in casual speech.",
+          "level": 1
+        },
+        {
+          "key": "sunday",
+          "english": "Sunday",
+          "targetText": "日曜日",
+          "romanization": "nichiyōbi",
+          "reading": "にちようび",
+          "gloss": [
+            {
+              "target": "日曜日",
+              "romanization": "nichiyōbi",
+              "english": "Sunday"
+            }
+          ],
+          "literal": "Sun-day (day of the week)",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "weekend",
+          "english": "weekend",
+          "targetText": "週末",
+          "romanization": "shūmatsu",
+          "reading": "しゅうまつ",
+          "gloss": [
+            {
+              "target": "週末",
+              "romanization": "shūmatsu",
+              "english": "weekend"
+            }
+          ],
+          "literal": "week-end",
+          "usageNote": "Refers to Saturday and Sunday, but 週末 can also loosely include Friday night.",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "connectors",
+      "items": [
+        {
+          "key": "and",
+          "english": "and",
+          "targetText": "と",
+          "romanization": "to",
+          "reading": "と",
+          "gloss": [
+            {
+              "target": "と",
+              "romanization": "to",
+              "english": "and (connects nouns)"
+            }
+          ],
+          "literal": "and",
+          "usageNote": "Example: コーヒーと紅茶をください。 [Coffee and tea, please.] Use と only between nouns; to join sentences, use そして or それから.",
+          "level": 1
+        },
+        {
+          "key": "or",
+          "english": "or",
+          "targetText": "または",
+          "romanization": "mata wa",
+          "reading": "または",
+          "gloss": [
+            {
+              "target": "または",
+              "romanization": "mata wa",
+              "english": "or"
+            }
+          ],
+          "literal": "or",
+          "usageNote": "Example: コーヒーまたはお茶をどうぞ。 [Please have coffee or tea.] Use それとも for open questions (\"A or B?\") and casual speech often uses simply か or での.",
+          "level": 3
+        },
+        {
+          "key": "but",
+          "english": "but",
+          "targetText": "でも",
+          "romanization": "demo",
+          "reading": "でも",
+          "gloss": [
+            {
+              "target": "でも",
+              "romanization": "demo",
+              "english": "but, however"
+            }
+          ],
+          "literal": "but",
+          "usageNote": "Example: でも、高いですね。 [But it's expensive, isn't it?] Use でも at the start of a sentence; しかし is more formal.",
+          "level": 1
+        },
+        {
+          "key": "if",
+          "english": "if",
+          "targetText": "もし",
+          "romanization": "moshi",
+          "reading": "もし",
+          "gloss": [
+            {
+              "target": "もし",
+              "romanization": "moshi",
+              "english": "if"
+            }
+          ],
+          "literal": "if",
+          "usageNote": "Usually paired with ~たら or ~ば, e.g. もし雨が降ったら、行きません。 [If it rains, I won't go.]",
+          "level": 2
+        },
+        {
+          "key": "because",
+          "english": "because",
+          "targetText": "から",
+          "romanization": "kara",
+          "reading": "から",
+          "gloss": [
+            {
+              "target": "から",
+              "romanization": "kara",
+              "english": "because (reason marker)"
+            }
+          ],
+          "literal": "because",
+          "usageNote": "Comes after the reason: 疲れたから、早く寝ます。 [I'm tired, so I'll go to bed early.]",
+          "level": 1
+        },
+        {
+          "key": "so",
+          "english": "so",
+          "targetText": "それで",
+          "romanization": "sorede",
+          "reading": "それで",
+          "gloss": [
+            {
+              "target": "それで",
+              "romanization": "sorede",
+              "english": "so, and then, because of that"
+            }
+          ],
+          "literal": "with that",
+          "usageNote": "Example: それで、帰りました。(So, we went home.)",
+          "level": 2
+        },
+        {
+          "key": "when",
+          "english": "when",
+          "targetText": "〜たら",
+          "romanization": "tara",
+          "reading": "たら",
+          "gloss": [
+            {
+              "target": "〜たら",
+              "romanization": "tara",
+              "english": "when / if (conditional suffix)"
+            }
+          ],
+          "literal": "when/if (it) happens",
+          "usageNote": "Attach to the past form of a verb: 家に帰ったら、電話します。(When I get home, I'll call you.)",
+          "level": 2
+        },
+        {
+          "key": "then",
+          "english": "then",
+          "targetText": "それから",
+          "romanization": "sorekara",
+          "reading": "それから",
+          "gloss": [
+            {
+              "target": "それ",
+              "romanization": "sore",
+              "english": "that"
+            },
+            {
+              "target": "から",
+              "romanization": "kara",
+              "english": "from, after (particle)"
+            }
+          ],
+          "literal": "from that / after that",
+          "usageNote": "Example: 朝ごはんを食べて、それから出かけます。 [I eat breakfast, and then I head out.]",
+          "level": 1
+        },
+        {
+          "key": "also",
+          "english": "also",
+          "targetText": "それと",
+          "romanization": "sore to",
+          "reading": "それと",
+          "gloss": [
+            {
+              "target": "それ",
+              "romanization": "sore",
+              "english": "that"
+            },
+            {
+              "target": "と",
+              "romanization": "to",
+              "english": "(and)"
+            }
+          ],
+          "literal": "and that",
+          "usageNote": "Example: それと、水もください。 [And also, water please.]",
+          "level": 2
+        },
+        {
+          "key": "before",
+          "english": "before",
+          "targetText": "前に",
+          "romanization": "mae ni",
+          "reading": "まえ に",
+          "gloss": [
+            {
+              "target": "前",
+              "romanization": "mae",
+              "english": "before, front"
+            },
+            {
+              "target": "に",
+              "romanization": "ni",
+              "english": "(time marker)"
+            }
+          ],
+          "literal": "in the before",
+          "usageNote": "Example: 寝る前に歯を磨きます。(mukashi... correction: neru mae ni ha o migakimasu) [I brush my teeth before going to bed.] Attach 前に to a dictionary-form verb or a noun + の.",
+          "level": 1
+        },
+        {
+          "key": "after",
+          "english": "after",
+          "targetText": "あとで",
+          "romanization": "ato de",
+          "reading": "あとで",
+          "gloss": [
+            {
+              "target": "あと",
+              "romanization": "ato",
+              "english": "after, later"
+            },
+            {
+              "target": "で",
+              "romanization": "de",
+              "english": "(time/means particle)"
+            }
+          ],
+          "literal": "at the later time",
+          "usageNote": "Example: 仕事のあとで飲みに行きましょう。 [Let's go for a drink after work.] Alone, あとで means \"later\"; after a noun use ～のあとで, after a verb use past form + あとで.",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "questions",
+      "items": [
+        {
+          "key": "what",
+          "english": "what",
+          "targetText": "何",
+          "romanization": "nani",
+          "reading": "なに",
+          "gloss": [
+            {
+              "target": "何",
+              "romanization": "nani",
+              "english": "what"
+            }
+          ],
+          "literal": "what",
+          "usageNote": "Example: これは何ですか？ (kore wa nan desu ka? [What is this?]) – 何 is read nan before です, か, and words starting with t/d/n sounds.",
+          "level": 1
+        },
+        {
+          "key": "who",
+          "english": "who",
+          "targetText": "誰",
+          "romanization": "dare",
+          "reading": "だれ",
+          "gloss": [
+            {
+              "target": "誰",
+              "romanization": "dare",
+              "english": "who"
+            }
+          ],
+          "literal": "who",
+          "usageNote": "Example: あの人は誰ですか? [Who is that person?]",
+          "level": 1
+        },
+        {
+          "key": "where",
+          "english": "where",
+          "targetText": "どこ",
+          "romanization": "doko",
+          "reading": "どこ",
+          "gloss": [
+            {
+              "target": "どこ",
+              "romanization": "doko",
+              "english": "where"
+            }
+          ],
+          "literal": "where",
+          "usageNote": "Example: トイレはどこですか？ [Where is the restroom?]",
+          "level": 1
+        },
+        {
+          "key": "when",
+          "english": "when",
+          "targetText": "いつ",
+          "romanization": "itsu",
+          "reading": "いつ",
+          "gloss": [
+            {
+              "target": "いつ",
+              "romanization": "itsu",
+              "english": "when"
+            }
+          ],
+          "literal": "when",
+          "usageNote": "Example: いつ行きますか？ (itsu ikimasu ka?) [When are you going?]",
+          "level": 1
+        },
+        {
+          "key": "why",
+          "english": "why",
+          "targetText": "どうして",
+          "romanization": "dōshite",
+          "reading": "どうして",
+          "gloss": [
+            {
+              "target": "どうして",
+              "romanization": "dōshite",
+              "english": "why / how come"
+            }
+          ],
+          "literal": "why (in what way)",
+          "usageNote": "Example: どうして遅れましたか。 [Why were you late?] なぜ is more formal; 'なんで' is more casual.",
+          "level": 1
+        },
+        {
+          "key": "how",
+          "english": "how",
+          "targetText": "どう",
+          "romanization": "dō",
+          "reading": "どう",
+          "gloss": [
+            {
+              "target": "どう",
+              "romanization": "dō",
+              "english": "how"
+            }
+          ],
+          "literal": "how",
+          "usageNote": "Example: 調子はどうですか？ (Chōshi wa dō desu ka?) [How are you doing?]",
+          "level": 1
+        },
+        {
+          "key": "which",
+          "english": "which",
+          "targetText": "どれ",
+          "romanization": "dore",
+          "reading": "どれ",
+          "gloss": [
+            {
+              "target": "どれ",
+              "romanization": "dore",
+              "english": "which (one of three or more things)"
+            }
+          ],
+          "literal": "which one",
+          "usageNote": "Use for choosing among three or more items, e.g. どれがいいですか？ [Which one is good?]. For two options use どっち, and before a noun use どの.",
+          "level": 1
+        },
+        {
+          "key": "how-much",
+          "english": "how much (price)",
+          "targetText": "いくら",
+          "romanization": "ikura",
+          "reading": "いくら",
+          "gloss": [
+            {
+              "target": "いくら",
+              "romanization": "ikura",
+              "english": "how much (price)"
+            }
+          ],
+          "literal": "how much",
+          "usageNote": "Example: これはいくらですか。 [How much is this?]",
+          "level": 1
+        },
+        {
+          "key": "how-many",
+          "english": "how many",
+          "targetText": "いくつ",
+          "romanization": "ikutsu",
+          "reading": "いくつ",
+          "gloss": [
+            {
+              "target": "いくつ",
+              "romanization": "ikutsu",
+              "english": "how many (things); how old"
+            }
+          ],
+          "literal": "how many",
+          "usageNote": "Example: りんごはいくつ ありますか。 [How many apples are there?] For people say 何人 (nannin), and for prices use いくら.",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "items": [
+        {
+          "key": "now",
+          "english": "now",
+          "targetText": "今",
+          "romanization": "ima",
+          "reading": "いま",
+          "gloss": [
+            {
+              "target": "今",
+              "romanization": "ima",
+              "english": "now"
+            }
+          ],
+          "literal": "now",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "today",
+          "english": "today",
+          "targetText": "今日",
+          "romanization": "kyō",
+          "reading": "きょう",
+          "gloss": [
+            {
+              "target": "今日",
+              "romanization": "kyō",
+              "english": "today"
+            }
+          ],
+          "literal": "today",
+          "usageNote": "The kanji 今日 is read kyō, an irregular reading; it is not read as \"konnichi\" here, though that reading appears in the greeting こんにちは.",
+          "level": 1
+        },
+        {
+          "key": "tomorrow",
+          "english": "tomorrow",
+          "targetText": "明日",
+          "romanization": "ashita",
+          "reading": "あした",
+          "gloss": [
+            {
+              "target": "明日",
+              "romanization": "ashita",
+              "english": "tomorrow"
+            }
+          ],
+          "literal": "tomorrow",
+          "usageNote": "In more formal speech or writing, 明日 can be read あす or even みょうにち; あした is the everyday reading.",
+          "level": 1
+        },
+        {
+          "key": "yesterday",
+          "english": "yesterday",
+          "targetText": "昨日",
+          "romanization": "kinō",
+          "reading": "きのう",
+          "gloss": [
+            {
+              "target": "昨日",
+              "romanization": "kinō",
+              "english": "yesterday"
+            }
+          ],
+          "literal": "yesterday",
+          "usageNote": "In formal speech or business settings, 昨日 is read as さくじつ.",
+          "level": 1
+        },
+        {
+          "key": "later",
+          "english": "later",
+          "targetText": "あとで",
+          "romanization": "ato de",
+          "reading": "あとで",
+          "gloss": [
+            {
+              "target": "あと",
+              "romanization": "ato",
+              "english": "after, later"
+            },
+            {
+              "target": "で",
+              "romanization": "de",
+              "english": "(time/means particle)"
+            }
+          ],
+          "literal": "after / at a later time",
+          "usageNote": "Also works as a casual \"see you later\" brush-off when said alone, e.g. あとでね; for a vague \"another time\" use また今度.",
+          "level": 1
+        },
+        {
+          "key": "soon",
+          "english": "soon",
+          "targetText": "もうすぐ",
+          "romanization": "mō sugu",
+          "reading": "もう すぐ",
+          "gloss": [
+            {
+              "target": "もう",
+              "romanization": "mō",
+              "english": "already, now"
+            },
+            {
+              "target": "すぐ",
+              "romanization": "sugu",
+              "english": "immediately, right away"
+            }
+          ],
+          "literal": "already right away",
+          "usageNote": "もうすぐ means very soon and implies something is about to happen; そのうち is vaguer, meaning sometime soon or eventually.",
+          "level": 2
+        },
+        {
+          "key": "already",
+          "english": "already",
+          "targetText": "もう",
+          "romanization": "mō",
+          "reading": "もう",
+          "gloss": [
+            {
+              "target": "もう",
+              "romanization": "mō",
+              "english": "already, by now"
+            }
+          ],
+          "literal": "already",
+          "usageNote": "With a past-tense verb, もう means \"already\" (もう食べました). With a negative it means \"anymore\" (もう食べません), and with a quantity it means \"another\" (もう一つ).",
+          "level": 1
+        },
+        {
+          "key": "not-yet",
+          "english": "not yet",
+          "targetText": "まだです",
+          "romanization": "mada desu",
+          "reading": "まだ です",
+          "gloss": [
+            {
+              "target": "まだ",
+              "romanization": "mada",
+              "english": "still, not yet"
+            },
+            {
+              "target": "です",
+              "romanization": "desu",
+              "english": "is (polite)"
+            }
+          ],
+          "literal": "still (not) is",
+          "usageNote": "Used alone to answer 'Have you done X yet?'; the negative meaning is implied, so you don't add ない.",
+          "level": 1
+        },
+        {
+          "key": "morning",
+          "english": "morning",
+          "targetText": "朝",
+          "romanization": "asa",
+          "reading": "あさ",
+          "gloss": [
+            {
+              "target": "朝",
+              "romanization": "asa",
+              "english": "morning"
+            }
+          ],
+          "literal": "morning",
+          "usageNote": "朝 means early morning up to about mid-morning; for the AM period in general, including late morning, 午前 is used instead.",
+          "level": 1
+        },
+        {
+          "key": "afternoon",
+          "english": "afternoon",
+          "targetText": "午後",
+          "romanization": "gogo",
+          "reading": "ごご",
+          "gloss": [
+            {
+              "target": "午後",
+              "romanization": "gogo",
+              "english": "afternoon, p.m."
+            }
+          ],
+          "literal": "afternoon (p.m.)",
+          "usageNote": "午後 means the p.m. hours in general, from noon until evening. It is not a greeting; for \"good afternoon\" say こんにちは.",
+          "level": 1
+        },
+        {
+          "key": "evening",
+          "english": "evening",
+          "targetText": "夕方",
+          "romanization": "yūgata",
+          "reading": "ゆうがた",
+          "gloss": [
+            {
+              "target": "夕方",
+              "romanization": "yūgata",
+              "english": "evening, late afternoon to dusk"
+            }
+          ],
+          "literal": "evening",
+          "usageNote": "夕方 covers late afternoon to around sunset; for later in the night, use 夜 (yoru) or 晩 (ban).",
+          "level": 2
+        },
+        {
+          "key": "tonight",
+          "english": "tonight",
+          "targetText": "今夜",
+          "romanization": "kon'ya",
+          "reading": "こんや",
+          "gloss": [
+            {
+              "target": "今夜",
+              "romanization": "kon'ya",
+              "english": "tonight"
+            }
+          ],
+          "literal": "this night",
+          "usageNote": "今晩 (konban) is a bit softer and more conversational; 今夜 sounds slightly more poetic or emphatic.",
+          "level": 2
+        },
+        {
+          "key": "this-week",
+          "english": "this week",
+          "targetText": "今週",
+          "romanization": "konshū",
+          "reading": "こんしゅう",
+          "gloss": [
+            {
+              "target": "今週",
+              "romanization": "konshū",
+              "english": "this week"
+            }
+          ],
+          "literal": "this week",
+          "usageNote": "Works as a time word without a particle, e.g. 今週忙しいです (I'm busy this week).",
+          "level": 1
+        },
+        {
+          "key": "next-week",
+          "english": "next week",
+          "targetText": "来週",
+          "romanization": "raishū",
+          "reading": "らいしゅう",
+          "gloss": [
+            {
+              "target": "来週",
+              "romanization": "raishū",
+              "english": "next week"
+            }
+          ],
+          "literal": "coming week",
+          "usageNote": "No particle is needed before a verb: 来週行きます (I'll go next week).",
+          "level": 1
+        },
+        {
+          "key": "last-week",
+          "english": "last week",
+          "targetText": "先週",
+          "romanization": "senshū",
+          "reading": "せんしゅう",
+          "gloss": [
+            {
+              "target": "先週",
+              "romanization": "senshū",
+              "english": "last week"
+            }
+          ],
+          "literal": "previous week",
+          "usageNote": "Used as an adverb without a particle, e.g. 先週行きました (I went last week).",
+          "level": 1
+        },
+        {
+          "key": "every-day",
+          "english": "every day",
+          "targetText": "毎日",
+          "romanization": "mainichi",
+          "reading": "まいにち",
+          "gloss": [
+            {
+              "target": "毎日",
+              "romanization": "mainichi",
+              "english": "every day"
+            }
+          ],
+          "literal": "every day",
+          "usageNote": "Works as an adverb without a particle, e.g. 毎日行きます (I go every day).",
+          "level": 1
+        }
+      ]
+    }
+  ]
+}

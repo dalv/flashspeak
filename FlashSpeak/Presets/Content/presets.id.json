@@ -1,0 +1,1758 @@
+{
+  "language": "id",
+  "contentVersion": 1,
+  "reviewed": false,
+  "promptVersion": "2026-10.1",
+  "model": "claude-sonnet-5-5",
+  "generatedAt": "2026-10-01",
+  "categories": [
+    {
+      "id": "numbers",
+      "items": [
+        {
+          "key": "1",
+          "english": "1",
+          "targetText": "satu",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "satu",
+              "romanization": null,
+              "english": "one"
+            }
+          ],
+          "literal": "one",
+          "usageNote": "Before a classifier or noun, 'satu' often shortens to 'se-' (e.g. 'seorang', 'sebuah'), but the number on its own is 'satu'.",
+          "level": 1
+        },
+        {
+          "key": "2",
+          "english": "2",
+          "targetText": "dua",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "dua",
+              "romanization": null,
+              "english": "two"
+            }
+          ],
+          "literal": "two",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "3",
+          "english": "3",
+          "targetText": "tiga",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "tiga",
+              "romanization": null,
+              "english": "three"
+            }
+          ],
+          "literal": "three",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "4",
+          "english": "4",
+          "targetText": "empat",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "empat",
+              "romanization": null,
+              "english": "four"
+            }
+          ],
+          "literal": "four",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "5",
+          "english": "5",
+          "targetText": "lima",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "lima",
+              "romanization": null,
+              "english": "five"
+            }
+          ],
+          "literal": "five",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "6",
+          "english": "6",
+          "targetText": "enam",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "enam",
+              "romanization": null,
+              "english": "six"
+            }
+          ],
+          "literal": "six",
+          "usageNote": "Pronounced with a schwa in the first syllable: \"uh-NAHM\", not \"ay-nam\".",
+          "level": 1
+        },
+        {
+          "key": "7",
+          "english": "7",
+          "targetText": "tujuh",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "tujuh",
+              "romanization": null,
+              "english": "seven"
+            }
+          ],
+          "literal": "seven",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "8",
+          "english": "8",
+          "targetText": "delapan",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "delapan",
+              "romanization": null,
+              "english": "eight"
+            }
+          ],
+          "literal": "eight",
+          "usageNote": "Some speakers say \"lapan\" informally, but \"delapan\" is the standard form.",
+          "level": 1
+        },
+        {
+          "key": "9",
+          "english": "9",
+          "targetText": "sembilan",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "sembilan",
+              "romanization": null,
+              "english": "nine"
+            }
+          ],
+          "literal": "nine",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "10",
+          "english": "10",
+          "targetText": "sepuluh",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "sepuluh",
+              "romanization": null,
+              "english": "ten"
+            }
+          ],
+          "literal": "one ten",
+          "usageNote": "Sepuluh is a contraction of \"se-\" (one) + \"puluh\" (ten), so it is never said as \"satu puluh\".",
+          "level": 1
+        },
+        {
+          "key": "11",
+          "english": "11",
+          "targetText": "sebelas",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "sebelas",
+              "romanization": null,
+              "english": "eleven"
+            }
+          ],
+          "literal": "eleven",
+          "usageNote": "Eleven is irregular: it is se- (one) + belas (teen), not \"satu belas\".",
+          "level": 1
+        },
+        {
+          "key": "12",
+          "english": "12",
+          "targetText": "dua belas",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "dua",
+              "romanization": null,
+              "english": "two"
+            },
+            {
+              "target": "belas",
+              "romanization": null,
+              "english": "-teen (eleven to nineteen)"
+            }
+          ],
+          "literal": "two -teen",
+          "usageNote": "Numbers 11 to 19 use belas, so twelve is literally \"two belas\".",
+          "level": 1
+        },
+        {
+          "key": "13",
+          "english": "13",
+          "targetText": "tiga belas",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "tiga",
+              "romanization": null,
+              "english": "three"
+            },
+            {
+              "target": "belas",
+              "romanization": null,
+              "english": "-teen (ten plus)"
+            }
+          ],
+          "literal": "three -teen",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "14",
+          "english": "14",
+          "targetText": "empat belas",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "empat",
+              "romanization": null,
+              "english": "four"
+            },
+            {
+              "target": "belas",
+              "romanization": null,
+              "english": "-teen (ten plus)"
+            }
+          ],
+          "literal": "four -teen",
+          "usageNote": "Teens are formed as the digit plus \"belas\", so 14 is \"empat belas\".",
+          "level": 1
+        },
+        {
+          "key": "15",
+          "english": "15",
+          "targetText": "lima belas",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "lima",
+              "romanization": null,
+              "english": "five"
+            },
+            {
+              "target": "belas",
+              "romanization": null,
+              "english": "-teen (teens suffix)"
+            }
+          ],
+          "literal": "five -teen",
+          "usageNote": "Numbers 11 to 19 are formed as the digit plus \"belas\", so 15 is \"lima belas\".",
+          "level": 1
+        },
+        {
+          "key": "16",
+          "english": "16",
+          "targetText": "enam belas",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "enam",
+              "romanization": null,
+              "english": "six"
+            },
+            {
+              "target": "belas",
+              "romanization": null,
+              "english": "-teen (ten plus)"
+            }
+          ],
+          "literal": "six -teen",
+          "usageNote": "Numbers 11 to 19 use the suffix \"belas\" after the unit, so 16 is \"enam belas\".",
+          "level": 1
+        },
+        {
+          "key": "17",
+          "english": "17",
+          "targetText": "tujuh belas",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "tujuh",
+              "romanization": null,
+              "english": "seven"
+            },
+            {
+              "target": "belas",
+              "romanization": null,
+              "english": "-teen (11-19)"
+            }
+          ],
+          "literal": "seven teen",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "18",
+          "english": "18",
+          "targetText": "delapan belas",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "delapan",
+              "romanization": null,
+              "english": "eight"
+            },
+            {
+              "target": "belas",
+              "romanization": null,
+              "english": "-teen (11-19)"
+            }
+          ],
+          "literal": "eight -teen",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "19",
+          "english": "19",
+          "targetText": "sembilan belas",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "sembilan",
+              "romanization": null,
+              "english": "nine"
+            },
+            {
+              "target": "belas",
+              "romanization": null,
+              "english": "-teen (11 to 19)"
+            }
+          ],
+          "literal": "nine -teen",
+          "usageNote": "Numbers 11 to 19 use the pattern digit + belas, so 19 is sembilan belas.",
+          "level": 1
+        },
+        {
+          "key": "20",
+          "english": "20",
+          "targetText": "dua puluh",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "dua",
+              "romanization": null,
+              "english": "two"
+            },
+            {
+              "target": "puluh",
+              "romanization": null,
+              "english": "tens"
+            }
+          ],
+          "literal": "two tens",
+          "usageNote": "Puluh is a counting unit for tens, so twenty is built as 'two tens'; it is not a standalone word for ten (that is sepuluh).",
+          "level": 1
+        },
+        {
+          "key": "21",
+          "english": "21",
+          "targetText": "dua puluh satu",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "dua",
+              "romanization": null,
+              "english": "two"
+            },
+            {
+              "target": "puluh",
+              "romanization": null,
+              "english": "ten (tens unit)"
+            },
+            {
+              "target": "satu",
+              "romanization": null,
+              "english": "one"
+            }
+          ],
+          "literal": "two tens one",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "22",
+          "english": "22",
+          "targetText": "dua puluh dua",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "dua",
+              "romanization": null,
+              "english": "two"
+            },
+            {
+              "target": "puluh",
+              "romanization": null,
+              "english": "ten (tens unit)"
+            },
+            {
+              "target": "dua",
+              "romanization": null,
+              "english": "two"
+            }
+          ],
+          "literal": "two tens two",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "23",
+          "english": "23",
+          "targetText": "dua puluh tiga",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "dua",
+              "romanization": null,
+              "english": "two"
+            },
+            {
+              "target": "puluh",
+              "romanization": null,
+              "english": "tens"
+            },
+            {
+              "target": "tiga",
+              "romanization": null,
+              "english": "three"
+            }
+          ],
+          "literal": "two tens three",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "34",
+          "english": "34",
+          "targetText": "tiga puluh empat",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "tiga",
+              "romanization": null,
+              "english": "three"
+            },
+            {
+              "target": "puluh",
+              "romanization": null,
+              "english": "ten (tens unit)"
+            },
+            {
+              "target": "empat",
+              "romanization": null,
+              "english": "four"
+            }
+          ],
+          "literal": "three tens four",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "45",
+          "english": "45",
+          "targetText": "empat puluh lima",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "empat",
+              "romanization": null,
+              "english": "four"
+            },
+            {
+              "target": "puluh",
+              "romanization": null,
+              "english": "ten (tens unit)"
+            },
+            {
+              "target": "lima",
+              "romanization": null,
+              "english": "five"
+            }
+          ],
+          "literal": "four tens five",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "56",
+          "english": "56",
+          "targetText": "lima puluh enam",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "lima",
+              "romanization": null,
+              "english": "five"
+            },
+            {
+              "target": "puluh",
+              "romanization": null,
+              "english": "ten (tens)"
+            },
+            {
+              "target": "enam",
+              "romanization": null,
+              "english": "six"
+            }
+          ],
+          "literal": "five tens six",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "67",
+          "english": "67",
+          "targetText": "enam puluh tujuh",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "enam",
+              "romanization": null,
+              "english": "six"
+            },
+            {
+              "target": "puluh",
+              "romanization": null,
+              "english": "tens"
+            },
+            {
+              "target": "tujuh",
+              "romanization": null,
+              "english": "seven"
+            }
+          ],
+          "literal": "six tens seven",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "78",
+          "english": "78",
+          "targetText": "tujuh puluh delapan",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "tujuh",
+              "romanization": null,
+              "english": "seven"
+            },
+            {
+              "target": "puluh",
+              "romanization": null,
+              "english": "ten (tens unit)"
+            },
+            {
+              "target": "delapan",
+              "romanization": null,
+              "english": "eight"
+            }
+          ],
+          "literal": "seven tens eight",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "89",
+          "english": "89",
+          "targetText": "delapan puluh sembilan",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "delapan",
+              "romanization": null,
+              "english": "eight"
+            },
+            {
+              "target": "puluh",
+              "romanization": null,
+              "english": "ten (tens unit)"
+            },
+            {
+              "target": "sembilan",
+              "romanization": null,
+              "english": "nine"
+            }
+          ],
+          "literal": "eight tens nine",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "95",
+          "english": "95",
+          "targetText": "sembilan puluh lima",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "sembilan",
+              "romanization": null,
+              "english": "nine"
+            },
+            {
+              "target": "puluh",
+              "romanization": null,
+              "english": "ten (tens unit)"
+            },
+            {
+              "target": "lima",
+              "romanization": null,
+              "english": "five"
+            }
+          ],
+          "literal": "nine tens five",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "100",
+          "english": "100",
+          "targetText": "seratus",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "seratus",
+              "romanization": null,
+              "english": "one hundred"
+            }
+          ],
+          "literal": "one hundred",
+          "usageNote": "Use \"seratus\" for exactly 100; \"satu ratus\" is not normally said, though \"satu\" appears in compounds like \"seratus satu\" (101) when counting precisely.",
+          "level": 1
+        },
+        {
+          "key": "115",
+          "english": "115",
+          "targetText": "seratus lima belas",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "seratus",
+              "romanization": null,
+              "english": "one hundred"
+            },
+            {
+              "target": "lima belas",
+              "romanization": null,
+              "english": "fifteen"
+            }
+          ],
+          "literal": "one-hundred five-teen",
+          "usageNote": "Indonesian uses \"seratus\" for 100, not \"satu ratus\"; \"lima belas\" follows directly with no word for \"and\".",
+          "level": 2
+        },
+        {
+          "key": "250",
+          "english": "250",
+          "targetText": "dua ratus lima puluh",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "dua",
+              "romanization": null,
+              "english": "two"
+            },
+            {
+              "target": "ratus",
+              "romanization": null,
+              "english": "hundred"
+            },
+            {
+              "target": "lima",
+              "romanization": null,
+              "english": "five"
+            },
+            {
+              "target": "puluh",
+              "romanization": null,
+              "english": "ten (tens)"
+            }
+          ],
+          "literal": "two hundred five ten",
+          "usageNote": "In prices, people often shorten it, e.g. \"dua lima\" or \"dua setengah\" (two and a half hundred) for 250 rupiah-type amounts in casual talk.",
+          "level": 1
+        },
+        {
+          "key": "275",
+          "english": "275",
+          "targetText": "dua ratus tujuh puluh lima",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "dua",
+              "romanization": null,
+              "english": "two"
+            },
+            {
+              "target": "ratus",
+              "romanization": null,
+              "english": "hundred"
+            },
+            {
+              "target": "tujuh",
+              "romanization": null,
+              "english": "seven"
+            },
+            {
+              "target": "puluh",
+              "romanization": null,
+              "english": "ten (tens)"
+            },
+            {
+              "target": "lima",
+              "romanization": null,
+              "english": "five"
+            }
+          ],
+          "literal": "two hundred seven ten five",
+          "usageNote": null,
+          "level": 2
+        },
+        {
+          "key": "500",
+          "english": "500",
+          "targetText": "lima ratus",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "lima",
+              "romanization": null,
+              "english": "five"
+            },
+            {
+              "target": "ratus",
+              "romanization": null,
+              "english": "hundred"
+            }
+          ],
+          "literal": "five hundred",
+          "usageNote": "With prices, people often drop the unit: \"lima ratus\" can mean 500 rupiah or 500 thousand depending on context. Say \"lima ratus ribu\" to be clear.",
+          "level": 1
+        },
+        {
+          "key": "750",
+          "english": "750",
+          "targetText": "tujuh ratus lima puluh",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "tujuh",
+              "romanization": null,
+              "english": "seven"
+            },
+            {
+              "target": "ratus",
+              "romanization": null,
+              "english": "hundred"
+            },
+            {
+              "target": "lima",
+              "romanization": null,
+              "english": "five"
+            },
+            {
+              "target": "puluh",
+              "romanization": null,
+              "english": "ten (tens)"
+            }
+          ],
+          "literal": "seven hundred five ten",
+          "usageNote": "In prices, people often say it as \"tujuh ratus lima puluh ribu\" for 750,000, so listen for \"ribu\" (thousand) after it.",
+          "level": 2
+        },
+        {
+          "key": "945",
+          "english": "945",
+          "targetText": "sembilan ratus empat puluh lima",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "sembilan",
+              "romanization": null,
+              "english": "nine"
+            },
+            {
+              "target": "ratus",
+              "romanization": null,
+              "english": "hundred"
+            },
+            {
+              "target": "empat",
+              "romanization": null,
+              "english": "four"
+            },
+            {
+              "target": "puluh",
+              "romanization": null,
+              "english": "ten (tens)"
+            },
+            {
+              "target": "lima",
+              "romanization": null,
+              "english": "five"
+            }
+          ],
+          "literal": "nine hundred four ten five",
+          "usageNote": null,
+          "level": 2
+        },
+        {
+          "key": "1000",
+          "english": "1000",
+          "targetText": "seribu",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "seribu",
+              "romanization": null,
+              "english": "one thousand"
+            }
+          ],
+          "literal": "one thousand",
+          "usageNote": "Say \"seribu\", not \"satu ribu\"; \"satu ribu\" sounds unnatural except when stressing exactly one.",
+          "level": 1
+        },
+        {
+          "key": "2500",
+          "english": "2500",
+          "targetText": "dua ribu lima ratus",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "dua",
+              "romanization": null,
+              "english": "two"
+            },
+            {
+              "target": "ribu",
+              "romanization": null,
+              "english": "thousand"
+            },
+            {
+              "target": "lima",
+              "romanization": null,
+              "english": "five"
+            },
+            {
+              "target": "ratus",
+              "romanization": null,
+              "english": "hundred"
+            }
+          ],
+          "literal": "two thousand five hundred",
+          "usageNote": "In prices, people often drop \"ratus\" and say \"dua ribu lima\" (2,500 rupiah) when the context is clear.",
+          "level": 2
+        },
+        {
+          "key": "5000",
+          "english": "5000",
+          "targetText": "lima ribu",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "lima",
+              "romanization": null,
+              "english": "five"
+            },
+            {
+              "target": "ribu",
+              "romanization": null,
+              "english": "thousand"
+            }
+          ],
+          "literal": "five thousand",
+          "usageNote": "When naming prices, people often drop \"rupiah\" and may say just \"lima ribu\" or even \"lima\" in casual market talk.",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "days",
+      "items": [
+        {
+          "key": "monday",
+          "english": "Monday",
+          "targetText": "Senin",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "Senin",
+              "romanization": null,
+              "english": "Monday"
+            }
+          ],
+          "literal": "Monday",
+          "usageNote": "Senin comes from the Arabic word for \"two\" and is the first day of the week in Indonesian calendars.",
+          "level": 1
+        },
+        {
+          "key": "tuesday",
+          "english": "Tuesday",
+          "targetText": "Selasa",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "Selasa",
+              "romanization": null,
+              "english": "Tuesday"
+            }
+          ],
+          "literal": "Tuesday",
+          "usageNote": "Selasa comes from the Arabic word for 'third', as the week is counted from Sunday (Minggu) as the first day.",
+          "level": 1
+        },
+        {
+          "key": "wednesday",
+          "english": "Wednesday",
+          "targetText": "Rabu",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "Rabu",
+              "romanization": null,
+              "english": "Wednesday"
+            }
+          ],
+          "literal": "Wednesday",
+          "usageNote": "Use hari Rabu (\"Wednesday day\") when you want to be explicit, but plain Rabu is fine in most conversations.",
+          "level": 1
+        },
+        {
+          "key": "thursday",
+          "english": "Thursday",
+          "targetText": "Kamis",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "Kamis",
+              "romanization": null,
+              "english": "Thursday"
+            }
+          ],
+          "literal": "Thursday",
+          "usageNote": "Comes from Arabic al-khamīs, meaning 'the fifth'; the casual form 'hari Kamis' means 'on Thursday'.",
+          "level": 1
+        },
+        {
+          "key": "friday",
+          "english": "Friday",
+          "targetText": "Jumat",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "Jumat",
+              "romanization": null,
+              "english": "Friday"
+            }
+          ],
+          "literal": "Friday",
+          "usageNote": "Jumat is also the main weekly day of congregational prayer for Muslims, so many people finish work early or take a longer midday break.",
+          "level": 1
+        },
+        {
+          "key": "saturday",
+          "english": "Saturday",
+          "targetText": "Sabtu",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "Sabtu",
+              "romanization": null,
+              "english": "Saturday"
+            }
+          ],
+          "literal": "Saturday",
+          "usageNote": "Use \"hari Sabtu\" (day Saturday) or \"Sabtu ini\" (this Saturday) when you want to say \"on Saturday\"; no preposition is needed.",
+          "level": 1
+        },
+        {
+          "key": "sunday",
+          "english": "Sunday",
+          "targetText": "Minggu",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "Minggu",
+              "romanization": null,
+              "english": "Sunday"
+            }
+          ],
+          "literal": "Sunday",
+          "usageNote": "Minggu also means \"week\" (as in \"minggu depan\", next week), so context tells you which is meant; \"Ahad\" is a less common, more religious term for Sunday.",
+          "level": 1
+        },
+        {
+          "key": "weekend",
+          "english": "weekend",
+          "targetText": "akhir pekan",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "akhir",
+              "romanization": null,
+              "english": "end"
+            },
+            {
+              "target": "pekan",
+              "romanization": null,
+              "english": "week"
+            }
+          ],
+          "literal": "end week",
+          "usageNote": "Indonesians also commonly borrow the English word \"weekend\" in casual speech, especially in cities.",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "connectors",
+      "items": [
+        {
+          "key": "and",
+          "english": "and",
+          "targetText": "dan",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "dan",
+              "romanization": null,
+              "english": "and"
+            }
+          ],
+          "literal": "and",
+          "usageNote": "Example: \"Saya mau nasi dan teh.\" (I want rice and tea.) Use \"serta\" in more formal writing; in speech \"sama\" is a casual stand-in for \"and\" between nouns.",
+          "level": 1
+        },
+        {
+          "key": "or",
+          "english": "or",
+          "targetText": "atau",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "atau",
+              "romanization": null,
+              "english": "or"
+            }
+          ],
+          "literal": "or",
+          "usageNote": "Example: Mau teh atau kopi? [Do you want tea or coffee?]",
+          "level": 1
+        },
+        {
+          "key": "but",
+          "english": "but",
+          "targetText": "tetapi",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "tetapi",
+              "romanization": null,
+              "english": "but"
+            }
+          ],
+          "literal": "but",
+          "usageNote": "Example: Saya mau pergi, tetapi saya sedang sibuk. [I want to go, but I'm busy.] In casual speech people usually shorten it to \"tapi\".",
+          "level": 1
+        },
+        {
+          "key": "if",
+          "english": "if",
+          "targetText": "kalau",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "kalau",
+              "romanization": null,
+              "english": "if / when"
+            }
+          ],
+          "literal": "if",
+          "usageNote": "Example: \"Kalau besok hujan, kita di rumah saja.\" (If it rains tomorrow, let's just stay home.) \"Jika\" is more formal, while \"kalau\" is the everyday spoken choice.",
+          "level": 1
+        },
+        {
+          "key": "because",
+          "english": "because",
+          "targetText": "karena",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "karena",
+              "romanization": null,
+              "english": "because"
+            }
+          ],
+          "literal": "because",
+          "usageNote": "Example: \"Saya terlambat karena macet.\" [I was late because of the traffic.]",
+          "level": 1
+        },
+        {
+          "key": "so",
+          "english": "so",
+          "targetText": "jadi",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "jadi",
+              "romanization": null,
+              "english": "so, therefore"
+            }
+          ],
+          "literal": "so / become",
+          "usageNote": "Example: \"Hujannya deras, jadi kami pulang.\" (It rained hard, so we went home.)",
+          "level": 2
+        },
+        {
+          "key": "when",
+          "english": "when",
+          "targetText": "ketika",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "ketika",
+              "romanization": null,
+              "english": "when"
+            }
+          ],
+          "literal": "when",
+          "usageNote": "Example: Ketika saya sampai di rumah, saya langsung mandi. [When I get home, I shower right away.] Use \"kalau\" instead for a habitual or uncertain future \"when/if\".",
+          "level": 3
+        },
+        {
+          "key": "then",
+          "english": "then",
+          "targetText": "lalu",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "lalu",
+              "romanization": null,
+              "english": "then, after that"
+            }
+          ],
+          "literal": "then",
+          "usageNote": "Example: \"Saya makan, lalu pulang.\" [I ate, then went home.]",
+          "level": 2
+        },
+        {
+          "key": "also",
+          "english": "also",
+          "targetText": "juga",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "juga",
+              "romanization": null,
+              "english": "also, too"
+            }
+          ],
+          "literal": "also",
+          "usageNote": "Example: \"Saya juga mau kopi.\" (I also want coffee.) It usually comes right after the subject or before the word it adds to.",
+          "level": 1
+        },
+        {
+          "key": "before",
+          "english": "before",
+          "targetText": "sebelum",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "sebelum",
+              "romanization": null,
+              "english": "before"
+            }
+          ],
+          "literal": "before",
+          "usageNote": "Example: \"Cuci tangan sebelum makan.\" [Wash your hands before eating.] Use \"sebelum\" before a clause or noun; \"sebelumnya\" means \"beforehand\" or \"previously\" on its own.",
+          "level": 2
+        },
+        {
+          "key": "after",
+          "english": "after",
+          "targetText": "setelah",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "setelah",
+              "romanization": null,
+              "english": "after"
+            }
+          ],
+          "literal": "after",
+          "usageNote": "Example: \"Setelah makan, kita pergi.\" [After eating, we'll go.]",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "questions",
+      "items": [
+        {
+          "key": "what",
+          "english": "what",
+          "targetText": "apa",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "apa",
+              "romanization": null,
+              "english": "what"
+            }
+          ],
+          "literal": "what",
+          "usageNote": "Example: \"Ini apa?\" (What is this?)",
+          "level": 1
+        },
+        {
+          "key": "who",
+          "english": "who",
+          "targetText": "siapa",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "siapa",
+              "romanization": null,
+              "english": "who"
+            }
+          ],
+          "literal": "who",
+          "usageNote": "Example: \"Siapa nama kamu?\" [What's your name? / Who are you called?]",
+          "level": 1
+        },
+        {
+          "key": "where",
+          "english": "where",
+          "targetText": "di mana",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "di",
+              "romanization": null,
+              "english": "at, in (location)"
+            },
+            {
+              "target": "mana",
+              "romanization": null,
+              "english": "which, where"
+            }
+          ],
+          "literal": "at which (place)",
+          "usageNote": "Example: \"Toilet di mana?\" [Where is the toilet?] Use \"ke mana\" for 'where to' and \"dari mana\" for 'where from'.",
+          "level": 1
+        },
+        {
+          "key": "when",
+          "english": "when",
+          "targetText": "kapan",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "kapan",
+              "romanization": null,
+              "english": "when (question)"
+            }
+          ],
+          "literal": "when",
+          "usageNote": "Example: Kapan kamu datang? [When are you coming?]",
+          "level": 1
+        },
+        {
+          "key": "why",
+          "english": "why",
+          "targetText": "kenapa",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "kenapa",
+              "romanization": null,
+              "english": "why"
+            }
+          ],
+          "literal": "why",
+          "usageNote": "Example: \"Kenapa kamu terlambat?\" [Why are you late?] \"Mengapa\" is the more formal, written equivalent.",
+          "level": 1
+        },
+        {
+          "key": "how",
+          "english": "how",
+          "targetText": "bagaimana",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "bagaimana",
+              "romanization": null,
+              "english": "how"
+            }
+          ],
+          "literal": "how",
+          "usageNote": "Example: \"Bagaimana cara ke stasiun?\" [How do I get to the station?]",
+          "level": 1
+        },
+        {
+          "key": "which",
+          "english": "which",
+          "targetText": "yang mana",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "yang",
+              "romanization": null,
+              "english": "(relative marker) that"
+            },
+            {
+              "target": "mana",
+              "romanization": null,
+              "english": "where / which"
+            }
+          ],
+          "literal": "that which-one",
+          "usageNote": "Example: \"Kamu mau yang mana?\" (Which one do you want?). Use \"apa\" plus noun is not used; instead put \"mana\" after the noun, e.g. \"buku mana\" (which book).",
+          "level": 1
+        },
+        {
+          "key": "how-much",
+          "english": "how much (price)",
+          "targetText": "berapa",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "berapa",
+              "romanization": null,
+              "english": "how much / how many"
+            }
+          ],
+          "literal": "how much",
+          "usageNote": "Example: \"Ini berapa?\" [How much is this?]",
+          "level": 1
+        },
+        {
+          "key": "how-many",
+          "english": "how many",
+          "targetText": "berapa",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "berapa",
+              "romanization": null,
+              "english": "how many / how much"
+            }
+          ],
+          "literal": "how many",
+          "usageNote": "Example: \"Berapa orang?\" [How many people?]",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "items": [
+        {
+          "key": "now",
+          "english": "now",
+          "targetText": "sekarang",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "sekarang",
+              "romanization": null,
+              "english": "now"
+            }
+          ],
+          "literal": "now",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "today",
+          "english": "today",
+          "targetText": "hari ini",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "hari",
+              "romanization": null,
+              "english": "day"
+            },
+            {
+              "target": "ini",
+              "romanization": null,
+              "english": "this"
+            }
+          ],
+          "literal": "day this",
+          "usageNote": "Indonesian has no single word for \"today\"; it is always the two-word phrase \"hari ini\".",
+          "level": 1
+        },
+        {
+          "key": "tomorrow",
+          "english": "tomorrow",
+          "targetText": "besok",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "besok",
+              "romanization": null,
+              "english": "tomorrow"
+            }
+          ],
+          "literal": "tomorrow",
+          "usageNote": "\"Esok\" is a bit more formal or literary; \"besok\" is the everyday choice.",
+          "level": 1
+        },
+        {
+          "key": "yesterday",
+          "english": "yesterday",
+          "targetText": "kemarin",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "kemarin",
+              "romanization": null,
+              "english": "yesterday"
+            }
+          ],
+          "literal": "yesterday",
+          "usageNote": "Use \"kemarin\" for the day before today; for \"yesterday evening\" say \"kemarin sore\" or \"kemarin malam\".",
+          "level": 1
+        },
+        {
+          "key": "later",
+          "english": "later",
+          "targetText": "nanti",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "nanti",
+              "romanization": null,
+              "english": "later"
+            }
+          ],
+          "literal": "later",
+          "usageNote": "Nanti refers to a later time in the future; for 'later' meaning 'in a little while', sebentar lagi fits better. Use tadi for earlier today.",
+          "level": 1
+        },
+        {
+          "key": "soon",
+          "english": "soon",
+          "targetText": "sebentar lagi",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "sebentar",
+              "romanization": null,
+              "english": "a moment, a short while"
+            },
+            {
+              "target": "lagi",
+              "romanization": null,
+              "english": "more, again"
+            }
+          ],
+          "literal": "a short while more",
+          "usageNote": "Use \"sebentar lagi\" for something about to happen in a few minutes; \"segera\" sounds more formal, like \"immediately\" or \"promptly\".",
+          "level": 2
+        },
+        {
+          "key": "already",
+          "english": "already",
+          "targetText": "sudah",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "sudah",
+              "romanization": null,
+              "english": "already; done"
+            }
+          ],
+          "literal": "already",
+          "usageNote": "Goes before the verb to show something is done, e.g. \"Saya sudah makan.\" Also works alone as an answer meaning \"already done.\" \"Udah\" is the casual spoken form.",
+          "level": 1
+        },
+        {
+          "key": "not-yet",
+          "english": "not yet",
+          "targetText": "belum",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "belum",
+              "romanization": null,
+              "english": "not yet"
+            }
+          ],
+          "literal": "not yet",
+          "usageNote": "Also works as a complete answer to questions like \"Sudah makan?\" (Have you eaten yet?), where \"belum\" replaces a full sentence.",
+          "level": 1
+        },
+        {
+          "key": "morning",
+          "english": "morning",
+          "targetText": "pagi",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "pagi",
+              "romanization": null,
+              "english": "morning"
+            }
+          ],
+          "literal": "morning",
+          "usageNote": "Covers roughly sunrise until about 10 or 11 a.m.; it is also used in the greeting \"selamat pagi\" (good morning).",
+          "level": 1
+        },
+        {
+          "key": "afternoon",
+          "english": "afternoon",
+          "targetText": "siang",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "siang",
+              "romanization": null,
+              "english": "midday, early afternoon"
+            }
+          ],
+          "literal": "midday / afternoon",
+          "usageNote": "Siang covers roughly 11am to 3pm; for later afternoon (about 3pm to sunset) use sore.",
+          "level": 1
+        },
+        {
+          "key": "evening",
+          "english": "evening",
+          "targetText": "malam",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "malam",
+              "romanization": null,
+              "english": "evening, night"
+            }
+          ],
+          "literal": "evening / night",
+          "usageNote": "Indonesian has no separate word for evening: \"sore\" is late afternoon until sunset, and \"malam\" covers evening and night after dark.",
+          "level": 1
+        },
+        {
+          "key": "tonight",
+          "english": "tonight",
+          "targetText": "malam ini",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "malam",
+              "romanization": null,
+              "english": "night, evening"
+            },
+            {
+              "target": "ini",
+              "romanization": null,
+              "english": "this"
+            }
+          ],
+          "literal": "night this",
+          "usageNote": "Use \"nanti malam\" for a later time tonight, as in plans or promises; \"tadi malam\" means last night.",
+          "level": 1
+        },
+        {
+          "key": "this-week",
+          "english": "this week",
+          "targetText": "minggu ini",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "minggu",
+              "romanization": null,
+              "english": "week"
+            },
+            {
+              "target": "ini",
+              "romanization": null,
+              "english": "this"
+            }
+          ],
+          "literal": "week this",
+          "usageNote": "Minggu also means Sunday, but in minggu ini the context makes it clearly mean \"week\".",
+          "level": 1
+        },
+        {
+          "key": "next-week",
+          "english": "next week",
+          "targetText": "minggu depan",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "minggu",
+              "romanization": null,
+              "english": "week"
+            },
+            {
+              "target": "depan",
+              "romanization": null,
+              "english": "next, front"
+            }
+          ],
+          "literal": "week front",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "last-week",
+          "english": "last week",
+          "targetText": "minggu lalu",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "minggu",
+              "romanization": null,
+              "english": "week"
+            },
+            {
+              "target": "lalu",
+              "romanization": null,
+              "english": "past, ago"
+            }
+          ],
+          "literal": "week past",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "every-day",
+          "english": "every day",
+          "targetText": "setiap hari",
+          "romanization": null,
+          "reading": null,
+          "gloss": [
+            {
+              "target": "setiap",
+              "romanization": null,
+              "english": "every"
+            },
+            {
+              "target": "hari",
+              "romanization": null,
+              "english": "day"
+            }
+          ],
+          "literal": "every day",
+          "usageNote": null,
+          "level": 1
+        }
+      ]
+    }
+  ]
+}

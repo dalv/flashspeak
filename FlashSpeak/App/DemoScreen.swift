@@ -6,16 +6,25 @@
     /// Names: home, onboarding, paywall, speak, listening, type, suggest,
     /// suggested, result, clarify, clarifyReply, duplicate, flashcards,
     /// flashcardBack, caughtUp, recall, recallThinking, recallAnswer, manage,
-    /// card.
+    /// card, presets, presetDetail.
     struct DemoScreen: View {
         let name: String
         let languageCode: String
 
-        @State private var dependencies = AppDependencies.preview()
+        @State private var dependencies: AppDependencies
         @State private var newPhrase: NewPhraseModel?
         @State private var clarify: ClarifyModel?
         @State private var flashcards: FlashcardsModel?
         @State private var recall: AudioRecallModel?
+
+        init(name: String, languageCode: String) {
+            self.name = name
+            self.languageCode = languageCode
+            // Set before any screen loads; preview settings persist between launches.
+            let dependencies = AppDependencies.preview()
+            dependencies.settings.currentLanguageCode = languageCode
+            _dependencies = State(initialValue: dependencies)
+        }
 
         static var requested: (name: String, language: String)? {
             let defaults = UserDefaults.standard
@@ -50,6 +59,13 @@
                 case "recall", "recallThinking", "recallAnswer":
                     if let recall {
                         NavigationStack { AudioRecallScreen(model: recall) }
+                    }
+                case "presets":
+                    NavigationStack { PresetCategoriesScreen(dependencies: dependencies) }
+                case "presetDetail":
+                    if let category = dependencies.presets.category("numbers", in: languageCode) {
+                        let model = PresetCategoriesModel(dependencies: dependencies)
+                        NavigationStack { PresetCategoryDetail(category: category, model: model).onAppear(perform: model.refresh) }
                     }
                 case "manage":
                     NavigationStack { ManageCardsScreen(dependencies: dependencies) }

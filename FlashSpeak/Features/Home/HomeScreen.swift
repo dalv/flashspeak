@@ -42,10 +42,16 @@ struct HomeScreen: View {
                     .disabled(model.isEmpty)
 
                     if model.isEmpty {
-                        Text("Add a phrase, try suggested phrases, or start a preset category such as Numbers to begin practising.")
-                            .appTextStyle(.secondary)
-                            .foregroundStyle(DS.Color.inkSecondary)
-                            .multilineTextAlignment(.center)
+                        VStack(spacing: DS.Spacing.s) {
+                            Text("Add a phrase, try suggested phrases, or start a preset category such as Numbers to begin practising.")
+                                .appTextStyle(.secondary)
+                                .foregroundStyle(DS.Color.inkSecondary)
+                                .multilineTextAlignment(.center)
+                            Button("Browse preset categories", systemImage: HomeRoute.presetCategories.systemImage) {
+                                path.append(.presetCategories)
+                            }
+                            .buttonStyle(.secondary)
+                        }
                     }
                 }
                 .padding(.horizontal, DS.Spacing.screenPadding)
@@ -89,6 +95,8 @@ struct HomeScreen: View {
             AudioRecallScreen(dependencies: model.dependencies)
         case .manageCards:
             ManageCardsScreen(dependencies: model.dependencies)
+        case .presetCategories:
+            PresetCategoriesScreen(dependencies: model.dependencies)
         default:
             ComingSoonView(route: route)
         }

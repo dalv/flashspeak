@@ -1,0 +1,2104 @@
+{
+  "language": "ko",
+  "contentVersion": 1,
+  "reviewed": false,
+  "promptVersion": "2026-10.1",
+  "model": "claude-sonnet-5-5",
+  "generatedAt": "2026-10-01",
+  "categories": [
+    {
+      "id": "numbers",
+      "items": [
+        {
+          "key": "1",
+          "english": "1",
+          "targetText": "일",
+          "romanization": "il",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "일",
+              "romanization": "il",
+              "english": "one (Sino-Korean)"
+            }
+          ],
+          "literal": "one",
+          "usageNote": "Sino-Korean numbers are used for prices, phone numbers, dates and minutes; 하나 is the native Korean one, used for counting items.",
+          "level": 1
+        },
+        {
+          "key": "2",
+          "english": "2",
+          "targetText": "이",
+          "romanization": "i",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "이",
+              "romanization": "i",
+              "english": "two (Sino-Korean)"
+            }
+          ],
+          "literal": "two",
+          "usageNote": "Sounds identical to the number 2 and to the word for \"tooth\" and \"this\"; context makes it clear. Use 둘 (native Korean) when counting objects or people.",
+          "level": 1
+        },
+        {
+          "key": "3",
+          "english": "3",
+          "targetText": "삼",
+          "romanization": "sam",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "삼",
+              "romanization": "sam",
+              "english": "three (Sino-Korean)"
+            }
+          ],
+          "literal": "three",
+          "usageNote": "Used for phone numbers, dates, money, and floors; use native 셋 or 세 when counting objects.",
+          "level": 1
+        },
+        {
+          "key": "4",
+          "english": "4",
+          "targetText": "사",
+          "romanization": "sa",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "사",
+              "romanization": "sa",
+              "english": "four (Sino-Korean)"
+            }
+          ],
+          "literal": "four",
+          "usageNote": "Sino-Korean 사 is avoided in some contexts because it sounds like 死 (death), so 4th floor is often labeled F in elevators.",
+          "level": 1
+        },
+        {
+          "key": "5",
+          "english": "5",
+          "targetText": "오",
+          "romanization": "o",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "오",
+              "romanization": "o",
+              "english": "five (Sino-Korean)"
+            }
+          ],
+          "literal": "five",
+          "usageNote": "Use 오 for phone numbers, dates, money, and floors; use native 다섯 when counting items or people.",
+          "level": 1
+        },
+        {
+          "key": "6",
+          "english": "6",
+          "targetText": "육",
+          "romanization": "yuk",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "육",
+              "romanization": "yuk",
+              "english": "six (Sino-Korean)"
+            }
+          ],
+          "literal": "six",
+          "usageNote": "In dates and phone numbers 6 is 육, but when counting objects or saying age you use the native form 여섯. In compounds like 6월 it is pronounced 유월.",
+          "level": 1
+        },
+        {
+          "key": "7",
+          "english": "7",
+          "targetText": "칠",
+          "romanization": "chil",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "칠",
+              "romanization": "chil",
+              "english": "seven (Sino-Korean)"
+            }
+          ],
+          "literal": "seven",
+          "usageNote": "Sometimes said as 칠 and 일 can sound alike over the phone, so 일 is often pronounced 'il' and 칠 stays distinct as 'chil'; for clarity people may say 칠 clearly with a stressed ch.",
+          "level": 1
+        },
+        {
+          "key": "8",
+          "english": "8",
+          "targetText": "팔",
+          "romanization": "pal",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "팔",
+              "romanization": "pal",
+              "english": "eight (Sino-Korean)"
+            }
+          ],
+          "literal": "eight",
+          "usageNote": "여덟 is the native Korean eight, used for counting things and for age; 팔 is used for dates, money, phone numbers, and floors.",
+          "level": 1
+        },
+        {
+          "key": "9",
+          "english": "9",
+          "targetText": "구",
+          "romanization": "gu",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "구",
+              "romanization": "gu",
+              "english": "nine (Sino-Korean)"
+            }
+          ],
+          "literal": "nine",
+          "usageNote": "Sino-Korean 구 is used for phone numbers, dates, and prices; the native word 아홉 is used for counting items and age.",
+          "level": 1
+        },
+        {
+          "key": "10",
+          "english": "10",
+          "targetText": "십",
+          "romanization": "sip",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "십",
+              "romanization": "sip",
+              "english": "ten (Sino-Korean)"
+            }
+          ],
+          "literal": "ten",
+          "usageNote": "Use 십 for phone numbers, dates, money and minutes; the native Korean 열 is used for counting items and hours.",
+          "level": 1
+        },
+        {
+          "key": "11",
+          "english": "11",
+          "targetText": "십일",
+          "romanization": "sibil",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "십",
+              "romanization": "sip",
+              "english": "ten"
+            },
+            {
+              "target": "일",
+              "romanization": "il",
+              "english": "one"
+            }
+          ],
+          "literal": "ten-one",
+          "usageNote": "Pronounced \"sibil\": the ㅂ of 십 links to the vowel of 일. Use it for dates (11일), minutes, and addresses; use native 열한 for counting things (열한 개).",
+          "level": 1
+        },
+        {
+          "key": "12",
+          "english": "12",
+          "targetText": "십이",
+          "romanization": "sibi",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "십",
+              "romanization": "sip",
+              "english": "ten"
+            },
+            {
+              "target": "이",
+              "romanization": "i",
+              "english": "two"
+            }
+          ],
+          "literal": "ten-two",
+          "usageNote": "Pronounced 'sibi' (the ㅂ links to the next syllable); use 십이 for dates, months (십이월), phone numbers and money, but 열두 before counters like 개 or 명.",
+          "level": 1
+        },
+        {
+          "key": "13",
+          "english": "13",
+          "targetText": "십삼",
+          "romanization": "sipsam",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "십",
+              "romanization": "sip",
+              "english": "ten"
+            },
+            {
+              "target": "삼",
+              "romanization": "sam",
+              "english": "three"
+            }
+          ],
+          "literal": "ten-three",
+          "usageNote": "Used for phone numbers, addresses, dates and floors; for counting things or age, use the native number 열세 instead.",
+          "level": 1
+        },
+        {
+          "key": "14",
+          "english": "14",
+          "targetText": "십사",
+          "romanization": "sipsa",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "십",
+              "romanization": "sip",
+              "english": "ten"
+            },
+            {
+              "target": "사",
+              "romanization": "sa",
+              "english": "four"
+            }
+          ],
+          "literal": "ten-four",
+          "usageNote": "Sino-Korean 14 is used for phone numbers, dates, minutes, and addresses; for counting things or age, use native Korean 열네 instead.",
+          "level": 1
+        },
+        {
+          "key": "15",
+          "english": "15",
+          "targetText": "십오",
+          "romanization": "sibo",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "십",
+              "romanization": "sip",
+              "english": "ten"
+            },
+            {
+              "target": "오",
+              "romanization": "o",
+              "english": "five"
+            }
+          ],
+          "literal": "ten-five",
+          "usageNote": "The ㅂ in 십 is pronounced like a soft 'b' before 오, so it sounds like 'sibo', not 'sip-o'. Native Korean 열다섯 is used for counting things, not for this system.",
+          "level": 1
+        },
+        {
+          "key": "16",
+          "english": "16",
+          "targetText": "십육",
+          "romanization": "sibyuk",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "십",
+              "romanization": "sip",
+              "english": "ten"
+            },
+            {
+              "target": "육",
+              "romanization": "yuk",
+              "english": "six"
+            }
+          ],
+          "literal": "ten-six",
+          "usageNote": "Pronounced \"sibyuk\" (not \"sipyuk\"); ㅂ is voiced between the two syllables, and some speakers also say \"simnyuk\".",
+          "level": 1
+        },
+        {
+          "key": "17",
+          "english": "17",
+          "targetText": "십칠",
+          "romanization": "sipchil",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "십",
+              "romanization": "sip",
+              "english": "ten"
+            },
+            {
+              "target": "칠",
+              "romanization": "chil",
+              "english": "seven"
+            }
+          ],
+          "literal": "ten-seven",
+          "usageNote": "Use 십칠 for phone numbers, dates, room numbers and money; for counting things or saying age, use native Korean 열일곱 instead.",
+          "level": 1
+        },
+        {
+          "key": "18",
+          "english": "18",
+          "targetText": "십팔",
+          "romanization": "sip-pal",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "십",
+              "romanization": "sip",
+              "english": "ten"
+            },
+            {
+              "target": "팔",
+              "romanization": "pal",
+              "english": "eight"
+            }
+          ],
+          "literal": "ten-eight",
+          "usageNote": "Heads up: 십팔 is pronounced close to a common swear word when said fast, so Koreans often say it carefully or use a different number when joking around, but it's totally normal for ages, dates, and counting.",
+          "level": 1
+        },
+        {
+          "key": "19",
+          "english": "19",
+          "targetText": "십구",
+          "romanization": "sipgu",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "십",
+              "romanization": "sip",
+              "english": "ten"
+            },
+            {
+              "target": "구",
+              "romanization": "gu",
+              "english": "nine"
+            }
+          ],
+          "literal": "ten-nine",
+          "usageNote": "Used for ages in some contexts like dates, addresses, phone numbers, and money; for counting people or things with a counter, Korean uses native numbers (열아홉) instead.",
+          "level": 1
+        },
+        {
+          "key": "20",
+          "english": "20",
+          "targetText": "이십",
+          "romanization": "isip",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "이십",
+              "romanization": "isip",
+              "english": "twenty (Sino-Korean)"
+            }
+          ],
+          "literal": "two-ten",
+          "usageNote": "Use 이십 for dates, money, phone numbers, and minutes; for counting items or age, native Korean 스물 (seumul) is used instead.",
+          "level": 1
+        },
+        {
+          "key": "21",
+          "english": "21",
+          "targetText": "이십일",
+          "romanization": "isibil",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "이",
+              "romanization": "i",
+              "english": "two"
+            },
+            {
+              "target": "십",
+              "romanization": "sip",
+              "english": "ten"
+            },
+            {
+              "target": "일",
+              "romanization": "il",
+              "english": "one"
+            }
+          ],
+          "literal": "two-ten-one",
+          "usageNote": "Use this for dates, phone numbers, money, and floors; for age or counting items, use native Korean \"스물한\" (seumulhan) instead.",
+          "level": 1
+        },
+        {
+          "key": "22",
+          "english": "22",
+          "targetText": "이십이",
+          "romanization": "isibi",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "이십",
+              "romanization": "isip",
+              "english": "twenty"
+            },
+            {
+              "target": "이",
+              "romanization": "i",
+              "english": "two"
+            }
+          ],
+          "literal": "two-ten two (20 + 2)",
+          "usageNote": "Use this Sino-Korean form for things like dates, minutes, addresses, and phone numbers; for age or counting items, use the native form 스물두 (seumuldu) instead.",
+          "level": 1
+        },
+        {
+          "key": "23",
+          "english": "23",
+          "targetText": "이십삼",
+          "romanization": "isipsam",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "이십",
+              "romanization": "isip",
+              "english": "twenty"
+            },
+            {
+              "target": "삼",
+              "romanization": "sam",
+              "english": "three"
+            }
+          ],
+          "literal": "two-ten three (twenty-three)",
+          "usageNote": "Use this Sino-Korean form for things like phone numbers, dates, addresses, and money; for counting items or giving age, Korean uses 스물셋 instead.",
+          "level": 1
+        },
+        {
+          "key": "34",
+          "english": "34",
+          "targetText": "삼십사",
+          "romanization": "samsipsa",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "삼십",
+              "romanization": "samsip",
+              "english": "thirty"
+            },
+            {
+              "target": "사",
+              "romanization": "sa",
+              "english": "four"
+            }
+          ],
+          "literal": "three-ten-four (thirty-four)",
+          "usageNote": "Use Sino-Korean 삼십사 for things like phone numbers, addresses, dates, and money; for counting items or age you'd use the native form 서른네.",
+          "level": 1
+        },
+        {
+          "key": "45",
+          "english": "45",
+          "targetText": "사십오",
+          "romanization": "sasibo",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "사십",
+              "romanization": "sasip",
+              "english": "forty"
+            },
+            {
+              "target": "오",
+              "romanization": "o",
+              "english": "five"
+            }
+          ],
+          "literal": "four-ten five",
+          "usageNote": "Use this Sino-Korean form for things like phone numbers, addresses, minutes, and prices; for age, you'd use the native form 마흔다섯.",
+          "level": 1
+        },
+        {
+          "key": "56",
+          "english": "56",
+          "targetText": "오십육",
+          "romanization": "osibyuk",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "오십",
+              "romanization": "osip",
+              "english": "fifty"
+            },
+            {
+              "target": "육",
+              "romanization": "yuk",
+              "english": "six"
+            }
+          ],
+          "literal": "five-ten six",
+          "usageNote": "After 십, 육 is pronounced 'nyuk' in some compounds, but in plain counting it is said 'yuk', so 56 sounds like 'o-sip-yuk' (often heard as 'osimnyuk').",
+          "level": 1
+        },
+        {
+          "key": "67",
+          "english": "67",
+          "targetText": "육십칠",
+          "romanization": "yuksip-chil",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "육십",
+              "romanization": "yuksip",
+              "english": "sixty"
+            },
+            {
+              "target": "칠",
+              "romanization": "chil",
+              "english": "seven"
+            }
+          ],
+          "literal": "six-ten seven (sixty seven)",
+          "usageNote": "Pronounced \"yuk-sip-chil\"; in fast speech 육십 often sounds like \"yuk-ssip\", and 칠 is sometimes said as 일곱-free Sino form only, so don't swap in native 일곱.",
+          "level": 1
+        },
+        {
+          "key": "78",
+          "english": "78",
+          "targetText": "칠십팔",
+          "romanization": "chilsippal",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "칠십",
+              "romanization": "chilsip",
+              "english": "seventy"
+            },
+            {
+              "target": "팔",
+              "romanization": "pal",
+              "english": "eight"
+            }
+          ],
+          "literal": "seven-ten eight",
+          "usageNote": "Commonly used for ages in the seventies, addresses, phone numbers, and prices; 78 pronounced as 'chilsippal' with the 'sip' and 'pal' blending.",
+          "level": 1
+        },
+        {
+          "key": "89",
+          "english": "89",
+          "targetText": "팔십구",
+          "romanization": "palsipgu",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "팔십",
+              "romanization": "palsip",
+              "english": "eighty"
+            },
+            {
+              "target": "구",
+              "romanization": "gu",
+              "english": "nine"
+            }
+          ],
+          "literal": "eight-ten nine (eighty nine)",
+          "usageNote": "Use for phone numbers, prices, room numbers, and ages in the formal sense; for age in everyday speech, native Korean numbers like 여든아홉 are used.",
+          "level": 1
+        },
+        {
+          "key": "95",
+          "english": "95",
+          "targetText": "구십오",
+          "romanization": "gusibo",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "구십",
+              "romanization": "gusip",
+              "english": "ninety"
+            },
+            {
+              "target": "오",
+              "romanization": "o",
+              "english": "five"
+            }
+          ],
+          "literal": "nine-ten five (ninety-five)",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "100",
+          "english": "100",
+          "targetText": "백",
+          "romanization": "baek",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "백",
+              "romanization": "baek",
+              "english": "one hundred"
+            }
+          ],
+          "literal": "hundred",
+          "usageNote": "Say 백 on its own for 100; don't add 일 before it (일백 sounds unnatural).",
+          "level": 1
+        },
+        {
+          "key": "115",
+          "english": "115",
+          "targetText": "백십오",
+          "romanization": "baek-sibo",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "백",
+              "romanization": "baek",
+              "english": "hundred"
+            },
+            {
+              "target": "십",
+              "romanization": "sip",
+              "english": "ten"
+            },
+            {
+              "target": "오",
+              "romanization": "o",
+              "english": "five"
+            }
+          ],
+          "literal": "hundred ten five",
+          "usageNote": "Korean drops the 일 before 백, so say 백십오, not 일백십오; the ㅂ in 십 links to 오 and sounds like 'sibo'.",
+          "level": 2
+        },
+        {
+          "key": "250",
+          "english": "250",
+          "targetText": "이백오십",
+          "romanization": "ibaegosip",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "이백",
+              "romanization": "ibaek",
+              "english": "two hundred"
+            },
+            {
+              "target": "오십",
+              "romanization": "osip",
+              "english": "fifty"
+            }
+          ],
+          "literal": "two-hundred fifty",
+          "usageNote": "Commonly used for prices in won, e.g. 이백오십 원, and for amounts in grams or milliliters.",
+          "level": 2
+        },
+        {
+          "key": "275",
+          "english": "275",
+          "targetText": "이백칠십오",
+          "romanization": "ibaekchilsibo",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "이",
+              "romanization": "i",
+              "english": "two"
+            },
+            {
+              "target": "백",
+              "romanization": "baek",
+              "english": "hundred"
+            },
+            {
+              "target": "칠",
+              "romanization": "chil",
+              "english": "seven"
+            },
+            {
+              "target": "십",
+              "romanization": "sip",
+              "english": "ten"
+            },
+            {
+              "target": "오",
+              "romanization": "o",
+              "english": "five"
+            }
+          ],
+          "literal": "two hundred seven ten five",
+          "usageNote": "Korean doesn't say 'one hundred' as 일백; 100 is just 백, but 200 needs the 이 in front.",
+          "level": 2
+        },
+        {
+          "key": "500",
+          "english": "500",
+          "targetText": "오백",
+          "romanization": "obaek",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "오",
+              "romanization": "o",
+              "english": "five"
+            },
+            {
+              "target": "백",
+              "romanization": "baek",
+              "english": "hundred"
+            }
+          ],
+          "literal": "five hundred",
+          "usageNote": "Korean doesn't say 'one' before hundred, so 100 is just 백, and 500 is 오백. Often used for prices, e.g. 오백 원 (500 won).",
+          "level": 1
+        },
+        {
+          "key": "750",
+          "english": "750",
+          "targetText": "칠백오십",
+          "romanization": "chilbaegosip",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "칠백",
+              "romanization": "chilbaek",
+              "english": "seven hundred"
+            },
+            {
+              "target": "오십",
+              "romanization": "osip",
+              "english": "fifty"
+            }
+          ],
+          "literal": "seven-hundred fifty",
+          "usageNote": "Korean doesn't use a word for 'and' here; for prices, add 원 (won) after it: 칠백오십 원.",
+          "level": 1
+        },
+        {
+          "key": "945",
+          "english": "945",
+          "targetText": "구백사십오",
+          "romanization": "gubaeksasibo",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "구백",
+              "romanization": "gubaek",
+              "english": "nine hundred"
+            },
+            {
+              "target": "사십",
+              "romanization": "sasip",
+              "english": "forty"
+            },
+            {
+              "target": "오",
+              "romanization": "o",
+              "english": "five"
+            }
+          ],
+          "literal": "nine-hundred four-ten five",
+          "usageNote": null,
+          "level": 2
+        },
+        {
+          "key": "1000",
+          "english": "1000",
+          "targetText": "천",
+          "romanization": "cheon",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "천",
+              "romanization": "cheon",
+              "english": "one thousand"
+            }
+          ],
+          "literal": "thousand",
+          "usageNote": "Say 천, not 일천, for 1,000; 일 is normally dropped before 천, 백, and 십 (but kept before 만 as in 일만).",
+          "level": 1
+        },
+        {
+          "key": "2500",
+          "english": "2500",
+          "targetText": "이천오백",
+          "romanization": "icheon-obaek",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "이천",
+              "romanization": "icheon",
+              "english": "two thousand"
+            },
+            {
+              "target": "오백",
+              "romanization": "obaek",
+              "english": "five hundred"
+            }
+          ],
+          "literal": "two-thousand five-hundred",
+          "usageNote": "Korean drops the \"one\" before hundreds and thousands, but here both 이 and 오 are needed; in prices, add 원 (이천오백 원 = 2,500 won).",
+          "level": 2
+        },
+        {
+          "key": "5000",
+          "english": "5000",
+          "targetText": "오천",
+          "romanization": "ocheon",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "오",
+              "romanization": "o",
+              "english": "five"
+            },
+            {
+              "target": "천",
+              "romanization": "cheon",
+              "english": "thousand"
+            }
+          ],
+          "literal": "five thousand",
+          "usageNote": "When talking about prices, Koreans usually add 원 (won) after it, and drop the 일 from 천 and 만 (so 1,000 is just 천, not 일천).",
+          "level": 1
+        },
+        {
+          "key": "native-1",
+          "english": "1 · counting things",
+          "targetText": "하나",
+          "romanization": "hana",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "하나",
+              "romanization": "hana",
+              "english": "one (native Korean number)"
+            }
+          ],
+          "literal": "one",
+          "usageNote": "Before a counter it becomes 한, as in 한 개 (one item), 한 명 (one person), or 한 시 (one o'clock).",
+          "level": 1
+        },
+        {
+          "key": "native-2",
+          "english": "2 · counting things",
+          "targetText": "둘",
+          "romanization": "dul",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "둘",
+              "romanization": "dul",
+              "english": "two (native Korean number)"
+            }
+          ],
+          "literal": "two",
+          "usageNote": "Before a counter it shortens to 두, as in 두 명 (two people) or 두 시 (two o'clock).",
+          "level": 1
+        },
+        {
+          "key": "native-3",
+          "english": "3 · counting things",
+          "targetText": "셋",
+          "romanization": "set",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "셋",
+              "romanization": "set",
+              "english": "three (native Korean)"
+            }
+          ],
+          "literal": "three",
+          "usageNote": "Before a counter it becomes 세, as in 세 시 (three o'clock) or 세 명 (three people).",
+          "level": 1
+        },
+        {
+          "key": "native-4",
+          "english": "4 · counting things",
+          "targetText": "넷",
+          "romanization": "net",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "넷",
+              "romanization": "net",
+              "english": "four (native Korean number)"
+            }
+          ],
+          "literal": "four",
+          "usageNote": "Before a counter it becomes 네, as in 네 명 (four people) or 네 시 (four o'clock).",
+          "level": 1
+        },
+        {
+          "key": "native-5",
+          "english": "5 · counting things",
+          "targetText": "다섯",
+          "romanization": "daseot",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "다섯",
+              "romanization": "daseot",
+              "english": "five (native Korean)"
+            }
+          ],
+          "literal": "five",
+          "usageNote": "Used with counters, e.g. 다섯 명 (daseot myeong) means five people, and 다섯 시 (daseot si) means five o'clock.",
+          "level": 1
+        },
+        {
+          "key": "native-6",
+          "english": "6 · counting things",
+          "targetText": "여섯",
+          "romanization": "yeoseot",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "여섯",
+              "romanization": "yeoseot",
+              "english": "six (native Korean number)"
+            }
+          ],
+          "literal": "six",
+          "usageNote": "Used before a counter, e.g. 여섯 시 (yeoseot si) means six o'clock, and 여섯 명 (yeoseot myeong) means six people.",
+          "level": 1
+        },
+        {
+          "key": "native-7",
+          "english": "7 · counting things",
+          "targetText": "일곱",
+          "romanization": "ilgop",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "일곱",
+              "romanization": "ilgop",
+              "english": "seven (native Korean number)"
+            }
+          ],
+          "literal": "seven",
+          "usageNote": "Used with counters, e.g. 일곱 시 (seven o'clock) or 일곱 명 (seven people); use 칠 for dates, phone numbers and money.",
+          "level": 1
+        },
+        {
+          "key": "native-8",
+          "english": "8 · counting things",
+          "targetText": "여덟",
+          "romanization": "yeodeol",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "여덟",
+              "romanization": "yeodeol",
+              "english": "eight (native Korean)"
+            }
+          ],
+          "literal": "eight",
+          "usageNote": "Used with counters, e.g. 여덟 시 (yeodeol si) means eight o'clock, and 여덟 명 (yeodeol myeong) means eight people.",
+          "level": 1
+        },
+        {
+          "key": "native-9",
+          "english": "9 · counting things",
+          "targetText": "아홉",
+          "romanization": "ahop",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "아홉",
+              "romanization": "ahop",
+              "english": "nine (native Korean number)"
+            }
+          ],
+          "literal": "nine",
+          "usageNote": "Used with counters, e.g. 아홉 시 (nine o'clock) or 아홉 명 (nine people); before a counter it stays 아홉, unlike 하나 → 한.",
+          "level": 1
+        },
+        {
+          "key": "native-10",
+          "english": "10 · counting things",
+          "targetText": "열",
+          "romanization": "yeol",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "열",
+              "romanization": "yeol",
+              "english": "ten (native Korean number)"
+            }
+          ],
+          "literal": "ten",
+          "usageNote": "Used before a counter, e.g. 열 명 (yeol myeong) means ten people, and 열 시 (yeol si) means ten o'clock.",
+          "level": 1
+        },
+        {
+          "key": "native-11",
+          "english": "11 · counting things",
+          "targetText": "열하나",
+          "romanization": "yeolhana",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "열",
+              "romanization": "yeol",
+              "english": "ten"
+            },
+            {
+              "target": "하나",
+              "romanization": "hana",
+              "english": "one"
+            }
+          ],
+          "literal": "ten-one",
+          "usageNote": "Before a counter it becomes 열한: 열한 시 (11 o'clock), 열한 명 (11 people), 열한 살 (11 years old).",
+          "level": 1
+        },
+        {
+          "key": "native-12",
+          "english": "12 · counting things",
+          "targetText": "열둘",
+          "romanization": "yeoldul",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "열둘",
+              "romanization": "yeoldul",
+              "english": "twelve (native Korean number)"
+            }
+          ],
+          "literal": "twelve",
+          "usageNote": "Before a counter it becomes 열두, as in 열두 시 (twelve o'clock) or 열두 명 (twelve people).",
+          "level": 1
+        },
+        {
+          "key": "native-13",
+          "english": "13 · counting things",
+          "targetText": "열셋",
+          "romanization": "yeolset",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "열셋",
+              "romanization": "yeolset",
+              "english": "thirteen (native Korean number)"
+            }
+          ],
+          "literal": "ten-three",
+          "usageNote": "Before a counter it becomes 열세, e.g. 열세 시 (13 o'clock is usually said 오후 한 시, so use 열세 명 for thirteen people or 열세 살 for thirteen years old).",
+          "level": 2
+        },
+        {
+          "key": "native-14",
+          "english": "14 · counting things",
+          "targetText": "열넷",
+          "romanization": "yeolnet",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "열넷",
+              "romanization": "yeolnet",
+              "english": "fourteen (native Korean number)"
+            }
+          ],
+          "literal": "fourteen",
+          "usageNote": "Before a counter it becomes 열네, e.g. 열네 명 (fourteen people) or 열네 살 (fourteen years old).",
+          "level": 2
+        },
+        {
+          "key": "native-15",
+          "english": "15 · counting things",
+          "targetText": "열다섯",
+          "romanization": "yeoldaseot",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "열",
+              "romanization": "yeol",
+              "english": "ten"
+            },
+            {
+              "target": "다섯",
+              "romanization": "daseot",
+              "english": "five"
+            }
+          ],
+          "literal": "ten-five",
+          "usageNote": "Before a counter it becomes 열다섯, as in 열다섯 살 (fifteen years old) or 열다섯 명 (fifteen people); for the hour, 열다섯 시 isn't used, so say 오후 세 시 or 열다섯 시 only in 24-hour style.",
+          "level": 2
+        },
+        {
+          "key": "native-16",
+          "english": "16 · counting things",
+          "targetText": "열여섯",
+          "romanization": "yeolyeoseot",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "열",
+              "romanization": "yeol",
+              "english": "ten"
+            },
+            {
+              "target": "여섯",
+              "romanization": "yeoseot",
+              "english": "six"
+            }
+          ],
+          "literal": "ten-six",
+          "usageNote": "Before a counter it becomes 열여섯 as is, e.g. 열여섯 살 (sixteen years old) or 열여섯 명 (sixteen people).",
+          "level": 1
+        },
+        {
+          "key": "native-17",
+          "english": "17 · counting things",
+          "targetText": "열일곱",
+          "romanization": "yeolilgop",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "열",
+              "romanization": "yeol",
+              "english": "ten"
+            },
+            {
+              "target": "일곱",
+              "romanization": "ilgop",
+              "english": "seven"
+            }
+          ],
+          "literal": "ten-seven",
+          "usageNote": "Before a counter it becomes 열일곱 살 (seventeen years old) or 열일곱 명 (seventeen people); 열일곱 시 is rarely used, as clock hours only go up to 열두 시 in native numbers.",
+          "level": 2
+        },
+        {
+          "key": "native-18",
+          "english": "18 · counting things",
+          "targetText": "열여덟",
+          "romanization": "yeolyeodeol",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "열",
+              "romanization": "yeol",
+              "english": "ten"
+            },
+            {
+              "target": "여덟",
+              "romanization": "yeodeol",
+              "english": "eight"
+            }
+          ],
+          "literal": "ten-eight",
+          "usageNote": "Before a counter it becomes 열여덟 살 (yeolyeodeol sal) for age 18, and 열여덟 명 means eighteen people.",
+          "level": 2
+        },
+        {
+          "key": "native-19",
+          "english": "19 · counting things",
+          "targetText": "열아홉",
+          "romanization": "yeolahop",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "열",
+              "romanization": "yeol",
+              "english": "ten"
+            },
+            {
+              "target": "아홉",
+              "romanization": "ahop",
+              "english": "nine"
+            }
+          ],
+          "literal": "ten-nine",
+          "usageNote": "Used for age: 열아홉 살 (yeolahop sal) means nineteen years old; before a counter it stays 열아홉, e.g. 열아홉 명 for nineteen people.",
+          "level": 2
+        },
+        {
+          "key": "native-20",
+          "english": "20 · counting things",
+          "targetText": "스물",
+          "romanization": "seumul",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "스물",
+              "romanization": "seumul",
+              "english": "twenty (native Korean)"
+            }
+          ],
+          "literal": "twenty",
+          "usageNote": "Before a counter it becomes 스무, e.g. 스무 살 (seumu sal) means twenty years old.",
+          "level": 1
+        },
+        {
+          "key": "native-30",
+          "english": "30 · counting things",
+          "targetText": "서른",
+          "romanization": "seoreun",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "서른",
+              "romanization": "seoreun",
+              "english": "thirty (native Korean number)"
+            }
+          ],
+          "literal": "thirty",
+          "usageNote": "Used for age, e.g. 서른 살 (seoreun sal) means thirty years old; before a counter it stays 서른, e.g. 서른 명 (thirty people). Note that 30 as an hour is not used.",
+          "level": 2
+        },
+        {
+          "key": "native-40",
+          "english": "40 · counting things",
+          "targetText": "마흔",
+          "romanization": "maheun",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "마흔",
+              "romanization": "maheun",
+              "english": "forty (native Korean number)"
+            }
+          ],
+          "literal": "forty",
+          "usageNote": "Often used for age, e.g. 마흔 살 (maheun sal) means forty years old; 마흔 명 is forty people.",
+          "level": 2
+        },
+        {
+          "key": "native-50",
+          "english": "50 · counting things",
+          "targetText": "쉰",
+          "romanization": "swin",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "쉰",
+              "romanization": "swin",
+              "english": "fifty (native Korean)"
+            }
+          ],
+          "literal": "fifty",
+          "usageNote": "Used with counters, e.g. 쉰 살 (fifty years old) or 쉰 명 (fifty people); for 50 in other contexts like prices or phone numbers, use 오십.",
+          "level": 4
+        }
+      ]
+    },
+    {
+      "id": "days",
+      "items": [
+        {
+          "key": "monday",
+          "english": "Monday",
+          "targetText": "월요일",
+          "romanization": "woryoil",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "월",
+              "romanization": "wol",
+              "english": "moon / Monday"
+            },
+            {
+              "target": "요일",
+              "romanization": "yoil",
+              "english": "day of the week"
+            }
+          ],
+          "literal": "moon day-of-week",
+          "usageNote": "The 월 comes from the Chinese character for moon (月), which is why Monday is the 'moon day'.",
+          "level": 1
+        },
+        {
+          "key": "tuesday",
+          "english": "Tuesday",
+          "targetText": "화요일",
+          "romanization": "hwayoil",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "화요일",
+              "romanization": "hwayoil",
+              "english": "Tuesday"
+            }
+          ],
+          "literal": "Fire-day",
+          "usageNote": "The 화 comes from 불 (fire), the element tied to Tuesday in the East Asian day-naming system.",
+          "level": 1
+        },
+        {
+          "key": "wednesday",
+          "english": "Wednesday",
+          "targetText": "수요일",
+          "romanization": "suyoil",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "수요일",
+              "romanization": "suyoil",
+              "english": "Wednesday"
+            }
+          ],
+          "literal": "Wednesday (water-day)",
+          "usageNote": "The 수 comes from 水 (water), the Korean name for the planet Mercury, so 수요일 literally means 'water day'.",
+          "level": 1
+        },
+        {
+          "key": "thursday",
+          "english": "Thursday",
+          "targetText": "목요일",
+          "romanization": "mogyoil",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "목요일",
+              "romanization": "mogyoil",
+              "english": "Thursday"
+            }
+          ],
+          "literal": "Thursday (wood-day)",
+          "usageNote": "The 목 comes from 나무 (wood), one of the five elements the Korean weekdays are named after.",
+          "level": 1
+        },
+        {
+          "key": "friday",
+          "english": "Friday",
+          "targetText": "금요일",
+          "romanization": "geumyoil",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "금요일",
+              "romanization": "geumyoil",
+              "english": "Friday"
+            }
+          ],
+          "literal": "Friday (metal/gold day)",
+          "usageNote": "Colloquially, 불금 (bulgeum, 'fiery Friday') refers to a Friday night out, as the weekend begins.",
+          "level": 1
+        },
+        {
+          "key": "saturday",
+          "english": "Saturday",
+          "targetText": "토요일",
+          "romanization": "toyoil",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "토요일",
+              "romanization": "toyoil",
+              "english": "Saturday"
+            }
+          ],
+          "literal": "Saturday (earth-day)",
+          "usageNote": "The 토 comes from 토성 (Saturn, 'earth star'), so the day name literally ties to the earth element.",
+          "level": 1
+        },
+        {
+          "key": "sunday",
+          "english": "Sunday",
+          "targetText": "일요일",
+          "romanization": "iryoil",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "일요일",
+              "romanization": "iryoil",
+              "english": "Sunday"
+            }
+          ],
+          "literal": "Sunday (sun-day)",
+          "usageNote": "The 일 is Sino-Korean for \"sun\" (日), the same character as in 일본 (Japan, \"sun origin\"), so don't confuse it with the number 일 (one).",
+          "level": 1
+        },
+        {
+          "key": "weekend",
+          "english": "weekend",
+          "targetText": "주말",
+          "romanization": "jumal",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "주말",
+              "romanization": "jumal",
+              "english": "weekend"
+            }
+          ],
+          "literal": "weekend",
+          "usageNote": "Use 이번 주말 for \"this weekend\" and 주말에 for \"on the weekend.\"",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "connectors",
+      "items": [
+        {
+          "key": "and",
+          "english": "and",
+          "targetText": "그리고",
+          "romanization": "geurigo",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "그리고",
+              "romanization": "geurigo",
+              "english": "and (connects sentences)"
+            }
+          ],
+          "literal": "and",
+          "usageNote": "Starts a new sentence or clause, e.g. 커피 마셨어요. 그리고 빵도 먹었어요. [I had coffee. And I also ate bread.] To join nouns, use 하고 or 와/과 instead.",
+          "level": 1
+        },
+        {
+          "key": "or",
+          "english": "or",
+          "targetText": "아니면",
+          "romanization": "animyeon",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "아니면",
+              "romanization": "animyeon",
+              "english": "or (otherwise, if not)"
+            }
+          ],
+          "literal": "if (it) is not",
+          "usageNote": "Example: 커피 마실래요, 아니면 차 마실래요? [Do you want to drink coffee, or tea?]",
+          "level": 2
+        },
+        {
+          "key": "but",
+          "english": "but",
+          "targetText": "하지만",
+          "romanization": "hajiman",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "하지만",
+              "romanization": "hajiman",
+              "english": "but, however"
+            }
+          ],
+          "literal": "but",
+          "usageNote": "Example: 맛있어요. 하지만 비싸요. [It's delicious. But it's expensive.] 하지만 starts a new sentence; in speech, 근데 is more casual.",
+          "level": 2
+        },
+        {
+          "key": "if",
+          "english": "if",
+          "targetText": "만약",
+          "romanization": "manyak",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "만약",
+              "romanization": "manyak",
+              "english": "if, in case"
+            }
+          ],
+          "literal": "if",
+          "usageNote": "Example: 만약 비가 오면 집에 있을 거예요. [If it rains, I'll stay home.] It usually pairs with -(으)면 on the verb.",
+          "level": 3
+        },
+        {
+          "key": "because",
+          "english": "because",
+          "targetText": "왜냐하면",
+          "romanization": "waenyahamyeon",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "왜냐하면",
+              "romanization": "waenyahamyeon",
+              "english": "because (sentence-initial connector)"
+            }
+          ],
+          "literal": "because",
+          "usageNote": "Example: 왜냐하면 너무 피곤해요. [Because I'm so tired.] In everyday speech Koreans usually attach -아서/어서 to the verb instead of starting with 왜냐하면.",
+          "level": 3
+        },
+        {
+          "key": "so",
+          "english": "so",
+          "targetText": "그래서",
+          "romanization": "geuraeseo",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "그래서",
+              "romanization": "geuraeseo",
+              "english": "so, therefore"
+            }
+          ],
+          "literal": "because of that / so",
+          "usageNote": "Example: 비가 왔어요. 그래서 집에 있었어요. [It rained, so I stayed home.]",
+          "level": 2
+        },
+        {
+          "key": "when",
+          "english": "when",
+          "targetText": "-(으)면",
+          "romanization": "-(eu)myeon",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "-(으)면",
+              "romanization": "-(eu)myeon",
+              "english": "when / if (connective ending)"
+            }
+          ],
+          "literal": "when/if (doing or being)",
+          "usageNote": "Attach to a verb stem: 집에 가면 전화할게요. [When I get home, I'll call you.]",
+          "level": 2
+        },
+        {
+          "key": "then",
+          "english": "then",
+          "targetText": "그리고 나서",
+          "romanization": "geurigo naseo",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "그리고",
+              "romanization": "geurigo",
+              "english": "and"
+            },
+            {
+              "target": "나서",
+              "romanization": "naseo",
+              "english": "after doing"
+            }
+          ],
+          "literal": "and after (that)",
+          "usageNote": "Example: 밥 먹고 그리고 나서 커피 마셔요. [I eat, and then I drink coffee.]",
+          "level": 3
+        },
+        {
+          "key": "also",
+          "english": "also",
+          "targetText": "또",
+          "romanization": "tto",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "또",
+              "romanization": "tto",
+              "english": "also, again, and then"
+            }
+          ],
+          "literal": "also",
+          "usageNote": "Example: 저도 또 갈래요. [I want to go too/again.] Use 도 after a noun for \"also\" (저도 = me too); 또 more often means \"again\" or \"in addition\".",
+          "level": 2
+        },
+        {
+          "key": "before",
+          "english": "before",
+          "targetText": "전에",
+          "romanization": "jeone",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "전",
+              "romanization": "jeon",
+              "english": "before, earlier"
+            },
+            {
+              "target": "에",
+              "romanization": "e",
+              "english": "(time particle) at"
+            }
+          ],
+          "literal": "at before",
+          "usageNote": "Example: 먹기 전에 손을 씻어요. (I wash my hands before eating.)",
+          "level": 2
+        },
+        {
+          "key": "after",
+          "english": "after",
+          "targetText": "후에",
+          "romanization": "hue",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "후",
+              "romanization": "hu",
+              "english": "after, later"
+            },
+            {
+              "target": "에",
+              "romanization": "e",
+              "english": "(time) at, in"
+            }
+          ],
+          "literal": "after (at the time of)",
+          "usageNote": "Example: 식사 후에 커피 마셔요. [We drink coffee after the meal.] For a following clause, 다음에 or -(으)ㄴ 후에 is common; casually 뒤에 or 다음에 also works.",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": "questions",
+      "items": [
+        {
+          "key": "what",
+          "english": "what",
+          "targetText": "뭐",
+          "romanization": "mwo",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "뭐",
+              "romanization": "mwo",
+              "english": "what"
+            }
+          ],
+          "literal": "what",
+          "usageNote": "Example: 뭐 먹어요? [What are you eating? / What shall we eat?] 무엇 is the formal written form; in speech 뭐 is the norm.",
+          "level": 1
+        },
+        {
+          "key": "who",
+          "english": "who",
+          "targetText": "누구",
+          "romanization": "nugu",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "누구",
+              "romanization": "nugu",
+              "english": "who"
+            }
+          ],
+          "literal": "who",
+          "usageNote": "Example: 누구예요? [Who is it?]",
+          "level": 1
+        },
+        {
+          "key": "where",
+          "english": "where",
+          "targetText": "어디",
+          "romanization": "eodi",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "어디",
+              "romanization": "eodi",
+              "english": "where"
+            }
+          ],
+          "literal": "where",
+          "usageNote": "Example: 화장실이 어디예요? [Where is the restroom?]",
+          "level": 1
+        },
+        {
+          "key": "when",
+          "english": "when",
+          "targetText": "언제",
+          "romanization": "eonje",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "언제",
+              "romanization": "eonje",
+              "english": "when"
+            }
+          ],
+          "literal": "when",
+          "usageNote": "Example: 언제 만나요? [When shall we meet?]",
+          "level": 1
+        },
+        {
+          "key": "why",
+          "english": "why",
+          "targetText": "왜요?",
+          "romanization": "wae-yo?",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "왜",
+              "romanization": "wae",
+              "english": "why"
+            },
+            {
+              "target": "요",
+              "romanization": "yo",
+              "english": "(polite ending)"
+            }
+          ],
+          "literal": "Why?",
+          "usageNote": "Example: 왜 늦었어요? [Why were you late?]",
+          "level": 1
+        },
+        {
+          "key": "how",
+          "english": "how",
+          "targetText": "어떻게",
+          "romanization": "eotteoke",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "어떻게",
+              "romanization": "eotteoke",
+              "english": "how"
+            }
+          ],
+          "literal": "how",
+          "usageNote": "Example: 거기에 어떻게 가요? (eogi-e eotteoke gayo?) [How do I get there?]",
+          "level": 1
+        },
+        {
+          "key": "which",
+          "english": "which",
+          "targetText": "어느",
+          "romanization": "eoneu",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "어느",
+              "romanization": "eoneu",
+              "english": "which"
+            }
+          ],
+          "literal": "which",
+          "usageNote": "Always goes before a noun, e.g. 어느 나라 사람이에요? (Which country are you from?)",
+          "level": 2
+        },
+        {
+          "key": "how-much",
+          "english": "how much (price)",
+          "targetText": "얼마",
+          "romanization": "eolma",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "얼마",
+              "romanization": "eolma",
+              "english": "how much"
+            }
+          ],
+          "literal": "how much",
+          "usageNote": "Example: 이거 얼마예요? [How much is this?]",
+          "level": 1
+        },
+        {
+          "key": "how-many",
+          "english": "how many",
+          "targetText": "몇 개",
+          "romanization": "myeot gae",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "몇",
+              "romanization": "myeot",
+              "english": "how many / what number of"
+            },
+            {
+              "target": "개",
+              "romanization": "gae",
+              "english": "counter for items"
+            }
+          ],
+          "literal": "how many items",
+          "usageNote": "Example: 몇 개 필요하세요? [How many do you need?]. Use 몇 plus the right counter, e.g. 몇 명 for people.",
+          "level": 1
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "items": [
+        {
+          "key": "now",
+          "english": "now",
+          "targetText": "지금",
+          "romanization": "jigeum",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "지금",
+              "romanization": "jigeum",
+              "english": "now"
+            }
+          ],
+          "literal": "now",
+          "usageNote": "이제 means \"now\" as a turning point (\"from now on\" or \"by now\"), while 지금 is simply the present moment.",
+          "level": 1
+        },
+        {
+          "key": "today",
+          "english": "today",
+          "targetText": "오늘",
+          "romanization": "oneul",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "오늘",
+              "romanization": "oneul",
+              "english": "today"
+            }
+          ],
+          "literal": "today",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "tomorrow",
+          "english": "tomorrow",
+          "targetText": "내일",
+          "romanization": "naeil",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "내일",
+              "romanization": "naeil",
+              "english": "tomorrow"
+            }
+          ],
+          "literal": "tomorrow",
+          "usageNote": "Can be shortened to a casual 낼 in speech or texting, but 내일 is the standard form.",
+          "level": 1
+        },
+        {
+          "key": "yesterday",
+          "english": "yesterday",
+          "targetText": "어제",
+          "romanization": "eoje",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "어제",
+              "romanization": "eoje",
+              "english": "yesterday"
+            }
+          ],
+          "literal": "yesterday",
+          "usageNote": "어저께 is a slightly longer variant of 어제 with the same meaning; both are common in speech.",
+          "level": 1
+        },
+        {
+          "key": "later",
+          "english": "later",
+          "targetText": "나중에",
+          "romanization": "najung-e",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "나중",
+              "romanization": "najung",
+              "english": "later, afterward"
+            },
+            {
+              "target": "에",
+              "romanization": "e",
+              "english": "(time particle) at, in"
+            }
+          ],
+          "literal": "at a later time",
+          "usageNote": "나중에 means later in an open-ended sense, while 이따가 means later today, within a few hours.",
+          "level": 2
+        },
+        {
+          "key": "soon",
+          "english": "soon",
+          "targetText": "곧",
+          "romanization": "got",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "곧",
+              "romanization": "got",
+              "english": "soon, shortly"
+            }
+          ],
+          "literal": "soon",
+          "usageNote": "곧 means soon in the near future, such as \"곧 가요\" (I'm going soon); 이따가 means \"in a little while\" and is more casual.",
+          "level": 2
+        },
+        {
+          "key": "already",
+          "english": "already",
+          "targetText": "벌써",
+          "romanization": "beolsseo",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "벌써",
+              "romanization": "beolsseo",
+              "english": "already (sooner than expected)"
+            }
+          ],
+          "literal": "already",
+          "usageNote": "벌써 suggests surprise that something happened earlier than expected, while 이미 simply states that something is already done.",
+          "level": 2
+        },
+        {
+          "key": "not-yet",
+          "english": "not yet",
+          "targetText": "아직요",
+          "romanization": "ajigyo",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "아직",
+              "romanization": "ajik",
+              "english": "yet, still"
+            },
+            {
+              "target": "요",
+              "romanization": "yo",
+              "english": "(polite particle)"
+            }
+          ],
+          "literal": "yet (polite)",
+          "usageNote": "Used as a short reply to a question like \"Have you done it yet?\"; 아직 alone is casual and 아직요 keeps it polite.",
+          "level": 2
+        },
+        {
+          "key": "morning",
+          "english": "morning",
+          "targetText": "아침",
+          "romanization": "achim",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "아침",
+              "romanization": "achim",
+              "english": "morning"
+            }
+          ],
+          "literal": "morning",
+          "usageNote": "아침 means early morning and also breakfast; 오전 means AM, the time before noon.",
+          "level": 1
+        },
+        {
+          "key": "afternoon",
+          "english": "afternoon",
+          "targetText": "오후",
+          "romanization": "ohu",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "오후",
+              "romanization": "ohu",
+              "english": "afternoon (PM)"
+            }
+          ],
+          "literal": "afternoon",
+          "usageNote": "오후 covers everything from noon to evening (PM), so it is broader than English \"afternoon\"; 낮 refers to daytime around midday.",
+          "level": 1
+        },
+        {
+          "key": "evening",
+          "english": "evening",
+          "targetText": "저녁",
+          "romanization": "jeonyeok",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "저녁",
+              "romanization": "jeonyeok",
+              "english": "evening"
+            }
+          ],
+          "literal": "evening",
+          "usageNote": "저녁 also means \"dinner,\" so context tells you whether someone means the time of day or the meal.",
+          "level": 1
+        },
+        {
+          "key": "tonight",
+          "english": "tonight",
+          "targetText": "오늘 밤",
+          "romanization": "oneul bam",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "오늘",
+              "romanization": "oneul",
+              "english": "today"
+            },
+            {
+              "target": "밤",
+              "romanization": "bam",
+              "english": "night"
+            }
+          ],
+          "literal": "today night",
+          "usageNote": "오늘 저녁 means \"this evening\" and is used for earlier plans, while 오늘 밤 suggests later at night.",
+          "level": 1
+        },
+        {
+          "key": "this-week",
+          "english": "this week",
+          "targetText": "이번 주",
+          "romanization": "ibeon ju",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "이번",
+              "romanization": "ibeon",
+              "english": "this (time)"
+            },
+            {
+              "target": "주",
+              "romanization": "ju",
+              "english": "week"
+            }
+          ],
+          "literal": "this time week",
+          "usageNote": null,
+          "level": 1
+        },
+        {
+          "key": "next-week",
+          "english": "next week",
+          "targetText": "다음 주",
+          "romanization": "daeum ju",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "다음",
+              "romanization": "daeum",
+              "english": "next"
+            },
+            {
+              "target": "주",
+              "romanization": "ju",
+              "english": "week"
+            }
+          ],
+          "literal": "next week",
+          "usageNote": "내주 is a more formal or written variant; in everyday speech 다음 주 is far more common.",
+          "level": 1
+        },
+        {
+          "key": "last-week",
+          "english": "last week",
+          "targetText": "지난주",
+          "romanization": "jinanju",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "지난주",
+              "romanization": "jinanju",
+              "english": "last week"
+            }
+          ],
+          "literal": "last week",
+          "usageNote": null,
+          "level": 2
+        },
+        {
+          "key": "every-day",
+          "english": "every day",
+          "targetText": "매일",
+          "romanization": "maeil",
+          "reading": null,
+          "gloss": [
+            {
+              "target": "매일",
+              "romanization": "maeil",
+              "english": "every day"
+            }
+          ],
+          "literal": "every day",
+          "usageNote": "Works as an adverb with no particle, e.g. 매일 운동해요 (I exercise every day).",
+          "level": 1
+        }
+      ]
+    }
+  ]
+}
