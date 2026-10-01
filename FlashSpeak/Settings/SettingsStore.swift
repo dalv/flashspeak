@@ -15,7 +15,6 @@ protocol SettingsStore: AnyObject {
     var recallSpeed: PlaybackSpeed { get set }
     var playTranslationTwice: Bool { get set }
     var recallSessionLength: RecallSessionLength { get set }
-    var hasSeenRecallHint: Bool { get set }
 
     // Reminders
     var reminderEnabled: Bool { get set }

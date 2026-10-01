@@ -45,10 +45,6 @@ final class UserDefaultsSettingsStore: SettingsStore {
         didSet { defaults.set(recallSessionLength.rawValue, forKey: Keys.recallLength) }
     }
 
-    var hasSeenRecallHint: Bool {
-        didSet { defaults.set(hasSeenRecallHint, forKey: Keys.recallHint) }
-    }
-
     var reminderEnabled: Bool {
         didSet { defaults.set(reminderEnabled, forKey: Keys.reminderEnabled) }
     }
@@ -85,7 +81,6 @@ final class UserDefaultsSettingsStore: SettingsStore {
         recallSpeed = defaults.string(forKey: Keys.recallSpeed).flatMap(PlaybackSpeed.init(rawValue:)) ?? .slow
         playTranslationTwice = defaults.bool(forKey: Keys.playTwice)
         recallSessionLength = defaults.string(forKey: Keys.recallLength).flatMap(RecallSessionLength.init(rawValue:)) ?? .twenty
-        hasSeenRecallHint = defaults.bool(forKey: Keys.recallHint)
         reminderEnabled = defaults.bool(forKey: Keys.reminderEnabled)
         reminderTime = defaults.data(forKey: Keys.reminderTime)
             .flatMap { try? JSONDecoder().decode(ReminderTime.self, from: $0) } ?? .default
@@ -124,7 +119,6 @@ final class UserDefaultsSettingsStore: SettingsStore {
         static let recallSpeed = "settings.recallSpeed"
         static let playTwice = "settings.playTranslationTwice"
         static let recallLength = "settings.recallSessionLength"
-        static let recallHint = "settings.hasSeenRecallHint"
         static let reminderEnabled = "settings.reminderEnabled"
         static let reminderTime = "settings.reminderTime"
     }

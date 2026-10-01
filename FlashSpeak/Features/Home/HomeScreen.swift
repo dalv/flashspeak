@@ -85,6 +85,8 @@ struct HomeScreen: View {
             FlashcardsScreen(dependencies: model.dependencies) {
                 path = [.audioRecall]
             }
+        case .audioRecall:
+            AudioRecallScreen(dependencies: model.dependencies)
         default:
             ComingSoonView(route: route)
         }

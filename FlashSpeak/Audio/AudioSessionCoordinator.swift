@@ -23,6 +23,9 @@ final class SystemAudioSessionCoordinator: AudioSessionCoordinator {
 
     func activate(_ mode: AudioMode) throws {
         guard mode != current else { return }
+        // Phrases spoken during audio recall keep the recall session, so
+        // playback continues with the screen locked.
+        if mode == .playback, current == .backgroundRecall { return }
         let session = AVAudioSession.sharedInstance()
         switch mode {
         case .recording:

@@ -14,6 +14,7 @@ struct AppDependencies {
     let speech: any SpeechSynthesizer
     let voices: any VoiceCatalog
     let audioSession: any AudioSessionCoordinator
+    let recallControls: any RecallSystemControls
     let settings: any SettingsStore
     let entitlements: any EntitlementService
     let usage: any UsageService
@@ -37,6 +38,7 @@ struct AppDependencies {
             speech: AppleSpeechSynthesizer(voices: voices, audioSession: audioSession),
             voices: voices,
             audioSession: audioSession,
+            recallControls: MediaPlayerRecallControls(),
             settings: UserDefaultsSettingsStore(),
             entitlements: entitlements,
             usage: LocalUsageService { entitlements.isPro },
@@ -60,6 +62,7 @@ struct AppDependencies {
             speech: FakeSpeechSynthesizer(),
             voices: AppleVoiceCatalog(),
             audioSession: FakeAudioSessionCoordinator(),
+            recallControls: FakeRecallSystemControls(),
             settings: UserDefaultsSettingsStore(defaults: defaults),
             entitlements: entitlements,
             usage: LocalUsageService(defaults: defaults) { entitlements.isPro },
@@ -82,6 +85,7 @@ struct AppDependencies {
             speech: FakeSpeechSynthesizer(),
             voices: AppleVoiceCatalog(),
             audioSession: FakeAudioSessionCoordinator(),
+            recallControls: FakeRecallSystemControls(),
             settings: UserDefaultsSettingsStore(defaults: defaults),
             entitlements: entitlements,
             usage: LocalUsageService(defaults: defaults) { entitlements.isPro },

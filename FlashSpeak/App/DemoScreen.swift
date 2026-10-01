@@ -5,7 +5,7 @@
     /// screenshots. Launch with `-demo <name> [-demoLanguage <code>]`.
     /// Names: home, onboarding, paywall, speak, listening, type, suggest,
     /// suggested, result, clarify, clarifyReply, duplicate, flashcards,
-    /// flashcardBack, caughtUp.
+    /// flashcardBack, caughtUp, recall, recallThinking, recallAnswer.
     struct DemoScreen: View {
         let name: String
         let languageCode: String
@@ -14,6 +14,7 @@
         @State private var newPhrase: NewPhraseModel?
         @State private var clarify: ClarifyModel?
         @State private var flashcards: FlashcardsModel?
+        @State private var recall: AudioRecallModel?
 
         static var requested: (name: String, language: String)? {
             let defaults = UserDefaults.standard
@@ -44,6 +45,10 @@
                 case "flashcards", "flashcardBack", "caughtUp":
                     if let flashcards {
                         NavigationStack { FlashcardsScreen(model: flashcards) }
+                    }
+                case "recall", "recallThinking", "recallAnswer":
+                    if let recall {
+                        NavigationStack { AudioRecallScreen(model: recall) }
                     }
                 default:
                     if let newPhrase {
@@ -85,6 +90,22 @@
                     }
                 }
                 flashcards = model
+            case "recall", "recallThinking", "recallAnswer":
+                let model = AudioRecallModel(dependencies: dependencies)
+                model.refresh()
+                if name != "recall" {
+                    // Hold the session on one step: the answer skips the
+                    // three thinking-gap sleeps, then every sleep waits.
+                    var sleeps = name == "recallAnswer" ? 3 : 0
+                    model.start(sleep: { _ in
+                        if sleeps > 0 {
+                            sleeps -= 1
+                            return
+                        }
+                        try await Task.sleep(for: .seconds(3600))
+                    })
+                }
+                recall = model
             default:
                 let model = NewPhraseModel(dependencies: dependencies)
                 if name == "type" {
