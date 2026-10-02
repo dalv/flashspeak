@@ -71,7 +71,7 @@ Status: Not started
 
 ## Next steps
 
-- **Your review** of the Phase 4 screens and the choices in [0021](decisions/0021-phase-4-interpretations.md). DEBUG launch arguments open any screen with sample data: `-demo <name>` with `-demoLanguage zh-CN|id|ko|ja`. Names: home, onboarding, paywall, speak, listening, type, suggest, suggested, result, duplicate, clarify, clarifyReply, flashcards, flashcardBack, caughtUp, recall, recallThinking, recallAnswer, manage, card, presets, presetDetail, settings. `-legacyUI` opens the old app; `-localWorker` uses `wrangler dev` for real translations.
+- **Your review** of the Phase 4 screens and the choices in [0021](decisions/0021-phase-4-interpretations.md). DEBUG launch arguments open any screen with sample data: `-demo <name>` with `-demoLanguage zh-CN|id|ko|ja`. Names: home, onboarding, paywall, speak, listening, type, suggest, suggested, result, duplicate, clarify, clarifyReply, flashcards, flashcardBack, caughtUp, recall, recallThinking, recallAnswer, manage, card, presets, presetDetail, settings. `-legacyUI` opens the old app; Translations hit the deployed Worker by default; `-localWorker` uses `wrangler dev` instead and `-fakeTranslation` uses canned samples.
 - **Device test** (the list under Phase 4).
 - **Native review** of the preset content and the translation evaluation set.
 - **Phase 1 leftovers:** pick the best Apple voices per language, check slow and word-by-word playback on a device, the 50-phrase evaluation set.

@@ -1,3 +1,5 @@
+import { MODEL } from "./anthropic.js";
+
 // Language configurations matching the iOS app's Language model
 const LANGUAGES = {
   "zh-CN": { name: "Mandarin Chinese", hasPronunciation: true, pronunciationName: "pinyin with tone marks" },
@@ -89,7 +91,7 @@ var index_default = {
           "anthropic-version": "2023-06-01",
         },
         body: JSON.stringify({
-          model: "claude-sonnet-4-20250514",
+          model: MODEL,
           max_tokens: 256,
           system: systemPrompt,
           messages: [{ role: "user", content: english }],
@@ -104,7 +106,8 @@ var index_default = {
         });
       }
       const anthropicData = await anthropicResponse.json();
-      const translationText = anthropicData.content[0].text;
+      // Newer models can put a thinking block before the text.
+      const translationText = anthropicData.content.find((block) => block.type === "text")?.text;
       let translation;
       try {
         translation = JSON.parse(translationText);

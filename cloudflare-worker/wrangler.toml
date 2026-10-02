@@ -1,10 +1,14 @@
 # Local development: `npm run dev` (wrangler dev) with ANTHROPIC_API_KEY in .dev.vars.
 #
-# NOT YET USED FOR DEPLOYING. Before the first deploy from this file, confirm
-# that `name` matches the Worker that is live today (the app's APIConfig URL);
-# a different name would create a second Worker instead of updating it.
-# Never deploy without asking (CLAUDE.md).
-name = "flashspeak"
+# `name` is the live Worker the app calls (the APIConfig URL); ANTHROPIC_API_KEY
+# is a Worker secret. Never deploy without asking (CLAUDE.md).
+name = "flashspeak-api"
 main = "src/index.js"
 compatibility_date = "2026-09-01"
 compatibility_flags = ["nodejs_compat"]
+
+# Run next to Anthropic's API rather than at the edge nearest the user. From
+# some locations (e.g. Hong Kong) the Anthropic API returns 403 "Request not
+# allowed", which broke translations for users routed there.
+[placement]
+region = "aws:us-east-1"

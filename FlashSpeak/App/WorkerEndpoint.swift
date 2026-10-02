@@ -6,11 +6,11 @@ import Foundation
 /// paths are appended to it. DEBUG builds launched with `-localWorker` use
 /// `wrangler dev` on this Mac instead (the simulator reaches localhost).
 enum WorkerEndpoint {
-    /// The client the app uses. v2 isn't deployed yet, so DEBUG builds use
-    /// the fake client unless launched with `-localWorker` (wrangler dev).
+    /// The client the app uses. DEBUG builds launched with
+    /// `-fakeTranslation` use the fake client instead, for offline work.
     static func liveClient() -> any TranslationClient {
         #if DEBUG
-        if !CommandLine.arguments.contains("-localWorker") {
+        if CommandLine.arguments.contains("-fakeTranslation") {
             return FakeTranslationClient(delay: .milliseconds(900))
         }
         #endif
