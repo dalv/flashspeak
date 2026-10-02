@@ -77,7 +77,7 @@ The app is one home screen with three actions and a menu; every other screen is 
 | Audio recall | Home | Hands-free listening practice |
 | Flashcard recall | Home | Spaced-repetition review |
 | Manage cards | Menu | Browse, play and delete phrases, by section (User phrases or a preset category) |
-| Preset categories | Menu, Home empty state | Browse ready-made categories and start learning one |
+| Preset categories | Menu, Home empty state | Browse ready-made categories and add them to flashcards or audio recall |
 | Settings | Menu | Language, playback, reminders, subscription |
 | Paywall | New phrase (limit reached), Settings | Upgrade to Pro |
 | Onboarding | First launch | Pick first language, grant microphone access |
@@ -90,7 +90,7 @@ The home screen shows the current language and three large actions; recording a 
 - **New phrase:** the primary action, visually strongest.
 - **Audio recall** and **Flashcard recall:** secondary actions. Each shows a small count (phrases in the set; cards due today).
 - **Menu** (top right): Manage cards, Preset categories, Settings.
-- **Empty state:** with no phrases yet, the recall actions are disabled with a one-line hint to add a phrase, try suggested phrases, or start a preset category such as Numbers.
+- **Empty state:** with no phrases yet, the recall actions are disabled with a one-line hint to add a phrase, try suggested phrases, or add a preset category such as Numbers.
 - **Free users** see how many free translations remain today (for example "2 of 3 left").
 
 ## New phrase
@@ -164,7 +164,7 @@ Each language's library has two parts: the user's own phrases, and ready-made pr
 **Preset categories**
 
 - Curated lists of basic words and short phrases, the same for every user, in all four languages.
-- **Opt in per category.** The Preset categories screen lists them with a word count and a preview. "Start learning" adds the category to the user's review; until then it can be browsed and played but isn't in flashcards or audio recall. A started category can be paused again, which keeps its review history.
+- **Opt in per category and per review mode.** The Preset categories screen lists them with a word count and a preview. Each category has two buttons, Flashcards and Audio recall, which add it to that set or remove it, after a confirmation that names the number of cards. Until added, a category can be browsed and played but is in neither set. Removing a category from flashcards resets its cards' progress; removing it from both deletes its cards, and adding it again starts fresh ([0022](decisions/0022-preset-review-sets.md)).
 - **Content source:** written once per language with the translation prompt, checked by the same native reviewer as the evaluation set, and shipped inside the app as versioned data. Presets work offline, cost nothing per user, and don't count toward the free limit. Corrections ship with app updates and update the user's cards without losing review history.
 - **Card format:** the front is the English (for numbers, the digits, with the English spoken); the back is native script, romanization and audio as for any phrase. Connector words and question words carry a short example phrase in the usage note, because a lone "because" is hard to recall without context.
 - **Duplicates:** the duplicate check covers user phrases and started categories. If a new phrase matches a preset item, the result card shows the preset card.
@@ -294,7 +294,7 @@ Audio recall is a hands-free listening session: hear the English, try to say it 
 **Session**
 
 - Length options: 10, 20 or all phrases; default 20.
-- Phrases come from User phrases and started preset categories; the user can narrow a session to one section (for example only Numbers).
+- Phrases come from User phrases and preset categories added to audio recall; the user can narrow a session to one section (for example only Numbers).
 - Order: phrases due for review first, then the newest, then random.
 - Progress at the bottom: practised this session and total in the set ("12 of 20 · 148 in set").
 - A summary at the end: phrases practised, time spent.
@@ -319,7 +319,7 @@ Flashcards use the FSRS spaced-repetition algorithm, which needs fewer reviews t
 
 - **Front:** the English phrase. **Back:** native script, romanization, gloss; audio plays on flip if auto-play is on.
 - Tap to flip; the user rates recall with two buttons, Hard or Easy (mapped to FSRS Again and Good), and FSRS sets the next review date. Two buttons is a deliberate choice: simpler than four.
-- The session shows cards due today, plus up to 10 new cards per day (adjustable), from User phrases and started preset categories. The user can narrow a session to one section.
+- The session shows cards due today, plus up to 10 new cards per day (adjustable), from User phrases and preset categories added to flashcards. The user can narrow a session to one section.
 - Progress at the top: cards left in this session.
 - An optional reverse direction (target language on the front, listening only) for listening practice.
 - Every review is stored as its own record so history syncs safely across devices and future FSRS versions can recalculate schedules.

@@ -1,6 +1,7 @@
 import SwiftUI
 
-/// Every card in one category, playable, with the status button.
+/// Every card in one category, playable, with the Flashcards and Audio
+/// recall buttons.
 struct PresetCategoryDetail: View {
     let category: PresetCategoryContent
     let model: PresetCategoriesModel
@@ -22,10 +23,12 @@ struct PresetCategoryDetail: View {
         }
         .dsGroupedList()
         .safeAreaBar(edge: .bottom) {
-            PresetStatusButton(
-                status: model.status(of: category),
-                onStart: { model.start(category) },
-                onPause: { model.pause(category) }
+            PresetSetButtons(
+                membership: model.membership(of: category),
+                pending: model.pendingChange(for: category),
+                onTap: { set in model.toggle(category, in: set) },
+                onConfirm: model.confirm,
+                onDismiss: model.dismissChange
             )
             .padding(.horizontal, DS.Spacing.screenPadding)
             .padding(.vertical, DS.Spacing.s)

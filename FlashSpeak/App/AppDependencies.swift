@@ -34,7 +34,12 @@ struct AppDependencies {
         // Deleted phrases can be recovered for 30 days (PRD, Manage cards).
         try? phrases.purgeDeleted(olderThan: .now.addingTimeInterval(-30 * 86400))
         let presets = PresetCatalog.bundled()
-        try? PresetLibrary(catalog: presets, phrases: phrases).applyCorrections()
+        let library = PresetLibrary(catalog: presets, phrases: phrases)
+        // Once: categories paused under the old Start/Pause design.
+        if !UserDefaults.standard.bool(forKey: "removedPausedPresets"), (try? library.removePausedCategories()) != nil {
+            UserDefaults.standard.set(true, forKey: "removedPausedPresets")
+        }
+        try? library.applyCorrections()
 
         let audioSession = SystemAudioSessionCoordinator()
         let voices = AppleVoiceCatalog()

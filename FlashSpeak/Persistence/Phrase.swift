@@ -70,6 +70,11 @@ final class Phrase {
     var clarificationsData: Data?
     /// Hidden from review without deleting (preset items).
     var hiddenFromReview: Bool = false
+    /// Out of flashcards. False for user phrases; preset cards start true
+    /// and are cleared when their category is added to flashcards.
+    var excludedFromFlashcards: Bool = false
+    /// Out of audio recall, the same way.
+    var excludedFromRecall: Bool = false
 
     init(
         englishText: String,

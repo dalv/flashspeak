@@ -1,36 +1,53 @@
 import Foundation
 
-/// Starts, pauses and updates preset categories. A category is in review
-/// once its items are Phrase records (source `preset`); pausing hides them
-/// and keeps their history (decision 0015).
+/// Adds preset categories to flashcards and audio recall, and removes them.
+/// A category is in a set once its items are Phrase records (source
+/// `preset`) not excluded from that set; removing it from both deletes its
+/// cards (decision 0022).
 @MainActor
 struct PresetLibrary {
-    enum Status: Equatable {
-        case notStarted
-        case learning
-        case paused
+    enum ReviewSet: Equatable {
+        case flashcards
+        case recall
+    }
+
+    /// Which sets a category is in.
+    struct Membership: Equatable {
+        var flashcards = false
+        var recall = false
+
+        func contains(_ set: ReviewSet) -> Bool {
+            switch set {
+            case .flashcards: flashcards
+            case .recall: recall
+            }
+        }
     }
 
     let catalog: PresetCatalog
     let phrases: any PhraseRepository
 
-    func status(of categoryID: String, in languageCode: String) -> Status {
+    func membership(of categoryID: String, in languageCode: String) -> Membership {
         let stored = storedItems(categoryID, in: languageCode)
-        if stored.isEmpty { return .notStarted }
-        return stored.allSatisfy(\.hiddenFromReview) ? .paused : .learning
+        return Membership(
+            flashcards: stored.contains { !$0.excludedFromFlashcards },
+            recall: stored.contains { !$0.excludedFromRecall }
+        )
     }
 
-    /// Adds the category to review: creates missing cards, un-hides the rest.
-    func start(_ categoryID: String, in languageCode: String, now: Date = .now) throws {
+    /// Adds the category to one set: creates missing cards (out of the
+    /// other set unless the category is already in it) and includes the rest.
+    func add(_ categoryID: String, to set: ReviewSet, in languageCode: String, now: Date = .now) throws {
         guard let file = catalog.file(for: languageCode),
               let category = catalog.category(categoryID, in: languageCode) else { return }
+        let current = membership(of: categoryID, in: languageCode)
         let existing = Dictionary(
             storedItems(categoryID, in: languageCode).compactMap { phrase in phrase.presetItemKey.map { ($0, phrase) } },
             uniquingKeysWith: { first, _ in first }
         )
         for (index, item) in category.items.enumerated() {
             if let phrase = existing[item.key] {
-                phrase.hiddenFromReview = false
+                Self.include(phrase, in: set)
                 phrase.updatedAt = now
                 continue
             }
@@ -47,6 +64,10 @@ struct PresetLibrary {
             phrase.presetItemKey = item.key
             phrase.presetContentVersion = file.contentVersion
             Self.apply(item, to: phrase)
+            // Presets are in neither set until added.
+            phrase.excludedFromFlashcards = !current.flashcards
+            phrase.excludedFromRecall = !current.recall
+            Self.include(phrase, in: set)
             // Catalog order, so new cards are introduced in that order.
             phrase.createdAt = now.addingTimeInterval(Double(index) / 1000)
             phrase.updatedAt = now
@@ -56,13 +77,37 @@ struct PresetLibrary {
         try phrases.save()
     }
 
-    /// Takes the category out of review; its cards and history stay.
-    func pause(_ categoryID: String, in languageCode: String, now: Date = .now) throws {
+    /// Takes the category out of one set. Leaving flashcards resets the
+    /// cards' progress; cards in neither set are deleted.
+    func remove(_ categoryID: String, from set: ReviewSet, in languageCode: String, now: Date = .now) throws {
         for phrase in storedItems(categoryID, in: languageCode) {
-            phrase.hiddenFromReview = true
+            switch set {
+            case .flashcards:
+                phrase.excludedFromFlashcards = true
+                phrase.cardState = .new(due: now)
+            case .recall:
+                phrase.excludedFromRecall = true
+            }
             phrase.updatedAt = now
+            if phrase.excludedFromFlashcards && phrase.excludedFromRecall {
+                try phrases.softDelete(phrase, at: now)
+            }
         }
         try phrases.save()
+    }
+
+    /// Deletes categories paused under the old Start/Pause design (every
+    /// card hidden), so they show as not added. Run once, at launch.
+    func removePausedCategories(now: Date = .now) throws {
+        for code in Language.supportedCodes {
+            let stored = try phrases.phrases(in: code, section: .all, sort: .oldest).filter(\.isPreset)
+            let byCategory = Dictionary(grouping: stored) { $0.presetCategory ?? "" }
+            for cards in byCategory.values where cards.allSatisfy(\.hiddenFromReview) {
+                for phrase in cards {
+                    try phrases.softDelete(phrase, at: now)
+                }
+            }
+        }
     }
 
     /// Updates cards made from an older content version, keeping their
@@ -90,6 +135,13 @@ struct PresetLibrary {
 
     private func storedItems(_ categoryID: String, in languageCode: String) -> [Phrase] {
         (try? phrases.phrases(in: languageCode, section: .preset(categoryID), sort: .oldest)) ?? []
+    }
+
+    private static func include(_ phrase: Phrase, in set: ReviewSet) {
+        switch set {
+        case .flashcards: phrase.excludedFromFlashcards = false
+        case .recall: phrase.excludedFromRecall = false
+        }
     }
 
     private static func apply(_ item: PresetItem, to phrase: Phrase) {

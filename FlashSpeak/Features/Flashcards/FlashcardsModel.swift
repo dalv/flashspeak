@@ -66,7 +66,7 @@ final class FlashcardsModel {
     func load(now: Date = .now) {
         stopPlayback()
         let code = languageCode
-        sections = PhraseSection.reviewable(in: code, phrases: dependencies.phrases)
+        sections = PhraseSection.reviewable(in: code, phrases: dependencies.phrases, set: .flashcards)
         if !sections.contains(section) {
             section = .all
         }
@@ -98,7 +98,7 @@ final class FlashcardsModel {
     func nextDue(after now: Date = .now) -> Date? {
         let phrases = (try? dependencies.phrases.phrases(in: languageCode, section: section, sort: .newest)) ?? []
         return phrases
-            .filter { !$0.hiddenFromReview && $0.fsrsState != nil && $0.fsrsState != CardState.Phase.new.rawValue }
+            .filter { !$0.hiddenFromReview && !$0.excludedFromFlashcards && $0.fsrsState != nil && $0.fsrsState != CardState.Phase.new.rawValue }
             .map(\.nextReviewAt)
             .filter { $0 > now }
             .min()

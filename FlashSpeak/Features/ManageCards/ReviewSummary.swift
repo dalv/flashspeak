@@ -15,6 +15,11 @@ struct ReviewSummary: View {
                 Text("Next review \(phrase.nextReviewAt.formatted(.relative(presentation: .named)))")
                 Text(reviews == 1 ? "Reviewed once" : "Reviewed \(reviews) times")
             }
+            if phrase.excludedFromFlashcards {
+                Text("Not in flashcards")
+            } else if phrase.excludedFromRecall {
+                Text("Not in audio recall")
+            }
             Text("Added \(phrase.createdAt.formatted(date: .abbreviated, time: .omitted))")
         }
         .appTextStyle(.footnote)

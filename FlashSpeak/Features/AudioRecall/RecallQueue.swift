@@ -12,7 +12,7 @@ enum RecallQueue {
         now: Date,
         shuffle: ([Phrase]) -> [Phrase] = { $0.shuffled() }
     ) -> [Phrase] {
-        let candidates = phrases.filter { !$0.hiddenFromReview }
+        let candidates = phrases.filter { !$0.hiddenFromReview && !$0.excludedFromRecall }
         let isDue: (Phrase) -> Bool = { phrase in
             let scheduled = (phrase.fsrsState ?? 0) != CardState.Phase.new.rawValue
             return scheduled && phrase.nextReviewAt <= now

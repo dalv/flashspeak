@@ -18,7 +18,7 @@ final class SwiftDataPhraseRepository: PhraseRepository {
 
     func due(in languageCode: String, section: PhraseSection, now: Date, newLimit: Int) throws -> [Phrase] {
         let candidates = try fetchLive(in: languageCode)
-            .filter { matches($0, section) && !$0.hiddenFromReview }
+            .filter { matches($0, section) && !$0.hiddenFromReview && !$0.excludedFromFlashcards }
         let isNew: (Phrase) -> Bool = { ($0.fsrsState ?? 0) == CardState.Phase.new.rawValue }
 
         let due = candidates

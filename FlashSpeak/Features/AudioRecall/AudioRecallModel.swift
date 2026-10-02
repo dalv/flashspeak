@@ -40,7 +40,7 @@ final class AudioRecallModel {
     }
 
     func refresh() {
-        sections = PhraseSection.reviewable(in: languageCode, phrases: dependencies.phrases)
+        sections = PhraseSection.reviewable(in: languageCode, phrases: dependencies.phrases, set: .recall)
         if !sections.contains(section) {
             section = .all
         }
@@ -66,6 +66,6 @@ final class AudioRecallModel {
 
     private func reviewablePhrases() -> [Phrase] {
         let phrases = (try? dependencies.phrases.phrases(in: languageCode, section: section, sort: .newest)) ?? []
-        return phrases.filter { !$0.hiddenFromReview }
+        return phrases.filter { !$0.hiddenFromReview && !$0.excludedFromRecall }
     }
 }

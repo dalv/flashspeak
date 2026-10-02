@@ -1,7 +1,7 @@
 import SwiftUI
 
-/// Ready-made categories of basic vocabulary. Browse and play freely;
-/// "Start learning" adds a category to flashcards and audio recall.
+/// Ready-made categories of basic vocabulary. Browse and play freely; add
+/// a category to flashcards, audio recall or both.
 struct PresetCategoriesScreen: View {
     @State private var model: PresetCategoriesModel
     @State private var selected: PresetCategoryContent?
@@ -13,7 +13,7 @@ struct PresetCategoriesScreen: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: DS.Spacing.m) {
-                Text("Basic words every learner needs. Start a category to add it to your reviews; pause it any time without losing progress.")
+                Text("Basic words every learner needs. Add a category to flashcards, audio recall or both, and remove it any time.")
                     .appTextStyle(.secondary)
                     .foregroundStyle(DS.Color.inkSecondary)
 
@@ -32,10 +32,12 @@ struct PresetCategoriesScreen: View {
                 ForEach(model.categories) { category in
                     PresetCategoryCard(
                         category: category,
-                        status: model.status(of: category),
+                        membership: model.membership(of: category),
+                        pending: model.pendingChange(for: category),
                         onOpen: { selected = category },
-                        onStart: { model.start(category) },
-                        onPause: { model.pause(category) }
+                        onToggle: { set in model.toggle(category, in: set) },
+                        onConfirm: model.confirm,
+                        onDismiss: model.dismissChange
                     )
                 }
             }
@@ -63,7 +65,9 @@ struct PresetCategoriesScreen: View {
 #Preview("Indonesian", traits: .modifier(DesignSystemPreview())) {
     let dependencies = AppDependencies.preview()
     dependencies.settings.currentLanguageCode = "id"
-    try? dependencies.presetLibrary.start("numbers", in: "id")
+    try? dependencies.presetLibrary.add("numbers", to: .flashcards, in: "id")
+    try? dependencies.presetLibrary.add("numbers", to: .recall, in: "id")
+    try? dependencies.presetLibrary.add("days", to: .recall, in: "id")
     return NavigationStack { PresetCategoriesScreen(dependencies: dependencies) }
         .dependencies(dependencies)
 }

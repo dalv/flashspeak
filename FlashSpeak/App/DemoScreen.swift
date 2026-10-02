@@ -6,7 +6,7 @@
     /// Names: home, onboarding, paywall, speak, listening, type, suggest,
     /// suggested, result, clarify, clarifyReply, duplicate, flashcards,
     /// flashcardBack, caughtUp, recall, recallThinking, recallAnswer, manage,
-    /// card, presets, presetDetail, settings.
+    /// card, presets, presetDetail, presetConfirm, settings.
     struct DemoScreen: View {
         let name: String
         let languageCode: String
@@ -24,6 +24,15 @@
             let dependencies = AppDependencies.preview()
             dependencies.settings.currentLanguageCode = languageCode
             _dependencies = State(initialValue: dependencies)
+        }
+
+        /// Numbers in both sets, Days in audio recall only.
+        private func seedPresets() {
+            let library = dependencies.presetLibrary
+            guard library.membership(of: "numbers", in: languageCode) == .init() else { return }
+            try? library.add("numbers", to: .flashcards, in: languageCode)
+            try? library.add("numbers", to: .recall, in: languageCode)
+            try? library.add("days", to: .recall, in: languageCode)
         }
 
         static var requested: (name: String, language: String)? {
@@ -64,10 +73,16 @@
                     NavigationStack { SettingsScreen(dependencies: dependencies) }
                 case "presets":
                     NavigationStack { PresetCategoriesScreen(dependencies: dependencies) }
-                case "presetDetail":
+                        .onAppear(perform: seedPresets)
+                case "presetDetail", "presetConfirm":
                     if let category = dependencies.presets.category("numbers", in: languageCode) {
                         let model = PresetCategoriesModel(dependencies: dependencies)
-                        NavigationStack { PresetCategoryDetail(category: category, model: model).onAppear(perform: model.refresh) }
+                        NavigationStack { PresetCategoryDetail(category: category, model: model) }
+                            .onAppear {
+                                seedPresets()
+                                model.refresh()
+                                if name == "presetConfirm" { model.toggle(category, in: .flashcards) }
+                            }
                     }
                 case "manage":
                     NavigationStack { ManageCardsScreen(dependencies: dependencies) }
