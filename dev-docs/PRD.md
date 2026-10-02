@@ -295,7 +295,7 @@ Audio recall is a hands-free listening session: hear the English, try to say it 
 
 - Length options: 10, 20 or all phrases; default 20.
 - Phrases come from User phrases and preset categories added to audio recall; the user can narrow a session to one section (for example only Numbers).
-- Order: phrases due for review first, then the newest, then random.
+- Order: random, shuffled again for every session.
 - Progress at the bottom: practised this session and total in the set ("12 of 20 · 148 in set").
 - A summary at the end: phrases practised, time spent.
 

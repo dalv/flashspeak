@@ -47,12 +47,9 @@ final class AudioRecallModel {
         setCount = reviewablePhrases().count
     }
 
-    func start(
-        now: Date = .now,
-        sleep: @escaping RecallSession.Sleep = { try await Task.sleep(for: $0) }
-    ) {
+    func start(sleep: @escaping RecallSession.Sleep = { try await Task.sleep(for: $0) }) {
         session?.stop()
-        let queue = RecallQueue.make(from: reviewablePhrases(), length: length, now: now)
+        let queue = RecallQueue.make(from: reviewablePhrases(), length: length)
         let session = RecallSession(phrases: queue, setCount: setCount, dependencies: dependencies, sleep: sleep)
         self.session = session
         session.start()

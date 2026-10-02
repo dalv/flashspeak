@@ -44,34 +44,39 @@ struct AudioRecallTests {
         dependencies.settings.currentLanguageCode = "zh-CN"
         let model = AudioRecallModel(dependencies: dependencies)
         model.refresh()
-        model.start(now: now, sleep: sleep)
+        model.start(sleep: sleep)
         return model.session!
     }
 
     // MARK: Queue
 
-    @Test func queueOrdersDueThenRecentThenTheRest() throws {
+    @Test func queueIsShuffledAndSkipsHiddenAndExcluded() throws {
         let older = try add("older")
-        let recent = try add("recent", created: -86400)
         let newest = try add("newest", created: -60)
-        let overdue = try add("overdue", phase: .review, due: -7200)
         let due = try add("due", phase: .review, due: -60)
         let hidden = try add("hidden", phase: .review, due: -9000, hidden: true)
+        let excluded = try add("excluded")
+        excluded.excludedFromRecall = true
 
         let queue = RecallQueue.make(
-            from: [older, recent, newest, overdue, due, hidden],
+            from: [older, newest, due, hidden, excluded],
             length: .all,
-            now: now,
-            shuffle: { $0 }
+            shuffle: { $0.reversed() }
         )
-        #expect(queue.map(\.englishText) == ["overdue", "due", "newest", "recent", "older"])
+        #expect(queue.map(\.englishText) == ["due", "newest", "older"])
+    }
+
+    @Test func queueOrderVariesBetweenSessions() throws {
+        let phrases = try (0 ..< 20).map { try add("p\($0)") }
+        let orders = Set((0 ..< 5).map { _ in RecallQueue.make(from: phrases, length: .all).map(\.englishText) })
+        #expect(orders.count > 1)
     }
 
     @Test func queueRespectsTheSessionLength() throws {
         let phrases = try (0 ..< 25).map { try add("p\($0)") }
-        #expect(RecallQueue.make(from: phrases, length: .ten, now: now).count == 10)
-        #expect(RecallQueue.make(from: phrases, length: .twenty, now: now).count == 20)
-        #expect(RecallQueue.make(from: phrases, length: .all, now: now).count == 25)
+        #expect(RecallQueue.make(from: phrases, length: .ten).count == 10)
+        #expect(RecallQueue.make(from: phrases, length: .twenty).count == 20)
+        #expect(RecallQueue.make(from: phrases, length: .all).count == 25)
     }
 
     // MARK: Session
@@ -107,19 +112,21 @@ struct AudioRecallTests {
     }
 
     @Test func pauseStopsAndSkipMovesOn() async throws {
-        try add("first", created: -60)
-        try add("second", created: -120)
+        try add("first")
+        try add("second")
         // Sleeps never end on their own, so the session waits in the thinking gap.
         let session = session(sleep: { _ in try await Task.sleep(for: .seconds(3600)) })
         await waitUntil { session.phase == .thinking(dots: 1) }
-        #expect(session.current?.englishText == "first")
+        // The queue is shuffled, so either can come first.
+        let first = try #require(session.current?.englishText)
+        let second = first == "first" ? "second" : "first"
 
         session.pause()
         #expect(session.isPaused)
         #expect(controls.lastUpdate?.isPlaying == false)
 
         session.skip()
-        #expect(session.current?.englishText == "second")
+        #expect(session.current?.englishText == second)
         #expect(session.phase == .english)
         #expect(session.isPaused)
         #expect(session.practisedCount == 0)

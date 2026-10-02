@@ -31,7 +31,7 @@ struct PresetLibraryTests {
 
     private func recallQueue(_ dependencies: AppDependencies) throws -> [Phrase] {
         let all = try dependencies.phrases.phrases(in: "zh-CN", section: .all, sort: .newest)
-        return RecallQueue.make(from: all, length: .all, now: now)
+        return RecallQueue.make(from: all, length: .all)
     }
 
     private func dueCards(_ dependencies: AppDependencies) throws -> [Phrase] {
