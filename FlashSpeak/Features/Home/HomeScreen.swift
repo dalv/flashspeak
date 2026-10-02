@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// The home screen: language picker, New phrase, and the two review actions.
+/// The home screen: language menu, New phrase, and the two review actions.
 struct HomeScreen: View {
     @State private var model: HomeModel
     @State private var path: [HomeRoute] = []
@@ -14,24 +14,13 @@ struct HomeScreen: View {
         NavigationStack(path: $path) {
             ScrollView {
                 VStack(spacing: DS.Spacing.l) {
-                    SegmentedControl(
-                        selection: $model.languageCode,
-                        options: Language.supportedCodes,
-                        variant: .glassAccent
-                    ) { code in
-                        let theme = LanguageTheme.forCode(code) ?? .mandarin
-                        Text(theme.nativeName)
-                            .nativeTextStyle(.segment, script: theme.script)
-                            .accessibilityLabel(theme.displayName)
-                    }
-
                     HomeHeroCard(action: openNewPhrase)
 
                     HStack(spacing: DS.Spacing.s) {
                         HomeActionTile(
                             title: "Audio recall",
                             systemImage: "headphones",
-                            detail: Text("\(model.phraseCount) phrases · hands-free")
+                            detail: Text("\(model.recallCount) phrases · hands-free")
                         ) { path.append(.audioRecall) }
                         HomeActionTile(
                             title: "Flashcards",
@@ -43,7 +32,7 @@ struct HomeScreen: View {
 
                     if model.isEmpty {
                         VStack(spacing: DS.Spacing.s) {
-                            Text("Add a phrase, try suggested phrases, or start a preset category such as Numbers to begin practising.")
+                            Text("Add a phrase, try suggested phrases, or add a preset category such as Numbers to begin practising.")
                                 .appTextStyle(.secondary)
                                 .foregroundStyle(DS.Color.inkSecondary)
                                 .multilineTextAlignment(.center)
@@ -63,6 +52,9 @@ struct HomeScreen: View {
             }
             .navigationTitle("FlashSpeak")
             .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    HomeLanguageMenu(languageCode: $model.languageCode)
+                }
                 ToolbarItem(placement: .topBarTrailing) {
                     Menu("Menu", systemImage: "line.3.horizontal") {
                         ForEach([HomeRoute.manageCards, .presetCategories, .settings], id: \.self) { route in
@@ -82,6 +74,10 @@ struct HomeScreen: View {
                 .languageTheme(model.theme)
         }
         .onAppear { model.refresh() }
+        // Back on Home after presets, reviews or edits changed the counts.
+        .onChange(of: path) { _, newPath in
+            if newPath.isEmpty { model.refresh() }
+        }
         .task { await model.refreshReminder() }
         .onReceive(NotificationCenter.default.publisher(for: .navigateToPractice)) { _ in
             newPhrase = nil

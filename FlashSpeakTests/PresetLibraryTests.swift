@@ -130,6 +130,21 @@ struct PresetLibraryTests {
         #expect(library.membership(of: "numbers", in: "zh-CN") == .init(flashcards: true))
     }
 
+    @Test func homeCountsFollowTheSets() throws {
+        let dependencies = try AppDependencies.test(presets: Self.catalog(version: 1))
+        dependencies.settings.currentLanguageCode = "zh-CN"
+        let home = HomeModel(dependencies: dependencies)
+        home.refresh(now: now)
+        #expect(home.recallCount == 0 && home.dueCount == 0)
+
+        try dependencies.presetLibrary.add("numbers", to: .flashcards, in: "zh-CN", now: now)
+        try dependencies.presetLibrary.add("days", to: .recall, in: "zh-CN", now: now)
+        home.refresh(now: now)
+
+        #expect(home.dueCount == 2)
+        #expect(home.recallCount == 1)
+    }
+
     @Test func pausedCategoriesFromTheOldDesignAreRemoved() throws {
         let dependencies = try AppDependencies.test(presets: Self.catalog(version: 1))
         let library = dependencies.presetLibrary

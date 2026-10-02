@@ -1,0 +1,25 @@
+I haven't built or installed anything yet, because the Mac can't see your iPhone right now. It's paired and in Developer Mode on iOS 26.5, but devicectl reports no connection, and the iPhone doesn't show up on USB either. The script is ready, so this is only the connection.
+
+Things to check:
+1. Unlock the phone and keep it on the home screen. A locked phone often won't connect.
+2. Look for a "Trust This Computer?" prompt on the phone, and tap Trust.
+3. Try a different cable or port. Some cables only charge and carry no data, which fits USB showing nothing. A hub or dongle can also cause this.
+4. If it still doesn't show, open Xcode → Window → Devices and Simulators once. That sometimes wakes up the connection, and you can then close Xcode.
+
+When it's connected, run this in the VS Code terminal:
+
+scripts/run-on-device.sh
+
+It finds the connected iPhone, builds a signed debug version, installs it and launches it, with no LLM involved. If no iPhone is connected, it says so and lists your devices. Other ways to run it:
+
+scripts/run-on-device.sh -c Release                    # real paywall and free limit
+scripts/run-on-device.sh -- -demo flashcards -demoLanguage ja   # open a demo screen
+scripts/run-on-device.sh -d "Vlad’s iPhone"            # pick a device by name
+
+Notes:
+- The first build takes a few minutes. It also creates the provisioning profile, and macOS may ask for your login keychain password so it can sign. Later builds are faster.
+- Build output goes to build/. I added that folder to .gitignore.
+- Once it has worked over the cable, it usually also works over Wi-Fi when the phone and Mac are on the same network.
+- If signing fails with something about iCloud or push notifications, your developer membership has probably lapsed. Paste me the error and I'll suggest the smallest workaround.
+
+The script and the .gitignore change aren't committed yet. I'll commit and push them once you've confirmed the script works on your phone, or now if you'd prefer.

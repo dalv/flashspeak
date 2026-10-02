@@ -6,6 +6,8 @@ import Observation
 @Observable
 final class HomeModel {
     private(set) var phraseCount = 0
+    /// Phrases audio recall would play: not hidden, not excluded from recall.
+    private(set) var recallCount = 0
     private(set) var dueCount = 0
 
     @ObservationIgnored let dependencies: AppDependencies
@@ -37,7 +39,9 @@ final class HomeModel {
     func refresh(now: Date = .now) {
         let code = languageCode
         let limit = dependencies.settings.settings(for: code).dailyNewCardLimit
-        phraseCount = (try? dependencies.phrases.phrases(in: code, section: .all, sort: .newest).count) ?? 0
+        let phrases = (try? dependencies.phrases.phrases(in: code, section: .all, sort: .newest)) ?? []
+        phraseCount = phrases.count
+        recallCount = phrases.count { !$0.hiddenFromReview && !$0.excludedFromRecall }
         dueCount = (try? dependencies.phrases.due(in: code, section: .all, now: now, newLimit: limit).count) ?? 0
     }
 
